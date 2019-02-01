@@ -2,9 +2,15 @@
 let Language, langdata;
 
 $(window).on("load", function(){
+    if($.cookie('lang') == undefined) {
+        Language = $("language").attr("initial");
+    } else {
+        Language = $.cookie('lang');
+    }
+
     Language = $("language").attr("initial");
     langdata = $("language").attr("lang").split(",");
-    langmain(0);
+    langmain(200);
 });
 
 function langmain(time){
@@ -14,6 +20,7 @@ function langmain(time){
             for(i in langdata){
                 if(langdata[i].indexOf(url.split("#")[1]) >= 0){
                     Language = url.split("#")[1];
+                    $.cookie('lang', Language);
                     $(".lang").each(function(i) {
                         lang = $(this).attr("language");
                         if(lang == Language) {
@@ -26,6 +33,7 @@ function langmain(time){
             }
         } else {
             $(".lang").each(function(i) {
+                $.cookie('lang', Language);
                 lang = $(this).attr("language");
                 if(lang == Language) {
                     $(this).show();
@@ -38,5 +46,5 @@ function langmain(time){
     setTimeout(this.main, time);
 }
 $(".language").on("click", function(){
-    langmain(200);
+    langmain(100);
 });
