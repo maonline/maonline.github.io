@@ -10,12 +10,12 @@ $(function() {
 });
 
 $(window).load(function () { //全ての読み込みが完了したら実行
-	// stopload();
+	stopload();
 });
 
 //10秒たったら強制的にロード画面を非表示
 $(function(){
-	setTimeout('stopload()', 1000);
+	setTimeout('stopload()', 5000);
 });
 
 function stopload(){
