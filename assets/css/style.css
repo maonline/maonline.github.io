@@ -11,7 +11,8 @@
 	background: #0f3854;
 	background: radial-gradient(ellipse at center, #0a2e38 0%, #000000 70%);
 	background-size: 100%;
-	z-index: 1;
+	z-index: 1000;
+	text-align: center;
 }
 
 #loader {
@@ -23,16 +24,49 @@
 	height: 60px;
 	top: calc((100% - 60px) / 2);
 
-	z-index: 2;
+	z-index: 1001;
 
 	text-align: center;
 	color: #fff;
 	text-shadow: 0 0 20px #0aafe6, 0 0 20px rgba(10, 175, 230, 0);
 	font-family: 'Share Tech Mono', monospace;
-	font-size: 55px;
+	font-size: 6.5vh;
 
 }
 
-#header-menu {
-	
+#top .bg {
+	z-index: 4;
+	background-repeat: no-repeat;
+	background-attachment: scroll;
+	background-size: cover;
+	background-position: center;
+	background-image: url(../image/bg_1.png);
+
+	height: 100vh;
+	margin: auto;
 }
+
+#top .title {
+	display: block;
+	position: absolute;
+	text-align: center;
+	top: 50vh;
+	width: 100%;
+	color: #00FFFF;
+	font-weight: bold;
+	text-shadow: 0 0 10px #000000;
+
+	font-family: 'Share Tech Mono', monospace;
+	font-size: 5.5vw;
+
+}
+
+@media (max-width: 767px) {
+
+	#top .title {
+		top: 30vh;
+		font-size: 8.5vw;
+	}
+
+}
+

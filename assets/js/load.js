@@ -1,17 +1,21 @@
 $(function() {
+	// console.log("LOAD");
 	var h = $(window).height();
 
 	$('#wrap').css('display','none');
 	$('#loader-bg, #loader').height(h).css('display', 'block');
+
+	$("#typing").t()
+
 });
 
 $(window).load(function () { //全ての読み込みが完了したら実行
-	stopload();
+	// stopload();
 });
 
 //10秒たったら強制的にロード画面を非表示
 $(function(){
-	setTimeout('stopload()', 5000);
+	setTimeout('stopload()', 1000);
 });
 
 function stopload(){

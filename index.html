@@ -21,71 +21,67 @@
 	<link rel="apple-touch-icon" href="apple-touch-icon114.png">
 	<link rel="stylesheet" href="./assets/css/reset.css">
 	<link rel="stylesheet" href="./assets/css/style.css">
+	<link rel="stylesheet" href="./assets/css/header.css">
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 
 	<script type="text/javascript" src="./assets/js/type.js"></script>
 	<script type="text/javascript" src="./assets/js/cookie.js"></script>
 
+</head>
 
-<!-- 		<script type="text/javascript">
-			$(document).ready(function(){
-			alert("%J-QUERY CHECK%");
-			});
-		</script> -->
+<body>
+	<language initial="ja" lang="ja, en"></language>
 
-	</head>
+	<script type="text/javascript" src="./assets/js/load.js"></script>
 
-	<body>
-		<language initial="ja" lang="ja, en"></language>
-
-		<script type="text/javascript" src="./assets/js/load.js"></script>
-
-		<div id="loader-bg">
-			<div id="loader">
-				<p id="typing">Mine Art Online</p>
-			</div>
-
-			<script>
-				$(function(){
-					$("#typing").t()
-				});
-			</script>
+	<div id="loader-bg">
+		<div id="loader">
+			<p id="typing" class="time">Mine Art Online<br />- {{ time }} -<br /></p>
 		</div>
 
-		<div id="wrap">
-			<div class="lang" language="ja">日本語</div>
-			<div class="lang" language="en">英語</div>
+		<script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.3.4/vue.min.js'></script>
+		<script type="text/javascript" src="./assets/js/clock.js"></script>
 
-			<a class="language" href="#ja">日本語に切り替え</a>
-			<a class="language" href="#en">英語に切り替え</a>
+	</div>
 
-			<header>
-				<div class="header-logo">
-					<!-- TODO -->
-				</div>
+	<div id="wrap">
 
-				<div id="header-menu">
-					<ul>
-						<li>TOP</li>
-						<li>NEWS</li>
-						<li>FIELD</li>
-						<li>MOVIE</li>
-						<li>THANKS</li>
-						<li>TWITTER</li>
-					</ul>
-				</div>
-			</header>
-			
-			<div id="top">
-				<div class="bg">
-
-				</div>
-
-			</div>
+		<input type="checkbox" id="cp_toggle02">
+		<div class="cp_mobilebar">
+			<label for="cp_toggle02" class="cp_menuicon">
+				<span></span>
+			</label>
 		</div>
+		<header class="cp_offcm02">
+			<nav>
+				<ul>
+					<li><a href="./">TOP</a></li>
+					<li><a href="./">FIELD</a></li>
+					<li><a href="./">DONATE</a></li>
+					<li><a href="//twitter.com/MineArtzNetWork" target="_blank">TWITTER</a></li>
+					<li>
+						<div class="lang" language="en"><a class="language" href="#ja">JAPANESE</a></div>
+						<div class="lang" language="ja"><a class="language" href="#en">ENGLISH</a></div>
+					</li>
+				</ul>
+			</nav>
+		</header>
 
-		<script type="text/javascript" src="./assets/js/lang.js"></script>
-	</body>
+		<div class="cp_container">
+			<div class="cp_content">
+				<div id="top">
+					<div class="bg">
+						<h1 class="title lang" language="ja">マインアートオンライン</h1>
+						<h1 class="title lang" language="en">Mine Art Online</h1>
 
-	</html>
+					</div>
+				</div>
+			</div>
+			<div class="spa"></div>
+		</div>
+	</div>
+
+	<script type="text/javascript" src="./assets/js/lang.js"></script>
+</body>
+</html>

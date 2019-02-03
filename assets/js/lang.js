@@ -43,6 +43,9 @@ function langmain(time){
             });
         }
     }
+    if (document.getElementById("cp_toggle02").checked == true) {
+        document.getElementById("cp_toggle02").checked = false;
+    }
     setTimeout(this.main, time);
 }
 $(".language").on("click", function(){
