@@ -36,7 +36,7 @@ function showNews() {
 			delayTime: 1000,
 			fadeTime : 1000,
 			alpha : 0.8,
-			limitMin : 0,
+			limitMin : 15,
 			limitCookie : 10
 		});
 	}

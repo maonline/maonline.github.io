@@ -90,7 +90,6 @@
 				表示処理
 			 ----------------------------------------*/
 			function LayerBoardFunc () {
-				console.log("#ON");
 				$('.layer_board_bg', elements).show().animate({opacity: 0}, 0).delay(option.delayTime).animate({opacity: option.alpha},option.fadeTime,function(){
 					$('.layer_board', elements).fadeIn(option.fadeTime);																																				
 				})
@@ -112,7 +111,6 @@
 			
 			//closeボタンの場合
 			$('.btn_close', elements).click(function() {
-				console.log("#OFF");
 				$('.layer_board', elements).fadeOut(option.fadeTime);
 				$('.layer_board_bg', elements).fadeOut(option.fadeTime);
 				
