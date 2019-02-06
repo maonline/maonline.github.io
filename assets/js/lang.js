@@ -51,6 +51,5 @@ function langmain(time){
     setTimeout(this.main, time);
 }
 $(".language").on("click", function(){
-
     langmain(200);
 });

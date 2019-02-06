@@ -1,28 +1,3 @@
-/*
- * ===================================================================
- *	jquery.layerBoard.js
- *	@auther:kiyoty
- *	@URI:http://www.idea-clippin.com
- *	@create:2012/12/30
- * 	@License:MIT License(X11 License、X License)
- * ===================================================================
- *	
- * -------------------------------------------------------------------
- *	opition
- * -------------------------------------------------------------------
- * delayTime		//表示までの待ち時間
- * fadeTime			//表示のフェード時間
- * alpha				//レイヤーの透明度
- * limitMin			//何分経過後に再度表示するか
- * easing				//イージング
- * limitCookie	//cookie保存期間
- *	
- * -------------------------------------------------------------------
- *	Example
- *	$('#layer_board_area').layerBoard({alpha:0.5});
- * -------------------------------------------------------------------
-*/
-
 (function($) {
 	
   $.fn.layerBoard = function(option) {
@@ -36,7 +11,7 @@
 				fadeTime : 500,						//表示のフェード時間
 				alpha : 0.5,							//レイヤーの透明度
 				
-				limitMin : 1,							//何分経過後に再度表示するか
+				limitMin : 15,							//何分経過後に再度表示するか
 				
 				easing: 'linear',					//イージング
 				
@@ -69,7 +44,6 @@
 				var now = new Date();
 				secDiff = now.getTime() - $.cookie('LastNewsTime');
 				secTime = Math.floor( secDiff / 1000);
-				
 				
 				//指定時間を経過していた場合は、LayerBoardを表示
 				//cookieを削除後、再度cookieに現在のミリ秒をセット
