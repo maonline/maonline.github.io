@@ -17,7 +17,7 @@
 	background: #0f3854;
 	background: radial-gradient(ellipse at center, #0a2e38 0%, #000000 70%);
 	background-size: 100%;
-	z-index: 1000;
+	z-index: 11000;
 	text-align: center;
 }
 
@@ -30,7 +30,7 @@
 	height: 60px;
 	top: calc((100% - 60px) / 2);
 
-	z-index: 1001;
+	z-index: 11001;
 
 	text-align: center;
 	color: #fff;
@@ -135,7 +135,7 @@ background-color:#111111;
 .modalArea {
 	display: none;
 	position: fixed;
-	z-index: 10000; /*サイトによってここの数値は調整 */
+	z-index: 8000; /*サイトによってここの数値は調整 */
 	top: 0;
 	left: 0;
 	width: 100%;

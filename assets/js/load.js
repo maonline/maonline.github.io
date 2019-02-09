@@ -1,13 +1,34 @@
 var isFin = Boolean(false);
 
 $(function() {
+	url = location.href;
+	if(url.match("#donate")) {
+		console.log("DONATE");
+		isFin = true;
+		$('#modalArea').show();
+		document.getElementById("donate-error1").style.display = 'none';
+		document.getElementById("donate-error2").style.display = 'none';
+		document.getElementById("donate-error3").style.display = 'none';
+		return false;
+	}
+
+	// if(url.match("#news")) {
+	// 	console.log("NEWS");
+	// 	isFin = true;
+	// 	$('.layer_board_bg').show();
+	// 	$('.layer_board').show();																																					
+	// 	return false;
+	// }
+});
+
+$(function() {
 	// console.log("LOAD");
 	var h = $(window).height();
 
 	$('#wrap').css('display','none');
 	$('#loader-bg, #loader').height(h).css('display', 'block');
 
-	$("#typing").t()
+	$("#typing").t();
 
 });
 
