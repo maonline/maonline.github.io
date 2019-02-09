@@ -110,7 +110,7 @@
 						×
 					</div>
 				</div>
-				<div id="thxMessage" style="display: none;">お問い合わせありがとうございました。</div>
+				<div id="thxMessage" style="display: none;">送信完了しました。</div>
 				<script>
 					function sendGform(){
 						var tex = document.getElementById("donate-discord-id").value;
@@ -142,6 +142,9 @@
 						document.myForm.submit();
 						document.getElementById('donateForm').style.display = 'none';
 						document.getElementById('thxMessage').style.display = 'block';
+						if (document.getElementById("cp_toggle02").checked == true) {
+							document.getElementById("cp_toggle02").checked = false;
+						}
 					}
 				</script>
 			</div>
