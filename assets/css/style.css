@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css?family=Share+Tech+Mono');
 /* font-family: 'Share Tech Mono', monospace; */
+
+@font-face {
+	font-family: 'Kaiso-Next-B';
+	src: url("../font/Kaiso-Next-B.otf");
+}
+
 #loader-bg {
 	display: none;
 	position: fixed;
@@ -54,13 +60,28 @@
 	top: 50vh;
 	width: 100%;
 	color: #00FFFF;
+	font-weight: 500;
+	text-shadow: 0 0 10px #000000;
+
+	font-family: 'Kaiso-Next-B', monospace;
+	font-size: 5.5vw;
+
+}
+
+/*#top #countdown {
+	display: block;
+	position: absolute;
+	text-align: center;
+	top: 50vh;
+	width: 100%;
+	color: #00FFFF;
 	font-weight: bold;
 	text-shadow: 0 0 10px #000000;
 
 	font-family: 'Share Tech Mono', monospace;
 	font-size: 5.5vw;
 
-}
+	}*/
 
 /*	#top .title-img {
 		position: absolute;
@@ -70,14 +91,14 @@
 		left: 0px;
 		margin: auto;
 
-		width: 30vw;
-	}
+	width: 30vw;
+}
 */
 @media (max-width: 767px) {
 
-/*	#top .title-img {
+	#top .title-img {
 		width: 80vw;
-	}*/
+	}
 
 	#top .title {
 		top: 40vh;
@@ -89,85 +110,160 @@
 
 }
 
-.header-logo {
-	/*background-color: yellow;*/
-	position: absolute;
-	opacity: 1;
-	z-index: 12;
-}
-
-.header-logo img {
-	width: 20vw;
-	/*background-color: red;*/
-
-}
-
-@media (max-width: 767px) {
-	.header-logo {
-		/*background-color: yellow;*/
-		display: flex;
-		z-index: 12;
-		position: fixed;
-		top: 0;
-		left: 25vw;
-		margin: auto;
-		padding: 0 25px;
-		width: 50%;
-		/*margin-left: 80px;*/
-
-		align-items: center;
-		justify-content: center;
-		height: 60px;
-
-		/*display: none;*/
-	}
-
-	.header-logo img {
-		/*background-color: red;*/
-		margin: auto;
-		height: 60%;
-		width: auto;
-	}
-
-}
-
-footer {
+#about-1 {
 	width: 100%;
-	height: 30vh;
+	min-height: 800px;
+	/*top: -30px;*/
+	position: relative;
 
-	background-color: #111111;
-	color: #eeeeee;
-	text-align: center;
+	/*-webkit-clip-path: polygon(0 0, 100% 3%, 100% 100%, 0% 100%);*/
+	/*clip-path: polygon(0 0, 100% 3%, 100% 100%, 0% 100%);*/
+/*	background-repeat: no-repeat;
+background-attachment: scroll;
+background-size: cover;
+background-position: center;*/
+/*background-image: url(../image/bg_2.png);*/
+background-color:#111111;
 
-	font-family: 'Share Tech Mono', monospace;
 }
 
-footer img {
-	padding-top: 30px;
-	height: 100px;
+.space {
+	height: 30px;
 }
 
-footer h3 {
+/* モーダルCSS */
+.modalArea {
+	display: none;
+	position: fixed;
+	z-index: 10000; /*サイトによってここの数値は調整 */
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.modalBg {
+	width: 100%;
+	height: 100%;
+	background-color: rgba(30,30,30,0.9);
+}
+
+.modalWrapper {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform:translate(-50%,-50%);
+	width: 60vw;
+	height: auto;
+	max-width: 500px;
+	padding: 10px 30px;
+	background-color: #fff;
+}
+
+.closeModal {
+	position: absolute;
+	padding: 1rem;
+	top: 0.5rem;
+	right: 1rem;
+	cursor: pointer;
+}
+
+/* 以下ボタンスタイル */
+#closeModal {
+	padding: 10px;
+	/*background-color: #fff;*/
+	/*border: 1px solid #282828;*/
+	border-radius: 2px;
+	cursor: pointer;
+}
+
+.donate-desc {
+	font-family: 'Kaiso-Next-B';
 	font-size: 18px;
-	padding-top: 10px;
-	/*background-color: red;*/
+	line-height: 25px;
+}
+
+.donate-error {
+	background: #f44242;
+	padding: 0.2em;
+	color: #ffffff;
+	margin: 5px 0;
+	border-radius: 0.5em;
+}
+
+#donate-form-space {
+	height: 30px;
+}
+
+.donate-form-space-sp {
+	height: 10px;
+}
+
+#donateForm label {
+	font-family: 'Kaiso-Next-B';
+	font-size: 20px;
+}
+
+#donateForm input[type="text"] {
+	outline: none;
+	border: 1px solid #aaa;
+	-webkit-transition: all .3s;
+	transition: all .3s;
+	width: 100%;
+	height: 30px;
+	font-family: 'Kaiso-Next-B';
+	font-size: 18px;
+}
+
+#donateForm input[type="text"]:focus {
+	box-shadow: 0 0 7px #1abc9c;
+	border: 1px solid #1abc9c;
+}
+
+#donateForm textarea {
+	outline: none;
+	border: 1px solid #aaa;
+	-webkit-transition: all .3s;
+	transition: all .3s;
+	width: 100%;
+	height: 60px;
+	font-family: 'Kaiso-Next-B';
+	font-size: 8px;
+}
+
+#donateForm textarea:focus {
+	box-shadow: 0 0 7px #1abc9c;
+	border: 1px solid #1abc9c;
+}
+
+#donateForm input[type="button"] {
+	outline: none;
+	border: 1px solid #aaa;
+	-webkit-transition: all .3s;
+	transition: all .3s;
+	width: 100%;
+	height: 30px;
+	font-family: 'Kaiso-Next-B';
+	font-size: 18px;
+	margin: 20px 0;
+}
+
+#donateForm input[type="button"]:focus {
+	box-shadow: 0 0 7px #1abc9c;
+	border: 1px solid #1abc9c;
 }
 
 @media (max-width: 767px) {
 
-	footer {
-		height: 22vh;
+	.modalWrapper {
+		width: 95vw;
+		height: auto;
 	}
 
-	footer img {
-		height: 15vw;
-		padding-top: 20px;
+	.donate-desc {
+		font-size: 14px;
+		line-height: 16px;
 	}
 
-	footer h3 {
-		font-size: 12px;
-		padding-top: 20px;
-		/*background-color: red;*/
-	}
 
 }

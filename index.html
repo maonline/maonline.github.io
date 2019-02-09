@@ -36,6 +36,8 @@
 	<script type="text/javascript" src="./assets/js/type.js"></script>
 	<script type="text/javascript" src="./assets/js/cookie.js"></script>
 	<script type="text/javascript" src="./assets/js/news.js"></script>
+	<script type="text/javascript" src="./assets/js/donate.js"></script>
+	<!-- <script type="text/javascript" src="./assets/js/count.js"></script> -->
 
 	<div id="layer_board_area">
 		<div class="layer_board_bg"></div>
@@ -45,12 +47,111 @@
 		</div>
 	</div>
 
+	<section id="modalArea" class="modalArea">
+		<div id="modalBg" class="modalBg"></div>
+		<div class="modalWrapper">
+			<div class="modalContents">
+				<div id="formWrapper">
+					<p class="lang donate-desc" language="ja">
+						MineNetWorkは寄付を受け付けております。<br />
+						寄付のお礼として、サーバー内ランクを付与いたします。<br />
+						この寄付に対しての返金は対応していません。<br />
+						ご了承ください。<br />
+					</p>
+					<p class="lang donate-desc" language="en">
+						Donation to MineNetWork is accepted.<br />
+						I will give you a rank as a way to thank you.<br />
+						Refunds for this donation are not supported.<br />
+						Please note.
+					</p>
+					<div id="donate-form-space"></div>
+					<form action="https://docs.google.com/forms/d/e/1FAIpQLScVnMpfZet9Yt09fkJHASjzqGgiZCvaqhV530iprx1jI83gGQ/formResponse" method="post" name="myForm" target="dummyIframe" id="donateForm">
+						<div>
+							<label class="lang" language="ja">ディスコード ID</label>
+							<label class="lang" language="en">DISCORD ID</label>
+							<br />
+							<input type="text" id="donate-discord-id" name="entry.2005620554" placeholder="Kirito#1234" value="" required />
+							<div id="donate-error1">
+								<p class="lang donate-error" style="display:none;" language="ja">記入漏れがあります!</p>
+								<p class="lang donate-error" style="display:none;" language="en">Missing entry!</p>
+							</div>
+							<div id="donate-error2">
+								<p class="lang donate-error" style="display:none;" language="ja">フォーマットが間違っています! (例: 	あいうえお#1234)</p>
+								<p class="lang donate-error" style="display:none;" language="en">Wrong format! (Ex: ABCDE#1234)</p>
+							</div>
+						</div>
+						<div class="donate-form-space-sp"></div>
+						<div>
+							<label class="lang" language="ja">アマゾンギフトコード</label>
+							<label class="lang" language="en">AMAZON GIFT CODE</label>
+							<br />
+							<input type="text" id="donate-gift-code" name="entry.1065046570" placeholder="ABCD-EFGHIJ-KLMNO"  value="" required />
+							<div id="donate-error3">
+								<p class="lang donate-error" style="display:none;" language="ja">記入漏れがあります!</p>
+								<p class="lang donate-error" style="display:none;" language="en">Missing entry!</p>
+							</div>
+						</div>
+						<div class="donate-form-space-sp"></div>
+						<div>
+							<label class="lang" language="ja">メッセージ</label>
+							<label class="lang" language="en">YOUR MESSAGE</label>
+							<br />
+							<textarea id="donate-message" placeholder="※必須ではありません" name="entry.839337160"></textarea>
+						</div>
+						<div class="donate-form-space-sp"></div>
+						<div>
+							<input type="button" value="送信" onclick="sendGform()" class="lang" language="ja">
+							<input type="button" value="SEND" onclick="sendGform()" class="lang" language="en">
+						</div>
+					</form>
+					<iframe name="dummyIframe" style="display:none;"></iframe>
+
+					<div id="closeModal" class="closeModal">
+						×
+					</div>
+				</div>
+				<div id="thxMessage" style="display: none;">お問い合わせありがとうございました。</div>
+				<script>
+					function sendGform(){
+						var tex = document.getElementById("donate-discord-id").value;
+						var Seiki = /^.+#([0-9]{4,4})$/;
+
+						if (tex == '') {
+							document.getElementById("donate-error1").style.display = 'block';
+							return false;
+						} else {
+							document.getElementById("donate-error1").style.display = 'none';
+						}
+
+						if (!(tex.match(Seiki))) {
+							document.getElementById("donate-error2").style.display = 'block';
+							return false;
+						} else {
+							document.getElementById("donate-error2").style.display = 'none';
+						}
+
+						var tex = document.getElementById("donate-gift-code").value;
+
+						if (tex == '') {
+							document.getElementById("donate-error3").style.display = 'block';
+							return false;
+						} else {
+							document.getElementById("donate-error3").style.display = 'none';
+						}
+
+						document.myForm.submit();
+						document.getElementById('donateForm').style.display = 'none';
+						document.getElementById('thxMessage').style.display = 'block';
+					}
+				</script>
+			</div>
+		</div>
+	</section>
+
 </head>
 
 <body>
 	<language initial="ja" lang="ja, en"></language>
-
-	<script type="text/javascript" src="./assets/js/load.js"></script>
 
 	<div id="loader-bg">
 		<div id="loader">
@@ -59,6 +160,8 @@
 
 		<script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.3.4/vue.min.js'></script>
 		<script type="text/javascript" src="./assets/js/clock.js"></script>
+
+		<script type="text/javascript" src="./assets/js/load.js"></script>
 
 	</div>
 
@@ -76,7 +179,7 @@
 				<ul>
 					<li><a href="./">TOP</a></li>
 					<li><a href="./">INFO</a></li>
-					<li><a href="./">DONATE</a></li>
+					<li><a id="openModal" href="#">DONATE</a></li>
 					<li><a href="//twitter.com/MineArtzNetWork" target="_blank">TWITTER</a></li>
 					<li>
 						<div class="lang" language="en"><a class="language" href="#ja">JAPANESE</a></div>
@@ -93,11 +196,26 @@
 			<div class="cp_content">
 				<div id="top">
 					<div class="bg">
-						<h1 class="title lang" language="ja">ようこそVRワールドへ。</h1>
-						<h1 class="title lang" language="en">Welcome to VR world.</h1>
+						<h1 class="title lang" language="ja">ようこそMAOの世界へ。</h1>
+						<h1 class="title lang" language="en">Welcome to MAO world.</h1>
+<!-- 						<div id="countdown"></div>
+
+						<script type="text/javascript">
+							countDown();
+						</script> -->
 						<!-- <img src="./assets/image/logo_w.png" class="title-img"> -->
 					</div>
 				</div>
+
+				<div class="space"></div>
+
+				<div id="about-1">
+
+				</div>
+				<div id="about-2">
+
+				</div>
+				
 			</div>
 			<div class="spa"></div>
 		</div>
