@@ -60,7 +60,7 @@
 	height: 65vh;
 	text-align: center;
 }
-@media (max-width: 767px) {
+@media (max-width: 959px) {
 	/* menu */
 	.cp_offcm02 {
 		display: inline-block;
@@ -189,7 +189,7 @@
 
 }
 
-@media (max-width: 767px) {
+@media (max-width: 959px) {
 	.header-logo {
 		/*background-color: yellow;*/
 		display: flex;
@@ -240,7 +240,7 @@ footer h3 {
 	/*background-color: red;*/
 }
 
-@media (max-width: 767px) {
+@media (max-width: 959px) {
 
 	footer {
 		height: 22vh;
