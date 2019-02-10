@@ -226,33 +226,3 @@
 		opacity: 1;
 	}
 }
-
-@-webkit-keyframes hudFlash2 {
-	0% {
-		-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
-		opacity: .8;
-	}
-	50% {
-		-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=60)";
-		opacity: .6;
-	}
-	to {
-		-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
-		opacity: .8;
-	}
-}
-
-@keyframes hudFlash2 {
-	0% {
-		-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
-		opacity: .8;
-	}
-	50% {
-		-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=60)";
-		opacity: .6;
-	}
-	to {
-		-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
-		opacity: .8;
-	}
-}
