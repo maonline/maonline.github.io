@@ -45,9 +45,13 @@ function langmain(time){
             });
         }
     }
-    if (document.getElementById("cp_toggle02").checked == true) {
-    	document.getElementById("cp_toggle02").checked = false;
-    }
+
+    $('._drawer_bg').fadeOut();
+    $('._drawer_button').removeClass('active');
+    $('nav').removeClass('open');
+    $('body').css('overflow', 'auto');
+    window.removeEventListener( 'touchmove' , movefun, { passive: false } );
+    
     setTimeout(this.main, time);
 }
 $(".language").on("click", function(){

@@ -66,8 +66,11 @@
 			function LayerBoardFunc () {
 				$('.layer_board_bg', elements).show().animate({opacity: 0}, 0).delay(option.delayTime).animate({opacity: option.alpha},option.fadeTime,function(){
 					$('.layer_board', elements).fadeIn(option.fadeTime);																																				
-				})
+				});
 
+				$('body').css('overflow', 'hidden');
+				// window.addEventListener( 'touchmove' , movefun , { passive: false } );
+				$('html,body').animate({ scrollTop: 0 }, '50');
 			}
 			
 			
@@ -79,7 +82,8 @@
 				$('.layer_board', elements).fadeOut(option.fadeTime);
 				$(this).fadeOut(option.fadeTime);
 				
-				
+				$('body').css('overflow', 'auto');
+				// window.removeEventListener( 'touchmove' , movefun, { passive: false } );
 			});
 			
 			
@@ -88,7 +92,8 @@
 				$('.layer_board', elements).fadeOut(option.fadeTime);
 				$('.layer_board_bg', elements).fadeOut(option.fadeTime);
 				
-				
+				$('body').css('overflow', 'auto');
+				// window.removeEventListener( 'touchmove' , movefun, { passive: false } );
 			});
 
 			
@@ -102,6 +107,9 @@
 					$('.layer_board', elements).fadeIn(option.fadeTime);																																					
 				});
 				
+				$('body').css('overflow', 'hidden');
+				// window.addEventListener( 'touchmove' , movefun , { passive: false } );
+				$('html,body').animate({ scrollTop: 0 }, '50');
 			});
 	
 		});

@@ -1,6 +1,8 @@
 var isFin = Boolean(false);
 
 $(function() {
+	scrollBy( 0, 0);
+
 	url = location.href;
 	if(url.match("#donate")) {
 		console.log("DONATE");
@@ -19,6 +21,10 @@ $(function() {
 	// 	$('.layer_board').show();																																					
 	// 	return false;
 	// }
+});
+
+$(window).load(function(){
+	$('html,body').animate({ scrollTop: 0 }, '1');
 });
 
 $(function() {

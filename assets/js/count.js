@@ -1,6 +1,6 @@
 function countDown() {
 	var nowTime = new Date();
-	var endTime = new Date('2019/02/09 01:48:00');
+	var endTime = new Date('2019/03/01 00:00:00');
 	var diff  = endTime - nowTime;
 	var times = 24 * 60 * 60 * 1000;
 	var day   = ('0' + Math.floor(diff / times)).slice(-2);
