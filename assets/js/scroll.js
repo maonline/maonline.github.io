@@ -19,7 +19,7 @@ $(window).resize(function() {
 $(window).scroll(function(){
 
 	var wih = window.innerHeight;
-	var wih_half = wih/2;
+	var wih_half = wih * 0.6;
 	current_view = $(this).scrollTop() + wih_half;
 	set_posi();
 
