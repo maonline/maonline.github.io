@@ -34,15 +34,6 @@
 	<link rel="stylesheet" href="./assets/css/news.css">
 	<link rel="stylesheet" href="./assets/css/scroll.css">
 
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-
-	<script type="text/javascript" src="./assets/js/type.js"></script>
-	<script type="text/javascript" src="./assets/js/cookie.js"></script>
-	<script type="text/javascript" src="./assets/js/news.js"></script>
-	<script type="text/javascript" src="./assets/js/donate.js"></script>
-	<script type="text/javascript" src="./assets/js/header.js"></script>
-	<script type="text/javascript" src="./assets/js/count.js"></script>
-
 	<div id="layer_board_area">
 		<div class="layer_board_bg"></div>
 		<div class="layer_board">
@@ -54,7 +45,7 @@
 	<section id="modalArea" class="modalArea">
 		<div id="modalBg" class="modalBg"></div>
 		<div class="modalWrapper">
-			<div class="modalContents">
+			<div class="modalContents demo_center flash">
 				<div id="formWrapper">
 					<p class="lang donate-desc" language="ja">
 						MineNetWorkは寄付を受け付けております。<br />
@@ -114,7 +105,7 @@
 						×
 					</div>
 				</div>
-				<div id="thxMessage" style="display: none;">
+				<div id="thxMessage" style="display: none;" class="demo_center flash">
 					<p class="lang donate-thx-message" language="ja">寄付の送信ありがとうございました!</p>
 					<p class="lang donate-thx-message" language="en">Thank you for your donating!</p>
 				</div>
@@ -201,7 +192,7 @@
 
 		<script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.3.4/vue.min.js'></script>
 		<script type="text/javascript" src="./assets/js/clock.js"></script>
-
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 		<script type="text/javascript" src="./assets/js/load.js"></script>
 
 	</div>
@@ -218,6 +209,8 @@
 							<h1 class="title lang en" language="en">Until alpha test...</h1>
 							<div class="title" id="countdown"></div>
 
+
+							<script type="text/javascript" src="./assets/js/count.js"></script>
 							<script type="text/javascript">
 								countDown();
 							</script>
@@ -231,10 +224,10 @@
 				</div>
 
 				<div id="about">
-					<div class="table-tag white">
+					<div class="table-tag white demo_center flash">
 						<h2>STORY</h2>
 					</div>
-					<div class="story-about">
+					<div class="story-about demo_center flash">
 						<div class="lang" language="ja">
 							<h4>2022年 人類はついに―</h4>
 							<h4>完全なる仮想世界を実現した</h4>
@@ -268,13 +261,13 @@
 				</div>
 
 				<div id="movie">
-					<div class="table-tag">
+					<div class="table-tag demo_center flash">
 						<h2>MOVIE</h2>
 					</div>
-					<iframe id="ytplayer" type="text/html" src="https://www.youtube.com/embed/AFXUtjZbwQ4?color=white?rel=0&start=0?end=145" frameborder="0" allowfullscreen></iframe>
+					<iframe id="ytplayer" class="demo_center flash" type="text/html" src="https://www.youtube.com/embed/AFXUtjZbwQ4?color=white?rel=0&start=0?end=145" frameborder="0" allowfullscreen></iframe>
 				</div>
 				<div id="thanks">
-					<div class="table-tag white">
+					<div class="table-tag white demo_center flash">
 						<h2>THANKS</h2>
 					</div>
 				</div>
@@ -284,11 +277,31 @@
 		</div>
 	</div>
 
-	<script type="text/javascript" src="./assets/js/lang.js"></script>
-
 	<footer>
 		<img src="./assets/image/logo_w.png" />
 		<h3>Copyright ©Nazuna All Rights Reserved.</h3>
 	</footer>
+
+	<script type="text/javascript" src="./assets/js/cookie.js"></script>
+	<script type="text/javascript" src="./assets/js/lang.js"></script>
+	<script type="text/javascript" src="./assets/js/header.js"></script>
+	<script type="text/javascript" src="./assets/js/type.js"></script>
+	<script type="text/javascript" src="./assets/js/news.js"></script>
+	<script type="text/javascript" src="./assets/js/donate.js"></script>
+
+	<script type="text/javascript" src="./assets/js/scroll.js"></script>
+<!-- 	<script type="text/javascript">
+		$(function() {
+			var ScrollEffectModule = new SCROLL_EFFECT_MODULE({
+				elem               : '.demo_center',
+				displayRatio       : 0.6,
+				displayReverse     : false,
+				firstElem          : '.effect_item--first',
+				firstElemDelayTime : 100,
+				firstDelayTime     : 0,
+				loadDelayTime      : 0
+			});
+		});
+	</script> -->
 </body>
 </html>
