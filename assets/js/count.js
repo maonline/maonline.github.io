@@ -16,7 +16,7 @@ function countDown() {
 		document.getElementById("countdown").innerText = "FINISH";
 		var elements = document.getElementsByClassName('bg');
 		for(i=0;i<elements.length;i++){
-			elements[i].style.backgroundImage = "url('./assets/image/bg_4.png')";
+			// elements[i].style.backgroundImage = "url('../assets/image/bg_4.png')";
 		}
 	}
 }

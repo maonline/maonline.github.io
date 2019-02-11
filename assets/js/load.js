@@ -60,7 +60,7 @@ function showNews() {
 	if (isFin == false) {
 		isFin = true;
 		$('#layer_board_area').layerBoard({
-			delayTime: 1000,
+			delayTime: 0,
 			fadeTime : 1000,
 			alpha : 0.8,
 			limitMin : 15,

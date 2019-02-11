@@ -29,13 +29,29 @@
 }
 .header-drawer a {
 	text-decoration: none;
+	position: relative;
 	color: inherit;
 	display: block;
 	padding: 12px 30px;
 	transition: .3s;
 }
-.header-drawer a:hover {
-	/*background-color: #FF9800;*/
+
+.header-drawer a::after {
+	position: absolute;
+	bottom: 50%;
+	left: 0;
+	content: '';
+	width: 100%;
+	height: 3px;
+	background: #111;
+	transform: scale(0, 1);
+	transform-origin: right top;
+	transition: transform .3s;
+}
+
+.header-drawer a:hover::after {
+	transform-origin: left top;
+	transform: scale(1, 1);
 }
 
 .header-drawer button {
@@ -43,6 +59,7 @@
 }
 
 @media (max-width: 959px) {
+
 	.header-drawer * {
 		margin: 0;
 		padding: 0;
@@ -71,6 +88,7 @@
 		border-top: 0.5px solid #eeeeee;
 		border-bottom: 0.5px solid #eeeeee;
 		font-family: 'Share Tech Mono', monospace;
+		border-left: none;
 	}
 
 	.header-drawer a {

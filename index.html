@@ -24,166 +24,19 @@
 	<meta property="og:image:height" content="630" />
 	<meta property="og:image:alt" content="You can see beautiful builings and natures" />
 	<meta name="theme-color" content="#A901DB" />
+	<link href="https://fonts.googleapis.com/css?family=Share+Tech+Mono" rel="stylesheet">
+
 	<link rel="icon" href="favicon.ico">
 	<link rel="apple-touch-icon" href="apple-touch-icon114.png">
-	<link rel="stylesheet" href="./assets/css/reset.css">	
-	<link rel="stylesheet" href="./assets/css/index.css">
-
+	<link rel="stylesheet" href="./assets/css/reset.css">
+	<link rel="stylesheet" href="./assets/css/page/index.css">
 	<link rel="stylesheet" href="./assets/css/style.css">
 	<link rel="stylesheet" href="./assets/css/header.css">
-	<link rel="stylesheet" href="./assets/css/news.css">
-	<link rel="stylesheet" href="./assets/css/scroll.css">
-
-	<div id="layer_board_area">
-		<div class="layer_board_bg"></div>
-		<div class="layer_board">
-			<p><a href="https://goo.gl/Prtyc3" target="_blank"><img src="./assets/image/news.png" class="news_img"/></a></p>
-			<p class="btn_close"><a><img src="./assets/image/close_button.png" alt="close" class="news_close" /></a></p>
-		</div>
-	</div>
-
-	<section id="modalArea" class="modalArea">
-		<div id="modalBg" class="modalBg"></div>
-		<div class="modalWrapper">
-			<div class="modalContents demo_center flash">
-				<div id="formWrapper">
-					<p class="lang donate-desc" language="ja">
-						MineNetWorkは寄付を受け付けております。<br />
-						寄付のお礼として、サーバー内ランクを付与いたします。<br />
-						この寄付に対しての返金は対応していません。<br />
-						ご了承ください。<br />
-					</p>
-					<p class="lang donate-desc" language="en">
-						Donation to MineNetWork is accepted.<br />
-						I will give you a rank as a way to thank you.<br />
-						Refunds for this donation are not supported.<br />
-						Please note.
-					</p>
-					<div id="donate-form-space"></div>
-					<form action="https://docs.google.com/forms/d/e/1FAIpQLScVnMpfZet9Yt09fkJHASjzqGgiZCvaqhV530iprx1jI83gGQ/formResponse" method="post" name="myForm" target="dummyIframe" id="donateForm">
-						<div>
-							<label class="lang" language="ja">ディスコード ID</label>
-							<label class="lang" language="en">DISCORD ID</label>
-							<br />
-							<input type="text" id="donate-discord-id" name="entry.2005620554" placeholder="Kirito#1234" value="" required />
-							<div id="donate-error1">
-								<p class="lang donate-error" style="display:none;" language="ja">記入漏れがあります!</p>
-								<p class="lang donate-error" style="display:none;" language="en">Missing entry!</p>
-							</div>
-							<div id="donate-error2">
-								<p class="lang donate-error" style="display:none;" language="ja">フォーマットが間違っています! (例: 	あいうえお#1234)</p>
-								<p class="lang donate-error" style="display:none;" language="en">Wrong format! (Ex: ABCDE#1234)</p>
-							</div>
-						</div>
-						<div class="donate-form-space-sp"></div>
-						<div>
-							<label class="lang" language="ja">アマゾンギフトコード</label>
-							<label class="lang" language="en">AMAZON GIFT CODE</label>
-							<br />
-							<input type="text" id="donate-gift-code" name="entry.1065046570" placeholder="ABCD-EFGHIJ-KLMNO"  value="" required />
-							<div id="donate-error3">
-								<p class="lang donate-error" style="display:none;" language="ja">記入漏れがあります!</p>
-								<p class="lang donate-error" style="display:none;" language="en">Missing entry!</p>
-							</div>
-						</div>
-						<div class="donate-form-space-sp"></div>
-						<div>
-							<label class="lang" language="ja">メッセージ</label>
-							<label class="lang" language="en">YOUR MESSAGE</label>
-							<br />
-							<textarea id="donate-message" placeholder="※必須ではありません/It is not required" name="entry.839337160"></textarea>
-						</div>
-						<div class="donate-form-space-sp"></div>
-						<div>
-							<input type="button" value="送信" onclick="sendGform()" class="lang" language="ja">
-							<input type="button" value="SEND" onclick="sendGform()" class="lang" language="en">
-						</div>
-					</form>
-					<iframe name="dummyIframe" style="display:none;"></iframe>
-
-					<div id="closeModal" class="closeModal">
-						×
-					</div>
-				</div>
-				<div id="thxMessage" style="display: none;" class="demo_center flash">
-					<p class="lang donate-thx-message" language="ja">寄付の送信ありがとうございました!</p>
-					<p class="lang donate-thx-message" language="en">Thank you for your donating!</p>
-				</div>
-				<script>
-					function sendGform(){
-						var tex = document.getElementById("donate-discord-id").value;
-						var Seiki = /^.+#([0-9]{4,4})$/;
-
-						if (tex == '') {
-							document.getElementById("donate-error1").style.display = 'block';
-							return false;
-						} else {
-							document.getElementById("donate-error1").style.display = 'none';
-						}
-
-						if (!(tex.match(Seiki))) {
-							document.getElementById("donate-error2").style.display = 'block';
-							return false;
-						} else {
-							document.getElementById("donate-error2").style.display = 'none';
-						}
-
-						var tex = document.getElementById("donate-gift-code").value;
-
-						if (tex == '') {
-							document.getElementById("donate-error3").style.display = 'block';
-							return false;
-						} else {
-							document.getElementById("donate-error3").style.display = 'none';
-						}
-
-						document.myForm.submit();
-						document.getElementById('donateForm').style.display = 'none';
-						document.getElementById('thxMessage').style.display = 'block';
-						$('._drawer_bg').fadeOut();
-						$('._drawer_button').removeClass('active');
-						$('nav').removeClass('open');
-						$('body').css('overflow', 'auto');
-						// window.removeEventListener( 'touchmove' , movefun, { passive: false } );
-					}
-				</script>
-			</div>
-		</div>
-	</section>
 
 </head>
 
 <body>
 	<language initial="ja" lang="ja, en"></language>
-
-	<header>
-		<div class="header-drawer left">
-			<div class="_drawer_bg"></div>
-			<button type="button" class="_drawer_button">
-				<span class="_drawer_bar _drawer_bar1"></span>
-				<span class="_drawer_bar _drawer_bar2"></span>
-				<span class="_drawer_bar _drawer_bar3"></span>
-				<span class="_drawer_menu_text _drawer_text">MENU</span>
-				<span class="_drawer_close _drawer_text">CLOSE</span>
-			</button>
-			<nav class="_drawer_nav_wrapper">
-				<ul class="_drawer_nav">
-					<li><a href="./">TOP</a></li>
-					<li><a href="./">INFO</a></li>
-					<li><a id="openModal" href="#">DONATE</a></li>
-					<li><a href="//twitter.com/MineArtzNetWork" target="_blank">TWITTER</a></li>
-					<li>
-						<div class="lang" language="en"><a class="language" href="#ja">JAPANESE</a></div>
-						<div class="lang" language="ja"><a class="language" href="#en">ENGLISH</a></div>
-					</li>
-				</ul>
-			</nav>
-		</div>
-	</header>
-
-	<div class="header-logo">
-		<a href="./"><img src="./assets/image/logo_w.png" class="title-img" /></a>
-	</div>
 
 	<div id="loader-bg">
 		<div id="loader">
@@ -200,108 +53,276 @@
 	<div id="wrap">
 		<div class="cp_container">
 			<div class="cp_content">
-				<div id="top">
-					<div class="bg">
-						<div class="top-inner">
-							<!-- <h1 class="title lang" language="ja">ようこそ この世界へ。</h1> -->
-							<!-- <h1 class="title lang" language="en">Welcome to this world.</h1> -->
-							<h1 class="title lang ja" language="ja">アルファテストまで...</h1>
-							<h1 class="title lang en" language="en">Until alpha test...</h1>
-							<div class="title" id="countdown"></div>
 
-
-							<script type="text/javascript" src="./assets/js/count.js"></script>
-							<script type="text/javascript">
-								countDown();
-							</script>
-							<!-- <img src="./assets/image/logo_w.png" class="title-img"> -->
-							<div class="top-span"></div>
-							<h3>===ACCESS===</h3><br />
-							<h3>IP: xxxxxxxxxxxx</h3>
-							<h3>version: x.x.x</h3>
-						</div>
+				<div id="layer_board_area">
+					<div class="layer_board_bg"></div>
+					<div class="layer_board">
+						<p><a href="https://goo.gl/Prtyc3" target="_blank"><img src="./assets/image/news.png" class="news_img"/></a></p>
+						<p class="btn_close"><a><img src="./assets/image/close_button.png" alt="close" class="news_close" /></a></p>
 					</div>
 				</div>
 
-				<div id="about">
-					<div class="table-tag white demo_center flash">
-						<h2>STORY</h2>
-					</div>
-					<div class="story-about demo_center flash">
-						<div class="lang" language="ja">
-							<h4>2022年 人類はついに―</h4>
-							<h4>完全なる仮想世界を実現した</h4>
-							<br />
-							<h4>今だ人気を誇る、Sword Art Online</h4>
-							<h4>SAOをマインクラフトスケールでお届けする</h4>
-							<br />
-							<h4>日本最大級の建築</h4>
-							<h4>各フロアに待ち受けるフロアボス</h4>
-							<h4>100層にも及ぶフィールド</h4>
-							<br />
-							<h4>VR世界のかつてない冒険へ</h4>
-							<br />
-						</div>
+				<section id="modalArea" class="modalArea">
+					<div id="modalBg" class="modalBg"></div>
+					<div class="modalWrapper">
+						<div class="modalContents demo_center flash">
+							<div id="formWrapper">
+								<p class="lang donate-desc" language="ja">
+									MineNetWorkは寄付を受け付けております。<br />
+									寄付のお礼として、サーバー内ランクを付与いたします。<br />
+									この寄付に対しての返金は対応していません。<br />
+									ご了承ください。<br />
+								</p>
+								<p class="lang donate-desc" language="en">
+									Donation to MineNetWork is accepted.<br />
+									I will give you a rank as a way to thank you.<br />
+									Refunds for this donation are not supported.<br />
+									Please note.
+								</p>
+								<div id="donate-form-space"></div>
+								<form action="https://docs.google.com/forms/d/e/1FAIpQLScVnMpfZet9Yt09fkJHASjzqGgiZCvaqhV530iprx1jI83gGQ/formResponse" method="post" name="myForm" target="dummyIframe" id="donateForm">
+									<div>
+										<label class="lang" language="ja">ディスコード ID</label>
+										<label class="lang" language="en">DISCORD ID</label>
+										<br />
+										<input type="text" id="donate-discord-id" name="entry.2005620554" placeholder="Kirito#1234" value="" required />
+										<div id="donate-error1">
+											<p class="lang donate-error" style="display:none;" language="ja">記入漏れがあります!</p>
+											<p class="lang donate-error" style="display:none;" language="en">Missing entry!</p>
+										</div>
+										<div id="donate-error2">
+											<p class="lang donate-error" style="display:none;" language="ja">フォーマットが間違っています! (例: 	あいうえお#1234)</p>
+											<p class="lang donate-error" style="display:none;" language="en">Wrong format! (Ex: ABCDE#1234)</p>
+										</div>
+									</div>
+									<div class="donate-form-space-sp"></div>
+									<div>
+										<label class="lang" language="ja">アマゾンギフトコード</label>
+										<label class="lang" language="en">AMAZON GIFT CODE</label>
+										<br />
+										<input type="text" id="donate-gift-code" name="entry.1065046570" placeholder="ABCD-EFGHIJ-KLMNO"  value="" required />
+										<div id="donate-error3">
+											<p class="lang donate-error" style="display:none;" language="ja">記入漏れがあります!</p>
+											<p class="lang donate-error" style="display:none;" language="en">Missing entry!</p>
+										</div>
+									</div>
+									<div class="donate-form-space-sp"></div>
+									<div>
+										<label class="lang" language="ja">メッセージ</label>
+										<label class="lang" language="en">YOUR MESSAGE</label>
+										<br />
+										<textarea id="donate-message" placeholder="※必須ではありません/It is not required" name="entry.839337160"></textarea>
+									</div>
+									<div class="donate-form-space-sp"></div>
+									<div>
+										<input type="button" value="送信" onclick="sendGform()" class="lang" language="ja">
+										<input type="button" value="SEND" onclick="sendGform()" class="lang" language="en">
+									</div>
+								</form>
+								<iframe name="dummyIframe" style="display:none;"></iframe>
 
-						<div class="lang" language="en">
-							<h4>2022 Mankind is finally-</h4>
-							<h4>Realized a complete virtual world.</h4>
-							<br />
-							<h4>Boasting the popularity now, Sword Art Online.</h4>
-							<h4>We will deliver SAO on Minecraft scale.</h4>
-							<br />
-							<h4>Japan's largest architecture.</h4>
-							<h4>Floor boss waiting for each floor.</h4>
-							<h4>Field that spans 100 layers.</h4>
-							<br />
-							<h4>To the unprecedented adventure of the VR world.</h4>
-							<br />
-						</div>
-					</div>
-				</div>
+								<div id="closeModal" class="closeModal">
+									×
+								</div>
+							</div>
+							<div id="thxMessage" style="display: none;" class="demo_center flash">
+								<p class="lang donate-thx-message" language="ja">寄付の送信ありがとうございました!</p>
+								<p class="lang donate-thx-message" language="en">Thank you for your donating!</p>
+							</div>
+							<script>
+								function sendGform(){
+									var tex = document.getElementById("donate-discord-id").value;
+									var Seiki = /^.+#([0-9]{4,4})$/;
 
-				<div id="movie">
-					<div class="table-tag demo_center flash">
-						<h2>MOVIE</h2>
-					</div>
-					<iframe id="ytplayer" class="demo_center flash" type="text/html" src="https://www.youtube.com/embed/AFXUtjZbwQ4?color=white?rel=0&start=0?end=145" frameborder="0" allowfullscreen></iframe>
-				</div>
-				<div id="thanks">
-					<div class="table-tag white demo_center flash">
-						<h2>THANKS</h2>
-					</div>
-				</div>
-				
+									if (tex == '') {
+										document.getElementById("donate-error1").style.display = 'block';
+										return false;
+									} else {
+										document.getElementById("donate-error1").style.display = 'none';
+									}
+
+									if (!(tex.match(Seiki))) {
+										document.getElementById("donate-error2").style.display = 'block';
+										return false;
+									} else {
+										document.getElementById("donate-error2").style.display = 'none';
+									}
+
+									var tex = document.getElementById("donate-gift-code").value;
+
+									if (tex == '') {
+										document.getElementById("donate-error3").style.display = 'block';
+										return false;
+									} else {
+										document.getElementById("donate-error3").style.display = 'none';
+									}
+
+									document.myForm.submit();
+									document.getElementById('donateForm').style.display = 'none';
+									document.getElementById('thxMessage').style.display = 'block';
+									$('._drawer_bg').fadeOut();
+									$('._drawer_button').removeClass('active');
+									$('nav').removeClass('open');
+									$('body').css('overflow', 'auto');
+						// window.removeEventListener( 'touchmove' , movefun, { passive: false } );
+					}
+				</script>
 			</div>
-			<div class="spa"></div>
+		</div>
+	</section>
+
+	<header>
+		<div class="header-drawer left">
+			<div class="_drawer_bg"></div>
+			<button type="button" class="_drawer_button">
+				<span class="_drawer_bar _drawer_bar1"></span>
+				<span class="_drawer_bar _drawer_bar2"></span>
+				<span class="_drawer_bar _drawer_bar3"></span>
+				<span class="_drawer_menu_text _drawer_text">MENU</span>
+				<span class="_drawer_close _drawer_text">CLOSE</span>
+			</button>
+			<nav class="_drawer_nav_wrapper">
+				<ul class="_drawer_nav">
+					<li><a href="./">TOP</a></li>
+					<li><a href="./">INFO</a></li>
+					<li><a class="layer_board_btn" href="#">NEWS</a></li>
+					<li><a href="https://goo.gl/Prtyc3">DISCORD</a></li>
+					<li><a href="//twitter.com/MineArtzNetWork" target="_blank">TWITTER</a></li>
+					<br />
+					<li><a id="openModal" href="#">DONATE</a></li>
+					<li>
+						<div class="lang" language="en"><a class="language" href="#ja">JAPANESE</a></div>
+						<div class="lang" language="ja"><a class="language" href="#en">ENGLISH</a></div>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+
+	<div class="header-logo">
+		<a href="./"><img src="./assets/image/logo_w.png" class="title-img" /></a>
+	</div>
+	<div id="top">
+		<div class="bg">
+			<div class="top-inner">
+				<!-- <h1 class="title lang" language="ja">ようこそ この世界へ。</h1> -->
+				<!-- <h1 class="title lang" language="en">Welcome to this world.</h1> -->
+				<h1 class="title lang ja" language="ja">アルファテストまで...</h1>
+				<h1 class="title lang en" language="en">Until alpha test...</h1>
+				<div class="title" id="countdown"></div>
+
+
+				<script type="text/javascript" src="./assets/js/count.js"></script>
+				<script type="text/javascript">
+					countDown();
+				</script>
+				<!-- <img src="./assets/image/logo_w.png" class="title-img"> -->
+				<div class="top-span"></div>
+				<h3>===ACCESS===</h3><br />
+				<h3>IP: xxxxxxxxxxxx</h3>
+				<h3>version: 1.12.2</h3>
+			</div>
 		</div>
 	</div>
 
-	<footer>
-		<img src="./assets/image/logo_w.png" />
-		<h3>Copyright ©Nazuna All Rights Reserved.</h3>
-	</footer>
+	<div id="about">
+		<div class="table-tag white demo_center flash">
+			<h2>STORY</h2>
+		</div>
+		<div class="story-about demo_center flash">
+			<div class="lang" language="ja">
+				<h4>2022年 人類はついに―</h4>
+				<h4>完全なる仮想世界を実現した</h4>
+				<br />
+				<h4>今だ人気を誇る、Sword Art Online</h4>
+				<h4>SAOをマインクラフトスケールでお届けする</h4>
+				<br />
+				<h4>日本最大級の建築</h4>
+				<h4>各フロアに待ち受けるフロアボス</h4>
+				<h4>100層にも及ぶフィールド</h4>
+				<br />
+				<h4>VR世界のかつてない冒険へ</h4>
+				<br />
+			</div>
 
-	<script type="text/javascript" src="./assets/js/cookie.js"></script>
-	<script type="text/javascript" src="./assets/js/lang.js"></script>
-	<script type="text/javascript" src="./assets/js/header.js"></script>
-	<script type="text/javascript" src="./assets/js/type.js"></script>
-	<script type="text/javascript" src="./assets/js/news.js"></script>
-	<script type="text/javascript" src="./assets/js/donate.js"></script>
+			<div class="lang" language="en">
+				<h4>2022 Mankind is finally-</h4>
+				<h4>Realized a complete virtual world.</h4>
+				<br />
+				<h4>Boasting the popularity now, Sword Art Online.</h4>
+				<h4>We will deliver SAO on Minecraft scale.</h4>
+				<br />
+				<h4>Japan's largest architecture.</h4>
+				<h4>Floor boss waiting for each floor.</h4>
+				<h4>Field that spans 100 layers.</h4>
+				<br />
+				<h4>To the unprecedented adventure of the VR world.</h4>
+				<br />
+			</div>
+		</div>
+	</div>
 
-	<script type="text/javascript" src="./assets/js/scroll.js"></script>
-<!-- 	<script type="text/javascript">
-		$(function() {
-			var ScrollEffectModule = new SCROLL_EFFECT_MODULE({
-				elem               : '.demo_center',
-				displayRatio       : 0.6,
-				displayReverse     : false,
-				firstElem          : '.effect_item--first',
-				firstElemDelayTime : 100,
-				firstDelayTime     : 0,
-				loadDelayTime      : 0
-			});
-		});
-	</script> -->
+	<div id="movie">
+		<div class="table-tag demo_center flash">
+			<h2>MOVIE</h2>
+		</div>
+		<iframe id="ytplayer" class="demo_center flash" type="text/html" src="https://www.youtube.com/embed/AFXUtjZbwQ4?color=white?rel=0&start=0?end=145" frameborder="0" allowfullscreen></iframe>
+	</div>
+	<div id="thanks">
+		<div class="table-tag white demo_center flash">
+			<h2>THANKS</h2>
+		</div>
+		<div id="thanks-list" class="demo_center flash">
+			<div class="thanks-list-content">
+				<img src="./assets/image/profile.jpg" />
+				<h5>ABCDE</h5>
+				<h6><a href="#">LINK</a></h6>
+			</div>
+			<div class="thanks-list-content">
+				<img src="./assets/image/profile.jpg" />
+				<h5>FGHIJ</h5>
+				<h6><a href="#">LINK</a></h6>
+			</div>
+			<div class="thanks-list-content">
+				<img src="./assets/image/profile.jpg" />
+				<h5>KLMNO</h5>
+				<h6><a href="#">LINK</a></h6>
+			</div>
+			<div class="thanks-list-content">
+				<img src="./assets/image/profile.jpg" />
+				<h5>PQRST</h5>
+				<h6><a href="#">LINK</a></h6>
+			</div>
+			<div class="thanks-list-content">
+				<img src="./assets/image/profile.jpg" />
+				<h5>UVWXY</h5>
+				<h6><a href="#">LINK</a></h6>
+			</div>
+			<div class="thanks-list-content">
+				<img src="./assets/image/profile.jpg" />
+				<h5>EXAMPLE</h5>
+				<h6><a href="#">LINK</a></h6>
+			</div>
+		</div>
+	</div>
+
+</div>
+<div class="spa"></div>
+</div>
+</div>
+
+<footer>
+	<img src="./assets/image/logo_w.png" />
+	<h3>Copyright ©Nazuna All Rights Reserved.</h3>
+</footer>
+
+<script type="text/javascript" src="./assets/js/cookie.js"></script>
+<script type="text/javascript" src="./assets/js/lang.js"></script>
+<script type="text/javascript" src="./assets/js/header.js"></script>
+<script type="text/javascript" src="./assets/js/type.js"></script>
+<script type="text/javascript" src="./assets/js/news.js"></script>
+<script type="text/javascript" src="./assets/js/donate.js"></script>
+
+<script type="text/javascript" src="./assets/js/scroll.js"></script>
 </body>
 </html>
