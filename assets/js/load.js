@@ -1,8 +1,6 @@
 var isFin = Boolean(false);
 
 $(function() {
-	scrollBy( 0, 0);
-
 	url = location.href;
 	if(url.match("#donate")) {
 		console.log("DONATE");
@@ -11,6 +9,17 @@ $(function() {
 		document.getElementById("donate-error1").style.display = 'none';
 		document.getElementById("donate-error2").style.display = 'none';
 		document.getElementById("donate-error3").style.display = 'none';
+		return false;
+	}
+
+	if(url.match("#contact")) {
+		console.log("DONATE");
+		isFin = true;
+		$('#contact-form').show();
+		document.getElementById("contact-form-error1").style.display = 'none';
+		document.getElementById("contact-form-error2").style.display = 'none';
+		document.getElementById("contact-form-error3").style.display = 'none';
+		document.getElementById("contact-form-error4").style.display = 'none';
 		return false;
 	}
 

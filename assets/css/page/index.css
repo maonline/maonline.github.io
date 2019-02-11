@@ -249,3 +249,152 @@
 	}
 
 }
+
+
+
+
+
+/* モーダルCSS */
+.contact-form {
+	display: none;
+	position: fixed;
+	z-index: 8000; /*サイトによってここの数値は調整 */
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.contact-formBg {
+	width: 100%;
+	height: 100%;
+	background-color: rgba(30,30,30,0.9);
+}
+
+.contact-formWrapper {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform:translate(-50%,-50%);
+	width: 60vw;
+	height: auto;
+	max-width: 500px;
+	padding: 10px 30px;
+	background-color: #fff;
+}
+
+.closeContact-form {
+	position: absolute;
+	padding: 1rem;
+	top: 0.5rem;
+	right: 1rem;
+	cursor: pointer;
+}
+
+/* 以下ボタンスタイル */
+#closeContact-form {
+	padding: 10px;
+	/*background-color: #fff;*/
+	/*border: 1px solid #282828;*/
+	border-radius: 2px;
+	cursor: pointer;
+}
+
+.contact-form-desc {
+	font-family: 'Kaiso-Next-B';
+	font-size: 18px;
+	line-height: 25px;
+}
+
+.contact-form-error {
+	background: #f44242;
+	padding: 0.2em;
+	color: #ffffff;
+	margin: 5px 0;
+	font-family: 'Kaiso-Next-B';
+	border-radius: 0.5em;
+}
+
+#contact-form-form-space {
+	height: 30px;
+}
+
+.contact-forme-form-space-sp {
+	height: 10px;
+}
+
+#contact-formForm label {
+	font-family: 'Kaiso-Next-B';
+	font-size: 20px;
+}
+
+#contact-formForm input[type="text"] {
+	outline: none;
+	border: 1px solid #aaa;
+	-webkit-transition: all .3s;
+	transition: all .3s;
+	width: 100%;
+	height: 30px;
+	font-family: 'Kaiso-Next-B';
+	font-size: 18px;
+}
+
+#contact-formForm input[type="text"]:focus {
+	box-shadow: 0 0 7px #1abc9c;
+	border: 1px solid #1abc9c;
+}
+
+#contact-formForm textarea {
+	outline: none;
+	border: 1px solid #aaa;
+	-webkit-transition: all .3s;
+	transition: all .3s;
+	width: 100%;
+	height: 60px;
+	font-family: 'Kaiso-Next-B';
+	font-size: 12px;
+}
+
+#contact-formForm textarea:focus {
+	box-shadow: 0 0 7px #1abc9c;
+	border: 1px solid #1abc9c;
+}
+
+#contact-formForm input[type="button"] {
+	outline: none;
+	border: 1px solid #aaa;
+	-webkit-transition: all .3s;
+	transition: all .3s;
+	width: 100%;
+	height: 30px;
+	font-family: 'Kaiso-Next-B';
+	font-size: 18px;
+	margin: 20px 0;
+}
+
+#contact-formForm input[type="button"]:focus {
+	box-shadow: 0 0 7px #1abc9c;
+	border: 1px solid #1abc9c;
+}
+
+#contact-form-thxMessage {
+	font-family: 'Kaiso-Next-B';
+	font-size: 24px;
+}
+
+@media (max-width: 767px) {
+
+	.modalWrapper {
+		width: 95vw;
+		height: auto;
+	}
+
+	.donate-desc {
+		font-size: 14px;
+		line-height: 16px;
+	}
+
+	#contact-form-thx-message {
+		font-size: 15px;
+	}
+}

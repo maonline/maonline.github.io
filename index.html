@@ -171,6 +171,126 @@
 		</div>
 	</section>
 
+	<section id="contact-form" class="contact-form">
+		<div id="contact-formBg" class="contact-formBg"></div>
+		<div class="contact-formWrapper">
+			<div class="contact-formContents demo_center flash">
+				<div id="contact-formWrapper">
+					<p class="lang contact-form-desc" language="ja">
+						運営に対しての意見・要望はこちらにて受け付けております。<br />
+						返信には最大2週間ほどいただきます。<br />
+						ご了承ください。<br />
+					</p>
+					<p class="lang contact-form-desc" language="en">
+						Opinions and requests for management are accepted here.<br />
+						It will take up to 2 weeks for reply.<br />
+						Please note.<br />
+					</p>
+					<div id="contact-form-form-space"></div>
+					<form action="https://docs.google.com/forms/d/e/1FAIpQLSdMqbOUZkONbjlkBpEkz9svLFc__M80HmAHy7FTjZ-yLMbyYA/formResponse" method="post" name="ContactForm" target="dummyIframe" id="contact-formForm">
+						<div>
+							<label class="lang" language="ja">メールアドレス</label>
+							<label class="lang" language="en">MAIL ADDRESS</label>
+							<br />
+							<input type="text" id="contact-form-mailaddress" name="entry.713871945" placeholder="mailaddress@example.com" value="" required />
+							<div id="contact-form-error1">
+								<p class="lang contact-form-error" style="display:none;" language="ja">記入漏れがあります!</p>
+								<p class="lang contact-form-error" style="display:none;" language="en">Missing entry!</p>
+							</div>
+							<div id="contact-form-error2">
+								<p class="lang contact-form-error" style="display:none;" language="ja">フォーマットが間違っています! (例: mailaddress@example.com)</p>
+								<p class="lang contact-form-error" style="display:none;" language="en">Wrong format! (Ex: mailaddress@example.com)</p>
+							</div>
+						</div>
+						<div class="contact-form-form-space-sp"></div>
+						<div>
+							<label class="lang" language="ja">件名</label>
+							<label class="lang" language="en">SUBJECT</label>
+							<br />
+							<input type="text" id="contact-form-subject" name="entry.1444656011" placeholder="QUESTION"  value="" required />
+							<div id="contact-form-error3">
+								<p class="lang contact-form-error" style="display:none;" language="ja">記入漏れがあります!</p>
+								<p class="lang contact-form-error" style="display:none;" language="en">Missing entry!</p>
+							</div>
+						</div>
+						<div class="contact-form-form-space-sp"></div>
+						<div>
+							<label class="lang" language="ja">内容</label>
+							<label class="lang" language="en">YOUR MESSAGE</label>
+							<br />
+							<textarea id="contact-form-message" name="entry.95113534"></textarea>
+							<div id="contact-form-error4">
+								<p class="lang contact-form-error" style="display:none;" language="ja">記入漏れがあります!</p>
+								<p class="lang contact-form-error" style="display:none;" language="en">Missing entry!</p>
+							</div>
+						</div>
+						<div class="contact-form-form-space-sp"></div>
+						<div>
+							<input type="button" value="送信" onclick="sendGformContactForm()" class="lang" language="ja">
+							<input type="button" value="SEND" onclick="sendGformContactForm()" class="lang" language="en">
+						</div>
+					</form>
+					<iframe name="dummyIframe" style="display:none;"></iframe>
+
+					<div id="closeContact-form" class="closeContact-form">
+						×
+					</div>
+				</div>
+				<div id="contact-form-thxMessage" style="display: none;" class="demo_center flash">
+					<p class="lang contact-form-thx-message" language="ja">送信を完了しました。</p>
+					<p class="lang contact-form-thx-message" language="en">Transmission completed.</p>
+				</div>
+				<script>
+					function sendGformContactForm(){
+						var tex = document.getElementById("contact-form-mailaddress").value;
+						var Seiki = /^[a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+
+						if (tex == '') {
+							document.getElementById("contact-form-error1").style.display = 'block';
+							return false;
+						} else {
+							document.getElementById("contact-form-error1").style.display = 'none';
+						}
+
+						if (!(tex.match(Seiki))) {
+							document.getElementById("contact-form-error2").style.display = 'block';
+							return false;
+						} else {
+							document.getElementById("contact-form-error2").style.display = 'none';
+						}
+
+						var tex = document.getElementById("contact-form-subject").value;
+
+						if (tex == '') {
+							document.getElementById("contact-form-error3").style.display = 'block';
+							return false;
+						} else {
+							document.getElementById("contact-form-error3").style.display = 'none';
+						}
+
+						var tex = document.getElementById("contact-form-message").value;
+
+						if (tex == '') {
+							document.getElementById("contact-form-error4").style.display = 'block';
+							return false;
+						} else {
+							document.getElementById("contact-form-error4").style.display = 'none';
+						}
+
+						document.ContactForm.submit();
+						document.getElementById('contact-formForm').style.display = 'none';
+						document.getElementById('contact-form-thxMessage').style.display = 'block';
+						$('._drawer_bg').fadeOut();
+						$('._drawer_button').removeClass('active');
+						$('nav').removeClass('open');
+						$('body').css('overflow', 'auto');
+						// window.removeEventListener( 'touchmove' , movefun, { passive: false } );
+					}
+				</script>
+			</div>
+		</div>
+	</section>
+
 	<header>
 		<div class="header-drawer left">
 			<div class="_drawer_bg"></div>
@@ -189,6 +309,7 @@
 					<li><a href="https://goo.gl/Prtyc3" target="_blank">DISCORD</a></li>
 					<li><a href="//twitter.com/MineNetWork_jp" target="_blank">TWITTER</a></li>
 					<br />
+					<li><a id="openContact-form" href="#">CONTACT</a></li>
 					<li><a id="openModal" href="#">DONATE</a></li>
 					<li>
 						<div class="lang" language="en"><a class="language" href="#ja">JAPANESE</a></div>
@@ -307,9 +428,6 @@
 	</div>
 
 </div>
-<div class="spa"></div>
-</div>
-</div>
 
 <footer>
 	<img src="./assets/image/logo_w.png" />
@@ -321,7 +439,7 @@
 <script type="text/javascript" src="./assets/js/header.js"></script>
 <script type="text/javascript" src="./assets/js/type.js"></script>
 <script type="text/javascript" src="./assets/js/news.js"></script>
-<script type="text/javascript" src="./assets/js/donate.js"></script>
+<script type="text/javascript" src="./assets/js/modal.js"></script>
 
 <script type="text/javascript" src="./assets/js/scroll.js"></script>
 </body>
