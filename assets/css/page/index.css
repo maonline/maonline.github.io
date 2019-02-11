@@ -219,6 +219,23 @@
 	transition: .3s;
 }
 
+.thanks-list-content.unknown a {
+	display: block;
+	font-family: 'Kaiso-Next-B';
+	font-size: 2vw;
+	margin: 2vw;
+	border: solid 3px #111111;
+	background-color: #444444;
+	color: #ededed;
+	transition: .3s;
+	text-decoration: none;
+}
+
+.thanks-list-content.unknown a:hover{
+	background-color: #444444;
+	color: #ededed;
+}
+
 @media (max-width: 767px) {
 
 	.thanks-list-content {
