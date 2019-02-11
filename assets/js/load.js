@@ -33,7 +33,7 @@ $(function() {
 });
 
 $(window).load(function(){
-	$('html,body').animate({ scrollTop: 0 }, '1');
+	$('html, body').animate({ scrollTop: 0 }, '1');
 });
 
 $(function() {

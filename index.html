@@ -165,282 +165,285 @@
 									$('nav').removeClass('open');
 									$('body').css('overflow', 'auto');
 						// window.removeEventListener( 'touchmove' , movefun, { passive: false } );
-					}
-				</script>
-			</div>
-		</div>
-	</section>
+								}
+							</script>
+						</div>
+					</div>
+				</section>
 
-	<section id="contact-form" class="contact-form">
-		<div id="contact-formBg" class="contact-formBg"></div>
-		<div class="contact-formWrapper">
-			<div class="contact-formContents demo_center flash">
-				<div id="contact-formWrapper">
-					<p class="lang contact-form-desc" language="ja">
-						運営に対しての意見・要望はこちらにて受け付けております。<br />
-						返信には最大2週間ほどいただきます。<br />
-						ご了承ください。<br />
-					</p>
-					<p class="lang contact-form-desc" language="en">
-						Opinions and requests for management are accepted here.<br />
-						It will take up to 2 weeks for reply.<br />
-						Please note.<br />
-					</p>
-					<div id="contact-form-form-space"></div>
-					<form action="https://docs.google.com/forms/d/e/1FAIpQLSdMqbOUZkONbjlkBpEkz9svLFc__M80HmAHy7FTjZ-yLMbyYA/formResponse" method="post" name="ContactForm" target="dummyIframe" id="contact-formForm">
-						<div>
-							<label class="lang" language="ja">メールアドレス</label>
-							<label class="lang" language="en">MAIL ADDRESS</label>
-							<br />
-							<input type="text" id="contact-form-mailaddress" name="entry.713871945" placeholder="mailaddress@example.com" value="" required />
-							<div id="contact-form-error1">
-								<p class="lang contact-form-error" style="display:none;" language="ja">記入漏れがあります!</p>
-								<p class="lang contact-form-error" style="display:none;" language="en">Missing entry!</p>
-							</div>
-							<div id="contact-form-error2">
-								<p class="lang contact-form-error" style="display:none;" language="ja">フォーマットが間違っています! (例: mailaddress@example.com)</p>
-								<p class="lang contact-form-error" style="display:none;" language="en">Wrong format! (Ex: mailaddress@example.com)</p>
-							</div>
-						</div>
-						<div class="contact-form-form-space-sp"></div>
-						<div>
-							<label class="lang" language="ja">件名</label>
-							<label class="lang" language="en">SUBJECT</label>
-							<br />
-							<input type="text" id="contact-form-subject" name="entry.1444656011" placeholder="QUESTION"  value="" required />
-							<div id="contact-form-error3">
-								<p class="lang contact-form-error" style="display:none;" language="ja">記入漏れがあります!</p>
-								<p class="lang contact-form-error" style="display:none;" language="en">Missing entry!</p>
-							</div>
-						</div>
-						<div class="contact-form-form-space-sp"></div>
-						<div>
-							<label class="lang" language="ja">内容</label>
-							<label class="lang" language="en">YOUR MESSAGE</label>
-							<br />
-							<textarea id="contact-form-message" name="entry.95113534"></textarea>
-							<div id="contact-form-error4">
-								<p class="lang contact-form-error" style="display:none;" language="ja">記入漏れがあります!</p>
-								<p class="lang contact-form-error" style="display:none;" language="en">Missing entry!</p>
-							</div>
-						</div>
-						<div class="contact-form-form-space-sp"></div>
-						<div>
-							<input type="button" value="送信" onclick="sendGformContactForm()" class="lang" language="ja">
-							<input type="button" value="SEND" onclick="sendGformContactForm()" class="lang" language="en">
-						</div>
-					</form>
-					<iframe name="dummyIframe" style="display:none;"></iframe>
+				<section id="contact-form" class="contact-form">
+					<div id="contact-formBg" class="contact-formBg"></div>
+					<div class="contact-formWrapper">
+						<div class="contact-formContents demo_center flash">
+							<div id="contact-formWrapper">
+								<p class="lang contact-form-desc" language="ja">
+									運営に対しての意見・要望はこちらにて受け付けております。<br />
+									返信には最大2週間ほどいただきます。<br />
+									ご了承ください。<br />
+								</p>
+								<p class="lang contact-form-desc" language="en">
+									Opinions and requests for management are accepted here.<br />
+									It will take up to 2 weeks for reply.<br />
+									Please note.<br />
+								</p>
+								<div id="contact-form-form-space"></div>
+								<form action="https://docs.google.com/forms/d/e/1FAIpQLSdMqbOUZkONbjlkBpEkz9svLFc__M80HmAHy7FTjZ-yLMbyYA/formResponse" method="post" name="ContactForm" target="dummyIframe" id="contact-formForm">
+									<div>
+										<label class="lang" language="ja">メールアドレス</label>
+										<label class="lang" language="en">MAIL ADDRESS</label>
+										<br />
+										<input type="text" id="contact-form-mailaddress" name="entry.713871945" placeholder="mailaddress@example.com" value="" required />
+										<div id="contact-form-error1">
+											<p class="lang contact-form-error" style="display:none;" language="ja">記入漏れがあります!</p>
+											<p class="lang contact-form-error" style="display:none;" language="en">Missing entry!</p>
+										</div>
+										<div id="contact-form-error2">
+											<p class="lang contact-form-error" style="display:none;" language="ja">フォーマットが間違っています! (例: mailaddress@example.com)</p>
+											<p class="lang contact-form-error" style="display:none;" language="en">Wrong format! (Ex: mailaddress@example.com)</p>
+										</div>
+									</div>
+									<div class="contact-form-form-space-sp"></div>
+									<div>
+										<label class="lang" language="ja">件名</label>
+										<label class="lang" language="en">SUBJECT</label>
+										<br />
+										<input type="text" id="contact-form-subject" name="entry.1444656011" placeholder="QUESTION"  value="" required />
+										<div id="contact-form-error3">
+											<p class="lang contact-form-error" style="display:none;" language="ja">記入漏れがあります!</p>
+											<p class="lang contact-form-error" style="display:none;" language="en">Missing entry!</p>
+										</div>
+									</div>
+									<div class="contact-form-form-space-sp"></div>
+									<div>
+										<label class="lang" language="ja">内容</label>
+										<label class="lang" language="en">YOUR MESSAGE</label>
+										<br />
+										<textarea id="contact-form-message" name="entry.95113534"></textarea>
+										<div id="contact-form-error4">
+											<p class="lang contact-form-error" style="display:none;" language="ja">記入漏れがあります!</p>
+											<p class="lang contact-form-error" style="display:none;" language="en">Missing entry!</p>
+										</div>
+									</div>
+									<div class="contact-form-form-space-sp"></div>
+									<div>
+										<input type="button" value="送信" onclick="sendGformContactForm()" class="lang" language="ja">
+										<input type="button" value="SEND" onclick="sendGformContactForm()" class="lang" language="en">
+									</div>
+								</form>
+								<iframe name="dummyIframe" style="display:none;"></iframe>
 
-					<div id="closeContact-form" class="closeContact-form">
-						×
+								<div id="closeContact-form" class="closeContact-form">
+									×
+								</div>
+							</div>
+							<div id="contact-form-thxMessage" style="display: none;" class="demo_center flash">
+								<p class="lang contact-form-thx-message" language="ja">送信を完了しました。</p>
+								<p class="lang contact-form-thx-message" language="en">Transmission completed.</p>
+							</div>
+							<script>
+								function sendGformContactForm(){
+									var tex = document.getElementById("contact-form-mailaddress").value;
+									var Seiki = /^[a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+
+									if (tex == '') {
+										document.getElementById("contact-form-error1").style.display = 'block';
+										return false;
+									} else {
+										document.getElementById("contact-form-error1").style.display = 'none';
+									}
+
+									if (!(tex.match(Seiki))) {
+										document.getElementById("contact-form-error2").style.display = 'block';
+										return false;
+									} else {
+										document.getElementById("contact-form-error2").style.display = 'none';
+									}
+
+									var tex = document.getElementById("contact-form-subject").value;
+
+									if (tex == '') {
+										document.getElementById("contact-form-error3").style.display = 'block';
+										return false;
+									} else {
+										document.getElementById("contact-form-error3").style.display = 'none';
+									}
+
+									var tex = document.getElementById("contact-form-message").value;
+
+									if (tex == '') {
+										document.getElementById("contact-form-error4").style.display = 'block';
+										return false;
+									} else {
+										document.getElementById("contact-form-error4").style.display = 'none';
+									}
+
+									document.ContactForm.submit();
+									document.getElementById('contact-formForm').style.display = 'none';
+									document.getElementById('contact-form-thxMessage').style.display = 'block';
+									$('._drawer_bg').fadeOut();
+									$('._drawer_button').removeClass('active');
+									$('nav').removeClass('open');
+									$('body').css('overflow', 'auto');
+									// window.removeEventListener( 'touchmove' , movefun, { passive: false } );
+								}
+							</script>
+						</div>
+					</div>
+				</section>
+
+				<header>
+					<div class="header-drawer left">
+						<div class="_drawer_bg"></div>
+						<button type="button" class="_drawer_button">
+							<span class="_drawer_bar _drawer_bar1"></span>
+							<span class="_drawer_bar _drawer_bar2"></span>
+							<span class="_drawer_bar _drawer_bar3"></span>
+							<span class="_drawer_menu_text _drawer_text">MENU</span>
+							<span class="_drawer_close _drawer_text">CLOSE</span>
+						</button>
+						<nav class="_drawer_nav_wrapper">
+							<ul class="_drawer_nav">
+								<li><a href="./">TOP</a></li>
+								<li><a href="./">INFO</a></li>
+								<li><a class="layer_board_btn" href="#">NEWS</a></li>
+								<li><a href="https://goo.gl/Prtyc3" target="_blank">DISCORD</a></li>
+								<li><a href="//twitter.com/MineNetWork_jp" target="_blank">TWITTER</a></li>
+								<br />
+								<li><a id="openContact-form" href="#">CONTACT</a></li>
+								<li><a id="openModal" href="#">DONATE</a></li>
+								<li>
+									<div class="lang" language="en"><a class="language" href="#ja">JAPANESE</a></div>
+									<div class="lang" language="ja"><a class="language" href="#en">ENGLISH</a></div>
+								</li>
+							</ul>
+						</nav>
+					</div>
+				</header>
+
+				<div class="header-logo">
+					<a href="./"><img src="./assets/image/logo_w.png" class="title-img" /></a>
+				</div>
+				<div id="top">
+					<div class="bg">
+						<div class="top-inner">
+							<!-- <h1 class="title lang" language="ja">ようこそ この世界へ。</h1> -->
+							<!-- <h1 class="title lang" language="en">Welcome to this world.</h1> -->
+							<h1 class="title lang ja" language="ja">アルファテストまで...</h1>
+							<h1 class="title lang en" language="en">Until alpha test...</h1>
+							<div class="title" id="countdown"></div>
+
+
+							<script type="text/javascript" src="./assets/js/count.js"></script>
+							<script type="text/javascript">
+								countDown();
+							</script>
+							<!-- <img src="./assets/image/logo_w.png" class="title-img"> -->
+							<div class="top-span"></div>
+							<h3>===ACCESS===</h3><br />
+							<h3>IP: xxxxxxxxxxxx</h3>
+							<h3>version: 1.12.2</h3>
+						</div>
 					</div>
 				</div>
-				<div id="contact-form-thxMessage" style="display: none;" class="demo_center flash">
-					<p class="lang contact-form-thx-message" language="ja">送信を完了しました。</p>
-					<p class="lang contact-form-thx-message" language="en">Transmission completed.</p>
+
+				<div id="about">
+					<div class="table-tag white demo_center flash">
+						<h2>STORY</h2>
+					</div>
+					<div class="story-about demo_center flash">
+						<div class="lang" language="ja">
+							<h4>2022年 人類はついに―</h4>
+							<h4>完全なる仮想世界を実現した</h4>
+							<br />
+							<h4>今だ人気を誇る、Sword Art Online</h4>
+							<h4>SAOをマインクラフトスケールでお届けする</h4>
+							<br />
+							<h4>日本最大級の建築</h4>
+							<h4>各フロアに待ち受けるフロアボス</h4>
+							<h4>100層にも及ぶフィールド</h4>
+							<br />
+							<h4>VR世界のかつてない冒険へ</h4>
+							<br />
+						</div>
+
+						<div class="lang" language="en">
+							<h4>2022 Mankind is finally-</h4>
+							<h4>Realized a complete virtual world.</h4>
+							<br />
+							<h4>Boasting the popularity now, Sword Art Online.</h4>
+							<h4>We will deliver SAO on Minecraft scale.</h4>
+							<br />
+							<h4>Japan's largest architecture.</h4>
+							<h4>Floor boss waiting for each floor.</h4>
+							<h4>Field that spans 100 layers.</h4>
+							<br />
+							<h4>To the unprecedented adventure of the VR world.</h4>
+							<br />
+						</div>
+					</div>
 				</div>
-				<script>
-					function sendGformContactForm(){
-						var tex = document.getElementById("contact-form-mailaddress").value;
-						var Seiki = /^[a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
 
-						if (tex == '') {
-							document.getElementById("contact-form-error1").style.display = 'block';
-							return false;
-						} else {
-							document.getElementById("contact-form-error1").style.display = 'none';
-						}
+				<div id="movie">
+					<div class="table-tag demo_center flash">
+						<h2>MOVIE</h2>
+					</div>
+					<iframe id="ytplayer" class="demo_center flash" type="text/html" src="https://www.youtube.com/embed/AFXUtjZbwQ4?color=white?rel=0&start=0?end=145" frameborder="0" allowfullscreen></iframe>
+				</div>
+				<div id="thanks">
+					<div class="table-tag white demo_center flash">
+						<h2>THANKS</h2>
+					</div>
+					<div id="thanks-list" class="demo_center flash">
+						<div class="thanks-list-content">
+							<img src="https://pbs.twimg.com/profile_images/1089161092259926016/71f9UizS_400x400.jpg" />
+							<h5 class="lang" language="ja">ゆーけむProject!</h5>
+							<h5 class="lang" language="en">Yu_kemu</h5>
+							<h6><a href="https://www.youtube.com/watch?v=3v06uQKJ-GY&list=PLDszZnJCCH6m9Pham-gJvftVqx87oI-RG" target="_blank">LINK</a></h6>
+						</div>
+						<div class="thanks-list-content">
+							<img src="./assets/image/profile.jpg" />
+							<h5>FGHIJ</h5>
+							<h6><a href="#" target="_blank">LINK</a></h6>
+						</div>
+						<div class="thanks-list-content">
+							<img src="./assets/image/profile.jpg" />
+							<h5>KLMNO</h5>
+							<h6><a href="#" target="_blank">LINK</a></h6>
+						</div>
+						<div class="thanks-list-content">
+							<img src="./assets/image/profile.jpg" />
+							<h5>PQRST</h5>
+							<h6><a href="#" target="_blank">LINK</a></h6>
+						</div>
+						<div class="thanks-list-content">
+							<img src="./assets/image/profile.jpg" />
+							<h5>UVWXY</h5>
+							<h6><a href="#" target="_blank">LINK</a></h6>
+						</div>
+						<div class="thanks-list-content">
+							<img src="./assets/image/profile.jpg" />
+							<h5>EXAMPLE</h5>
+							<h6><a href="#" target="_blank">LINK</a></h6>
+						</div>
+					</div>
+				</div>
 
-						if (!(tex.match(Seiki))) {
-							document.getElementById("contact-form-error2").style.display = 'block';
-							return false;
-						} else {
-							document.getElementById("contact-form-error2").style.display = 'none';
-						}
-
-						var tex = document.getElementById("contact-form-subject").value;
-
-						if (tex == '') {
-							document.getElementById("contact-form-error3").style.display = 'block';
-							return false;
-						} else {
-							document.getElementById("contact-form-error3").style.display = 'none';
-						}
-
-						var tex = document.getElementById("contact-form-message").value;
-
-						if (tex == '') {
-							document.getElementById("contact-form-error4").style.display = 'block';
-							return false;
-						} else {
-							document.getElementById("contact-form-error4").style.display = 'none';
-						}
-
-						document.ContactForm.submit();
-						document.getElementById('contact-formForm').style.display = 'none';
-						document.getElementById('contact-form-thxMessage').style.display = 'block';
-						$('._drawer_bg').fadeOut();
-						$('._drawer_button').removeClass('active');
-						$('nav').removeClass('open');
-						$('body').css('overflow', 'auto');
-						// window.removeEventListener( 'touchmove' , movefun, { passive: false } );
-					}
-				</script>
 			</div>
-		</div>
-	</section>
 
-	<header>
-		<div class="header-drawer left">
-			<div class="_drawer_bg"></div>
-			<button type="button" class="_drawer_button">
-				<span class="_drawer_bar _drawer_bar1"></span>
-				<span class="_drawer_bar _drawer_bar2"></span>
-				<span class="_drawer_bar _drawer_bar3"></span>
-				<span class="_drawer_menu_text _drawer_text">MENU</span>
-				<span class="_drawer_close _drawer_text">CLOSE</span>
-			</button>
-			<nav class="_drawer_nav_wrapper">
-				<ul class="_drawer_nav">
-					<li><a href="./">TOP</a></li>
-					<li><a href="./">INFO</a></li>
-					<li><a class="layer_board_btn" href="#">NEWS</a></li>
-					<li><a href="https://goo.gl/Prtyc3" target="_blank">DISCORD</a></li>
-					<li><a href="//twitter.com/MineNetWork_jp" target="_blank">TWITTER</a></li>
-					<br />
-					<li><a id="openContact-form" href="#">CONTACT</a></li>
-					<li><a id="openModal" href="#">DONATE</a></li>
-					<li>
-						<div class="lang" language="en"><a class="language" href="#ja">JAPANESE</a></div>
-						<div class="lang" language="ja"><a class="language" href="#en">ENGLISH</a></div>
-					</li>
-				</ul>
-			</nav>
-		</div>
-	</header>
+			<footer>
+				<img src="./assets/image/logo_w.png" />
+				<h3>Copyright ©Nazuna All Rights Reserved.</h3>
+			</footer>
 
-	<div class="header-logo">
-		<a href="./"><img src="./assets/image/logo_w.png" class="title-img" /></a>
-	</div>
-	<div id="top">
-		<div class="bg">
-			<div class="top-inner">
-				<!-- <h1 class="title lang" language="ja">ようこそ この世界へ。</h1> -->
-				<!-- <h1 class="title lang" language="en">Welcome to this world.</h1> -->
-				<h1 class="title lang ja" language="ja">アルファテストまで...</h1>
-				<h1 class="title lang en" language="en">Until alpha test...</h1>
-				<div class="title" id="countdown"></div>
+			<script type="text/javascript" src="./assets/js/cookie.js"></script>
+			<script type="text/javascript" src="./assets/js/lang.js"></script>
+			<script type="text/javascript" src="./assets/js/header.js"></script>
+			<script type="text/javascript" src="./assets/js/type.js"></script>
+			<script type="text/javascript" src="./assets/js/news.js"></script>
+			<script type="text/javascript" src="./assets/js/modal.js"></script>
 
-
-				<script type="text/javascript" src="./assets/js/count.js"></script>
-				<script type="text/javascript">
-					countDown();
-				</script>
-				<!-- <img src="./assets/image/logo_w.png" class="title-img"> -->
-				<div class="top-span"></div>
-				<h3>===ACCESS===</h3><br />
-				<h3>IP: xxxxxxxxxxxx</h3>
-				<h3>version: 1.12.2</h3>
-			</div>
+			<script type="text/javascript" src="./assets/js/scroll.js"></script>
 		</div>
 	</div>
-
-	<div id="about">
-		<div class="table-tag white demo_center flash">
-			<h2>STORY</h2>
-		</div>
-		<div class="story-about demo_center flash">
-			<div class="lang" language="ja">
-				<h4>2022年 人類はついに―</h4>
-				<h4>完全なる仮想世界を実現した</h4>
-				<br />
-				<h4>今だ人気を誇る、Sword Art Online</h4>
-				<h4>SAOをマインクラフトスケールでお届けする</h4>
-				<br />
-				<h4>日本最大級の建築</h4>
-				<h4>各フロアに待ち受けるフロアボス</h4>
-				<h4>100層にも及ぶフィールド</h4>
-				<br />
-				<h4>VR世界のかつてない冒険へ</h4>
-				<br />
-			</div>
-
-			<div class="lang" language="en">
-				<h4>2022 Mankind is finally-</h4>
-				<h4>Realized a complete virtual world.</h4>
-				<br />
-				<h4>Boasting the popularity now, Sword Art Online.</h4>
-				<h4>We will deliver SAO on Minecraft scale.</h4>
-				<br />
-				<h4>Japan's largest architecture.</h4>
-				<h4>Floor boss waiting for each floor.</h4>
-				<h4>Field that spans 100 layers.</h4>
-				<br />
-				<h4>To the unprecedented adventure of the VR world.</h4>
-				<br />
-			</div>
-		</div>
-	</div>
-
-	<div id="movie">
-		<div class="table-tag demo_center flash">
-			<h2>MOVIE</h2>
-		</div>
-		<iframe id="ytplayer" class="demo_center flash" type="text/html" src="https://www.youtube.com/embed/AFXUtjZbwQ4?color=white?rel=0&start=0?end=145" frameborder="0" allowfullscreen></iframe>
-	</div>
-	<div id="thanks">
-		<div class="table-tag white demo_center flash">
-			<h2>THANKS</h2>
-		</div>
-		<div id="thanks-list" class="demo_center flash">
-			<div class="thanks-list-content">
-				<img src="./assets/image/profile.jpg" />
-				<h5>ABCDE</h5>
-				<h6><a href="#">LINK</a></h6>
-			</div>
-			<div class="thanks-list-content">
-				<img src="./assets/image/profile.jpg" />
-				<h5>FGHIJ</h5>
-				<h6><a href="#">LINK</a></h6>
-			</div>
-			<div class="thanks-list-content">
-				<img src="./assets/image/profile.jpg" />
-				<h5>KLMNO</h5>
-				<h6><a href="#">LINK</a></h6>
-			</div>
-			<div class="thanks-list-content">
-				<img src="./assets/image/profile.jpg" />
-				<h5>PQRST</h5>
-				<h6><a href="#">LINK</a></h6>
-			</div>
-			<div class="thanks-list-content">
-				<img src="./assets/image/profile.jpg" />
-				<h5>UVWXY</h5>
-				<h6><a href="#">LINK</a></h6>
-			</div>
-			<div class="thanks-list-content">
-				<img src="./assets/image/profile.jpg" />
-				<h5>EXAMPLE</h5>
-				<h6><a href="#">LINK</a></h6>
-			</div>
-		</div>
-	</div>
-
-</div>
-
-<footer>
-	<img src="./assets/image/logo_w.png" />
-	<h3>Copyright ©Nazuna All Rights Reserved.</h3>
-</footer>
-
-<script type="text/javascript" src="./assets/js/cookie.js"></script>
-<script type="text/javascript" src="./assets/js/lang.js"></script>
-<script type="text/javascript" src="./assets/js/header.js"></script>
-<script type="text/javascript" src="./assets/js/type.js"></script>
-<script type="text/javascript" src="./assets/js/news.js"></script>
-<script type="text/javascript" src="./assets/js/modal.js"></script>
-
-<script type="text/javascript" src="./assets/js/scroll.js"></script>
 </body>
 </html>
