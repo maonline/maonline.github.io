@@ -186,6 +186,7 @@
 		right: 0;
 		z-index: 1000;
 		background-color: #FFF;
+		padding-top: 10px;
 	}
 
 	.header-drawer ._drawer_nav_wrapper.open {
@@ -209,12 +210,12 @@
 
 	/*+++ Default Navigation CSS +++*/
 	.header-drawer ._drawer_nav {
-		padding: 112px 24px;
+		padding: 70px 24px;
 	}
 
 	.header-drawer ._drawer_nav li {
 		font-size: 16px;
-		margin-bottom: 15px;
+		margin-bottom: 5px;
 	}
 
 	/*+++ Default Button Color +++*/
