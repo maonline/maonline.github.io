@@ -45,18 +45,19 @@
 
 .title.ja {
 	font-family: 'Kaiso-Next-B', monospace;
+	letter-spacing: 0.2vw;
 }
 
 .title.en {
 	font-family: 'Teko', sans-serif;
-	letter-spacing: 1vw;
+	letter-spacing: 0.3vw;
 }
 
-#countdown {
+/*#countdown {
 	margin-top: 40px;
 	letter-spacing: 1vw;
 	font-family: 'Teko', sans-serif;
-}
+}*/
 
 /*#top .title-img {
 		position: absolute;
