@@ -7,7 +7,7 @@
 <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1"><![endif]-->
 <title>Mine Art Online | 「マイン・アート・オンライン」 オフィシャルサイト</title>
 <meta name="description" content="SAO をマインクラフトスケールで完全再現 VR世界のかつてない冒険へ。">
-<meta name="keywords" content="マイン・アート・オンライン, MINE ART ONLINE, SAO, MINECRAFT" />
+<meta name="keywords" content="マインアートオンライン, MINE ART ONLINE, SAO, MINECRAFT, MMO, 再現" />
 <meta name="format-detection" content="telephone=no,address=no,email=no">
 <meta property="og:title" content="Mine Art Online | 「マイン・アート・オンライン」 オフィシャルサイト">
 <meta property="og:type" content="website">
@@ -67,7 +67,8 @@
 			<div id="layer_board_area">
 				<div class="layer_board_bg"></div>
 				<div class="layer_board">
-					<p><a href="https://goo.gl/Prtyc3" target="_blank" onclick="ga('send','event','modal','click','news', '1');"><img src="./assets/image/news.png" class="news_img"/></a></p>
+					<p><a href="https://goo.gl/Prtyc3" target="_blank" onclick="gtag('event', 'click', {'event_category': 'Links', 'event_label': 'ModalMenu'});">
+					<img src="./assets/image/news.png" class="news_img"/></a></p>
 					<p class="btn_close"><a><img src="./assets/image/close_button.png" alt="close" class="news_close" /></a></p>
 				</div>
 			</div>
@@ -141,6 +142,8 @@
 						</div>
 						<script>
 							function sendGform(){
+								gtag('event', 'click', {'event_category': 'Submit', 'event_label': 'DonateForm'});
+
 								var tex = document.getElementById("donate-discord-id").value;
 								var Seiki = /^.+#([0-9]{4,4})$/;
 
@@ -252,6 +255,8 @@
 						</div>
 						<script>
 							function sendGformContactForm(){
+								gtag('event', 'click', {'event_category': 'Submit', 'event_label': 'ContactForm'});
+
 								var tex = document.getElementById("contact-form-mailaddress").value;
 								var Seiki = /^[a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
 
@@ -295,6 +300,7 @@
 								$('nav').removeClass('open');
 								$('body').css('overflow', 'auto');
 								// window.removeEventListener( 'touchmove' , movefun, { passive: false } );
+
 							}
 						</script>
 					</div>
@@ -313,18 +319,27 @@
 					</button>
 					<nav class="_drawer_nav_wrapper">
 						<ul class="_drawer_nav">
-							<li><a href="./" onclick="ga('send','event','menu','click','top', '1');">TOP</a></li>
-							<li><a href="./" onclick="ga('send','event','menu','click','info', '1');">INFO</a></li>
-							<li><a class="layer_board_btn" href="#" onclick="ga('send','event','menu','click','news', '1');">NEWS</a></li>
-							<li><a href="https://goo.gl/Zrg1r4" target="_blank" onclick="ga('send','event','menu','click','youtube', '1');">YOUTUBE</a></li>
-							<li><a href="https://goo.gl/Prtyc3" target="_blank" onclick="ga('send','event','menu','click','discord', '1');">DISCORD</a></li>
+							<li><a href="./" onclick="gtag('event', 'click', {'event_category': 'Menu', 'event_label': 'Top'});">TOP</a></li>
+
+							<li><a href="./" onclick="gtag('event', 'click', {'event_category': 'Menu', 'event_label': 'Info'});">INFO</a></li>
+
+							<li><a class="layer_board_btn" href="#" onclick="gtag('event', 'click', {'event_category': 'Menu', 'event_label': 'News'});">NEWS</a></li>
+
+							<li><a href="https://goo.gl/Zrg1r4" target="_blank" onclick="gtag('event', 'click', {'event_category': 'Menu', 'event_label': 'YouTube'});">YOUTUBE</a></li>
+
+							<li><a href="https://goo.gl/Prtyc3" target="_blank" onclick="gtag('event', 'click', {'event_category': 'Menu', 'event_label': 'Discord'});">DISCORD</a></li>
+
 							<br />
-							<li><a href="https://goo.gl/z3w6ux" target="_blank" onclick="ga('send','event','menu','click','twitter', '1');">TWITTER</a></li>
-							<li><a id="openContact-form" href="#" onclick="ga('send','event','menu','click','contact', '1');">CONTACT</a></li>
-							<li><a id="openModal" href="#" onclick="ga('send','event','menu','click','donate', '1');">DONATE</a></li>
+
+							<li><a href="https://goo.gl/z3w6ux" target="_blank" onclick="gtag('event', 'click', {'event_category': 'Menu', 'event_label': 'Twitter'});">TWITTER</a></li>
+
+							<li><a id="openContact-form" href="#" onclick="gtag('event', 'click', {'event_category': 'Menu', 'event_label': 'Contact'});">CONTACT</a></li>
+
+							<li><a id="openModal" href="#" onclick="gtag('event', 'click', {'event_category': 'Menu', 'event_label': 'Donate'});">DONATE</a></li>
+
 							<li>
-								<div class="lang" language="en"><a class="language" href="#ja">JAPANESE</a></div>
-								<div class="lang" language="ja"><a class="language" href="#en">ENGLISH</a></div>
+								<div class="lang" language="en"><a class="language" href="#ja" onclick="gtag('event', 'click', {'event_category': 'Menu', 'event_label': 'Japanese'});">JAPANESE</a></div>
+								<div class="lang" language="ja"><a class="language" href="#en" onclick="gtag('event', 'click', {'event_category': 'Menu', 'event_label': 'English'});">ENGLISH</a></div>
 							</li>
 						</ul>
 					</nav>
@@ -394,11 +409,13 @@
 				</div>
 			</div>
 
-			<div id="movie" onclick="ga('send','event','movie','click','pv', '1');">
+			<div id="movie">
 				<div class="table-tag demo_center flash">
 					<h2>MOVIE</h2>
 				</div>
-				<iframe id="ytplayer" class="demo_center flash" type="text/html" src="https://www.youtube.com/embed/kjYI6kI_jjM?color=white?rel=0&start=0?end=144" frameborder="0" allowfullscreen></iframe>
+				<div onclick="gtag('event', 'click', {'event_category': 'Videos', 'event_label': 'OfficialPV'});">
+					<iframe id="ytplayer" class="demo_center flash" type="text/html" src="https://www.youtube.com/embed/kjYI6kI_jjM?color=white?rel=0&start=0?end=144" frameborder="0" allowfullscreen></iframe>
+				</div>
 			</div>
 			<div id="thanks">
 				<div class="table-tag white demo_center flash">
@@ -409,21 +426,21 @@
 						<img src="https://yt3.ggpht.com/a-/AAuE7mAtkF1oRsz78EMM6qzEVaxhCrJN-yu0PIkoDA=s288-mo-c-c0xffffffff-rj-k-no" />
 						<h5 class="lang" language="ja">ゆーけむProject!</h5>
 						<h5 class="lang" language="en">Yu_kemu</h5>
-						<h6><a href="https://goo.gl/qETjTr" target="_blank" onclick="ga('send','event','movie','click','thanks_yu-kemu', '1');">LINK</a></h6>
+						<h6><a href="https://goo.gl/qETjTr" target="_blank" onclick="gtag('event', 'click', {'event_category': 'Thanks', 'event_label': 'Yukemu'});">LINK</a></h6>
 					</div>
 					<div class="thanks-list-content">
 						<img src="https://yt3.ggpht.com/a-/AAuE7mCHCPFLB1o90uGccJ3bIoGOgggw-1hWiFijLQ=s288-mo-c-c0xffffffff-rj-k-no" />
 						<h5 class="lang" language="ja">きらくん。</h5>
 						<h5 class="lang" language="en">KIRA</h5>
 						<!-- <h6><a>LINK</a></h6> -->
-						<h6><a href="https://goo.gl/gs9Agd" target="_blank" onclick="ga('send','event','movie','click','thanks_kira', '1');">LINK</a></h6>
+						<h6><a href="https://goo.gl/gs9Agd" target="_blank" onclick="gtag('event', 'click', {'event_category': 'Thanks', 'event_label': 'Kira'});">LINK</a></h6>
 					</div>
 					<div class="thanks-list-content">
 						<img src="https://yt3.ggpht.com/a-/AAuE7mCJBTbXH5M5Wp7c3y2HZVWJywbXJ1v-EmIDpw=s288-mo-c-c0xffffffff-rj-k-no" />
 						<h5 class="lang" language="ja">実況者ねが</h5>
 						<h5 class="lang" language="en">NEGA</h5>
 						<!-- <h6><a>LINK</a></h6> -->
-						<h6><a href="https://goo.gl/XJsPBY" target="_blank" onclick="ga('send','event','movie','click','thanks_nega', '1');">LINK</a></h6>
+						<h6><a href="https://goo.gl/XJsPBY" target="_blank" onclick="gtag('event', 'click', {'event_category': 'Thanks', 'event_label': 'Nega'});">LINK</a></h6>
 					</div>
 				</div>
 			</div>
