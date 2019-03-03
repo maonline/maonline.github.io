@@ -329,6 +329,8 @@
 
 .news_img {
 	width: 50vw;
+	border-radius: 15px;
+	box-shadow: 0 0 16px #000000;
 }
 
 .news_close {
