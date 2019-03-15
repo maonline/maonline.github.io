@@ -1,0 +1,293 @@
+@import url('https://fonts.googleapis.com/css?family=Sawarabi+Mincho');
+/*font-family: 'Sawarabi Mincho', sans-serif;*/
+@import url('https://fonts.googleapis.com/css?family=Teko');
+/*font-family: 'Teko', sans-serif;*/
+
+@font-face {
+	font-family: 'SAO UI';
+	src: url("../font/SAO.otf");
+}
+
+/* TOP */
+
+#top .bg {
+	position: relative;
+	background-repeat: no-repeat;
+	background-attachment: scroll;
+	background-size: cover;
+	background-position: center;
+	background-image: url(../../image/bg_1.jpg);
+
+	height: 100vh;
+	margin: auto;
+	transform:translate3d(0,0,0);
+}
+
+.top-inner {
+	display: inline-block;
+	position: absolute;
+	width: 100%;
+	height: 60vh;
+	top: 40vh;
+	text-align: center;
+
+}
+
+.top-span {
+	height: 10vh;
+}
+
+.top-inner .title {
+	display: block;
+	width: 100%;
+	color: #00FFFF;
+	font-weight: 500;
+	text-shadow: 0 0 10px #000000;
+
+	/*font-family: 'Kaiso-Next-B', monospace;*/
+	/*font-family: 'Teko', sans-serif;*/
+	font-family: 'SAO UI';
+	font-size: 5.5vw;
+	letter-spacing: 0.4vw;
+}
+
+/*#countdown {
+	margin-top: 40px;
+	letter-spacing: 1vw;
+	font-family: 'Teko', sans-serif;
+}*/
+
+/*#top .title-img {
+		position: absolute;
+		top: 0px;
+		right: 0px;
+		bottom: 0px;
+		left: 0px;
+		margin: auto;
+
+	width: 30vw;
+}*/
+
+.top-inner h3 {
+	display: block;
+	text-align: center;
+	width: 100%;
+	color: #00FFFF;
+	font-weight: 100;
+	text-shadow: 0 0 10px #000000;
+
+	font-family: 'Kaiso-Next-B', monospace;
+	font-size: 1.5vw;
+}
+
+
+
+@media (max-width: 767px) {
+
+	.top-inner {
+		top: 40vh;
+	}
+
+	#top .title-img {
+		width: 80vw;
+	}
+
+	#top .title {
+		width: 100%;
+		font-weight: 800;
+		font-size: 14.5vw;
+
+	}
+
+	.top-span {
+		height: 5vh;
+	}
+
+	.top-inner h3 {
+		font-size: 3vh;
+	}
+
+}
+
+/* ABOUT */
+
+#about {
+	width: 100%;
+	min-height: 400px;
+	position: relative;
+
+	background-color: #002f7c;
+	text-align: center;
+}
+
+.story-about {
+	font-size: 2vw;
+	letter-spacing: 0.5vw;
+	line-height: 3vw;
+	font-weight: 100;
+	font-family: 'Sawarabi Mincho', sans-serif;
+	color: white;
+}
+
+@media (max-width: 767px) {
+
+	.story-about {
+		font-size: 4.5vw;
+		letter-spacing: 0.5vw;
+		line-height: 7vw;
+	}
+
+}
+
+/* MOVIE */
+
+#movie {
+	width: 100%;
+	min-height: 400px;
+	position: relative;
+
+	background-color: #FFFFFF;
+	background-image:
+	radial-gradient(#318bc6 1px, transparent 1px);
+	background-size: 40px 40px;
+
+	text-align: center;
+}
+
+#movie img {
+	width: 40vw;
+	height: auto;
+	margin-bottom: 40px;
+	border-radius: 15px;
+	box-shadow: 0 0 10px #000000;
+	filter: saturate(150%);
+	transition: .3s;
+}
+
+#movie img:hover {
+	box-shadow: 0 0 16px #333333;
+	filter: saturate(250%);
+	transition: .3s;
+}
+
+@media (max-width: 767px) {
+
+	.table-tag h2 {
+		font-size: 14vw;
+		margin: 40px;
+	}
+
+	#movie img {
+		width: 80vw;
+		margin-bottom: 40px;
+	}
+
+}
+
+/* THANKS */
+
+#thanks {
+	background-color: #002f7c;
+	height: auto;
+	text-align: center;
+	padding-bottom: 30px;
+}
+
+.thanks-list-content {
+	display: inline-block;
+	width: 28vw;
+	margin: 1vw;
+	height: auto;
+	background-color: rgb(255, 255, 255, 0.7);
+	border: solid 3px #FFFFFF;/*線*/
+	border-radius: 10px;/*角の丸み*/
+}
+
+.thanks-list-content img {
+	margin: 10px;
+	width: 25%;
+}
+
+.thanks-list-content h5 {
+	font-family: 'Kaiso-Next-B';
+	font-size: 2vw;
+}
+
+.thanks-list-content a {
+	display: block;
+	font-family: 'Kaiso-Next-B';
+	font-size: 2vw;
+	margin: 2vw;
+	border: solid 3px #d10000;
+	background-color: #ff0000;
+	color: #ededed;
+	transition: .3s;
+	text-decoration: none;
+}
+
+.thanks-list-content a:hover{
+	background-color: #ededed;
+	color: #ff0000;
+	transition: .3s;
+}
+
+.thanks-list-content.unknown a {
+	display: block;
+	font-family: 'Kaiso-Next-B';
+	font-size: 2vw;
+	margin: 2vw;
+	border: solid 3px #111111;
+	background-color: #444444;
+	color: #ededed;
+	transition: .3s;
+	text-decoration: none;
+}
+
+.thanks-list-content.unknown a:hover{
+	background-color: #444444;
+	color: #ededed;
+}
+
+@media (max-width: 767px) {
+
+	.thanks-list-content {
+		width: 85vw;
+		background-color: #ededed;
+		margin-bottom: 3vh;
+	}
+
+	.thanks-list-content h5 {
+		font-size: 5vw;
+	}
+
+	.thanks-list-content a {
+		display: block;
+		font-family: 'Kaiso-Next-B';
+		font-size: 4vw;
+		margin: 2vw;
+		padding: 1vw;
+		border: solid 3px #d10000;
+		background-color: #ff0000;
+		color: #ededed;
+		transition: .3s;
+	}
+
+	.thanks-list-content a:hover{
+		background-color: #ff0000;
+		color: #ededed;
+	}
+
+	.thanks-list-content.unknown a {
+		font-size: 4vw;
+		margin: 2vw;
+		padding: 1vw;
+		border: solid 3px #111111;
+		background-color: #444444;
+	}
+
+	.thanks-list-content.unknown a:hover{
+		background-color: #444444;
+		color: #ededed;
+	}
+
+}
