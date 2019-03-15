@@ -1,28 +1,38 @@
-$(function () {
-	$('#openModal').click(function(){
-		document.getElementById("donate-error1").style.display = 'none';
-		document.getElementById("donate-error2").style.display = 'none';
-		document.getElementById("donate-error3").style.display = 'none';
-		document.getElementById("thxMessage").style.display = 'none';
+$(function(){
+	var mdwBtn = $('.switchModal'),
+	overlayOpacity = 0.7,
+	fadeTime = 500;
 
-		$('#modalArea').fadeIn();
-	});
-	$('#closeModal , #modalBg').click(function(){
-		$('#modalArea').fadeOut();
-	});
-});
+	mdwBtn.on('click',function(e){
+		e.preventDefault();
 
-$(function () {
-	$('#openContact-form').click(function(){
-		document.getElementById("contact-form-error1").style.display = 'none';
-		document.getElementById("contact-form-error2").style.display = 'none';
-		document.getElementById("contact-form-error3").style.display = 'none';
-		document.getElementById("contact-form-error4").style.display = 'none';
-		document.getElementById("contact-form-thxMessage").style.display = 'none';
+		$('._drawer_bg').fadeOut();
+		$('._drawer_button').removeClass('active');
+		$('nav').removeClass('open');
+		// window.addEventListener( 'touchmove' , movefun , { passive: false } );
 
-		$('#contact-form').fadeIn();
-	});
-	$('#closecontact-form , #contact-formBg').click(function(){
-		$('#contact-form').fadeOut();
+		var setMdw = $(this),
+		setHref = setMdw.attr('href'),
+		wdHeight = $(window).height();
+		$('body').append('<div id="mdOverlay"></div><div id="mdWindow"><div class="mdClose">✖</div><iframe id="contWrap"></iframe></div>');
+
+		$('#contWrap').attr('src',setHref);
+		$('body').css('overflow', 'hidden');
+		$('#mdOverlay,#mdWindow').css({display:'block',opacity:'0'});
+		$('#mdOverlay').css({height:wdHeight}).stop().animate({opacity:overlayOpacity},fadeTime);
+		$('#mdWindow').stop().animate({opacity:'1'},fadeTime);
+
+		$(window).on('resize',function(){
+			var adjHeight = $(window).height();
+			$('#mdOverlay').css({height:adjHeight});
+		});
+
+		$('#mdOverlay,.mdClose').on('click',function(){
+			$('body').css('overflow', 'auto');
+			// window.removeEventListener( 'touchmove' , movefun, { passive: false } );
+			$('#mdWindow,#mdOverlay').stop().animate({opacity:'0'},fadeTime,function(){
+				$('#mdOverlay,#mdWindow').remove();
+			});
+		});
 	});
 });

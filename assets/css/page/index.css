@@ -3,6 +3,13 @@
 @import url('https://fonts.googleapis.com/css?family=Teko');
 /*font-family: 'Teko', sans-serif;*/
 
+@font-face {
+	font-family: 'SAO UI';
+	src: url("../font/SAO.otf");
+}
+
+/* TOP */
+
 #top .bg {
 	position: relative;
 	background-repeat: no-repeat;
@@ -38,19 +45,10 @@
 	text-shadow: 0 0 10px #000000;
 
 	/*font-family: 'Kaiso-Next-B', monospace;*/
-	font-family: 'Teko', sans-serif;
+	/*font-family: 'Teko', sans-serif;*/
+	font-family: 'SAO UI';
 	font-size: 5.5vw;
-
-}
-
-.title.ja {
-	font-family: 'Kaiso-Next-B', monospace;
-	letter-spacing: 0.2vw;
-}
-
-.title.en {
-	font-family: 'Teko', sans-serif;
-	letter-spacing: 0.3vw;
+	letter-spacing: 0.4vw;
 }
 
 /*#countdown {
@@ -97,7 +95,7 @@
 	#top .title {
 		width: 100%;
 		font-weight: 800;
-		font-size: 8.5vw;
+		font-size: 14.5vw;
 
 	}
 
@@ -110,6 +108,8 @@
 	}
 
 }
+
+/* ABOUT */
 
 #about {
 	width: 100%;
@@ -139,6 +139,7 @@
 
 }
 
+/* MOVIE */
 
 #movie {
 	width: 100%;
@@ -153,11 +154,20 @@
 	text-align: center;
 }
 
-#movie iframe {
-	display: inline-block;
-	width: 60vw;
-	height: 33.75vw;
+#movie img {
+	width: 40vw;
+	height: auto;
 	margin-bottom: 40px;
+	border-radius: 15px;
+	box-shadow: 0 0 10px #000000;
+	filter: saturate(150%);
+	transition: .3s;
+}
+
+#movie img:hover {
+	box-shadow: 0 0 16px #333333;
+	filter: saturate(250%);
+	transition: .3s;
 }
 
 @media (max-width: 767px) {
@@ -167,13 +177,14 @@
 		margin: 40px;
 	}
 
-	#movie iframe {
-		width: 95vw;
-		height: 53.4375vw;
+	#movie img {
+		width: 80vw;
 		margin-bottom: 40px;
 	}
 
 }
+
+/* THANKS */
 
 #thanks {
 	background-color: #002f7c;

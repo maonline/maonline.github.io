@@ -5,21 +5,12 @@ $(function() {
 	if(url.match("#donate")) {
 		console.log("DONATE");
 		isFin = true;
-		$('#modalArea').show();
-		document.getElementById("donate-error1").style.display = 'none';
-		document.getElementById("donate-error2").style.display = 'none';
-		document.getElementById("donate-error3").style.display = 'none';
 		return false;
 	}
 
 	if(url.match("#contact")) {
 		console.log("DONATE");
 		isFin = true;
-		$('#contact-form').show();
-		document.getElementById("contact-form-error1").style.display = 'none';
-		document.getElementById("contact-form-error2").style.display = 'none';
-		document.getElementById("contact-form-error3").style.display = 'none';
-		document.getElementById("contact-form-error4").style.display = 'none';
 		return false;
 	}
 
@@ -42,8 +33,6 @@ $(function() {
 
 	$('#wrap').css('display','none');
 	$('#loader-bg, #loader').height(h).css('display', 'block');
-
-	$("#typing").t();
 
 });
 

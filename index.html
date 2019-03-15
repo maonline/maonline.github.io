@@ -22,24 +22,28 @@
 	<meta property="og:image:secure_url" content="https://www.minenet.work/assets/image/pr_1.jpg" />
 	<meta property="og:image:alt" content="You can see beautiful builings and natures" />
 	<meta name="theme-color" content="#A901DB" />
-	<link href="https://fonts.googleapis.com/css?family=Share+Tech+Mono" rel="stylesheet">
-
 	<link rel="icon" href="favicon.ico">
 	<link rel="apple-touch-icon" href="apple-touch-icon114.png">
+
+	<link href="https://fonts.googleapis.com/css?family=Share+Tech+Mono" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=ZCOOL+QingKe+HuangYou" rel="stylesheet">
 	<link rel="stylesheet" href="./assets/css/reset.css">
 	<link rel="stylesheet" href="./assets/css/page/index.css">
 	<link rel="stylesheet" href="./assets/css/style.css">
+	<link rel="stylesheet" href="./assets/css/modal.css">
 	<link rel="stylesheet" href="./assets/css/header.css">
 
 	<!-- Global site tag (gtag.js) - Google Analytics -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-123405637-2"></script>
+<!-- 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-123405637-2"></script>
 	<script>
 		window.dataLayer = window.dataLayer || [];
 		function gtag(){dataLayer.push(arguments);}
 		gtag('js', new Date());
 
 		gtag('config', 'UA-123405637-2');
-	</script>
+	</script> -->
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 
 </head>
 
@@ -48,326 +52,78 @@
 
 	<div id="loader-bg">
 		<div id="loader">
-			<p id="typing" class="time">Mine Art Online<br />- {{ time }} -<br /></p>
+			<p>Loading</p>
 		</div>
 
-		<script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.3.4/vue.min.js'></script>
-		<script type="text/javascript" src="./assets/js/clock.js"></script>
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-		<script type="text/javascript" src="./assets/js/load.js"></script>
-		<!-- <script type="text/javascript" src="./assets/js/mosaic.js"></script> -->
-<!-- 		<script type="text/javascript">
-			$(document).ready(function () {
-				$('.mosaic').mosaicIn();
-			});
-		</script>
- -->
 	</div>
 
 	<div id="wrap">
 		<div class="cp_container">
 			<div class="cp_content">
 
+				<!-- TOP NEWS -->
 				<div id="layer_board_area">
 					<div class="layer_board_bg"></div>
 					<div class="layer_board">
 						<p><a href="https://goo.gl/Prtyc3" target="_blank" onclick="gtag('event', 'click', {'event_category': 'Links', 'event_label': 'ModalMenu'});">
-							<img src="./assets/image/news.jpg" class="news_img mosaic"/></a></p>
+							<img src="./assets/image/news.jpg" class="news_img"/></a></p>
 							<p class="btn_close"><a><img src="./assets/image/close_button.png" alt="close" class="news_close" /></a></p>
 						</div>
 					</div>
 
-					<section id="modalArea" class="modalArea">
-						<div id="modalBg" class="modalBg"></div>
-						<div class="modalWrapper">
-							<div class="modalContents demo_center flash">
-								<div id="formWrapper">
-									<p class="lang donate-desc" language="ja">
-										MineNetWorkは寄付を受け付けております。<br />
-										寄付のお礼として、サーバー内ランクを付与いたします。<br />
-										この寄付に対しての返金は対応していません。<br />
-										ご了承ください。<br />
-									</p>
-									<p class="lang donate-desc" language="en">
-										Donation to MineNetWork is accepted.<br />
-										I will give you a rank as a way to thank you.<br />
-										Refunds for this donation are not supported.<br />
-										Please note.
-									</p>
-									<div id="donate-form-space"></div>
-									<form action="https://docs.google.com/forms/d/e/1FAIpQLScVnMpfZet9Yt09fkJHASjzqGgiZCvaqhV530iprx1jI83gGQ/formResponse" method="post" name="myForm" target="dummyIframe" id="donateForm">
-										<div>
-											<label class="lang" language="ja">ディスコード ID</label>
-											<label class="lang" language="en">DISCORD ID</label>
-											<br />
-											<input type="text" id="donate-discord-id" name="entry.2005620554" placeholder="Kirito#1234" value="" required />
-											<div id="donate-error1">
-												<p class="lang donate-error" style="display:none;" language="ja">記入漏れがあります!</p>
-												<p class="lang donate-error" style="display:none;" language="en">Missing entry!</p>
-											</div>
-											<div id="donate-error2">
-												<p class="lang donate-error" style="display:none;" language="ja">フォーマットが間違っています! (例: 	あいうえお#1234)</p>
-												<p class="lang donate-error" style="display:none;" language="en">Wrong format! (Ex: ABCDE#1234)</p>
-											</div>
-										</div>
-										<div class="donate-form-space-sp"></div>
-										<div>
-											<label class="lang" language="ja">アマゾンギフトコード</label>
-											<label class="lang" language="en">AMAZON GIFT CODE</label>
-											<br />
-											<input type="text" id="donate-gift-code" name="entry.1065046570" placeholder="ABCD-EFGHIJ-KLMNO"  value="" required />
-											<div id="donate-error3">
-												<p class="lang donate-error" style="display:none;" language="ja">記入漏れがあります!</p>
-												<p class="lang donate-error" style="display:none;" language="en">Missing entry!</p>
-											</div>
-										</div>
-										<div class="donate-form-space-sp"></div>
-										<div>
-											<label class="lang" language="ja">メッセージ</label>
-											<label class="lang" language="en">YOUR MESSAGE</label>
-											<br />
-											<textarea id="donate-message" placeholder="※必須ではありません/It is not required" name="entry.839337160"></textarea>
-										</div>
-										<div class="donate-form-space-sp"></div>
-										<div>
-											<input type="button" value="送信" onclick="sendGform()" class="lang" language="ja">
-											<input type="button" value="SEND" onclick="sendGform()" class="lang" language="en">
-										</div>
-									</form>
-									<iframe name="dummyIframe" style="display:none;"></iframe>
+					<script type="text/javascript" src="./assets/js/header.js"></script>
 
-									<div id="closeModal" class="closeModal">
-										×
-									</div>
-								</div>
-								<div id="thxMessage" style="display: none;" class="demo_center flash">
-									<p class="lang donate-thx-message" language="ja">寄付の送信ありがとうございました!</p>
-									<p class="lang donate-thx-message" language="en">Thank you for your donating!</p>
-								</div>
-								<script>
-									function sendGform(){
-										gtag('event', 'click', {'event_category': 'Submit', 'event_label': 'DonateForm'});
+					<header>
+						<div class="header-drawer left">
+							<div class="_drawer_bg"></div>
+							<button type="button" class="_drawer_button">
+								<span class="_drawer_bar _drawer_bar1"></span>
+								<span class="_drawer_bar _drawer_bar2"></span>
+								<span class="_drawer_bar _drawer_bar3"></span>
+								<span class="_drawer_menu_text _drawer_text">MENU</span>
+								<span class="_drawer_close _drawer_text">CLOSE</span>
+							</button>
+							<nav class="_drawer_nav_wrapper">
+								<ul class="_drawer_nav">
+									<li><a href="./" onclick="gtag('event', 'click', {'event_category': 'Menu', 'event_label': 'Top'});">TOP</a></li>
 
-										var tex = document.getElementById("donate-discord-id").value;
-										var Seiki = /^.+#([0-9]{4,4})$/;
+									<li><a href="./" onclick="gtag('event', 'click', {'event_category': 'Menu', 'event_label': 'Info'});">INFO</a></li>
 
-										if (tex == '') {
-											document.getElementById("donate-error1").style.display = 'block';
-											return false;
-										} else {
-											document.getElementById("donate-error1").style.display = 'none';
-										}
+									<li><a href="https://goo.gl/Zrg1r4" target="_blank" onclick="gtag('event', 'click', {'event_category': 'Menu', 'event_label': 'YouTube'});">YOUTUBE</a></li>
 
-										if (!(tex.match(Seiki))) {
-											document.getElementById("donate-error2").style.display = 'block';
-											return false;
-										} else {
-											document.getElementById("donate-error2").style.display = 'none';
-										}
+									<li><a href="https://goo.gl/Prtyc3" target="_blank" onclick="gtag('event', 'click', {'event_category': 'Menu', 'event_label': 'Discord'});">DISCORD</a></li>
 
-										var tex = document.getElementById("donate-gift-code").value;
+									<br />
 
-										if (tex == '') {
-											document.getElementById("donate-error3").style.display = 'block';
-											return false;
-										} else {
-											document.getElementById("donate-error3").style.display = 'none';
-										}
+									<li><a href="https://goo.gl/z3w6ux" target="_blank" onclick="gtag('event', 'click', {'event_category': 'Menu', 'event_label': 'Twitter'});">TWITTER</a></li>
 
-										document.myForm.submit();
-										document.getElementById('donateForm').style.display = 'none';
-										document.getElementById('thxMessage').style.display = 'block';
-										$('._drawer_bg').fadeOut();
-										$('._drawer_button').removeClass('active');
-										$('nav').removeClass('open');
-										$('body').css('overflow', 'auto');
-					// window.removeEventListener( 'touchmove' , movefun, { passive: false } );
-				}
-			</script>
-		</div>
-	</div>
-</section>
+									<li><a class="layer_board_btn" href="#" onclick="gtag('event', 'click', {'event_category': 'Menu', 'event_label': 'News'});">NEWS</a></li>
 
-<section id="contact-form" class="contact-form">
-	<div id="contact-formBg" class="contact-formBg"></div>
-	<div class="contact-formWrapper">
-		<div class="contact-formContents demo_center flash">
-			<div id="contact-formWrapper">
-				<p class="lang contact-form-desc" language="ja">
-					運営に対しての意見・要望はこちらにて受け付けております。<br />
-					返信には最大2週間ほどいただきます。<br />
-					ご了承ください。<br />
-				</p>
-				<p class="lang contact-form-desc" language="en">
-					Opinions and requests for management are accepted here.<br />
-					It will take up to 2 weeks for reply.<br />
-					Please note.<br />
-				</p>
-				<div id="contact-form-form-space"></div>
-				<form action="https://docs.google.com/forms/d/e/1FAIpQLSdMqbOUZkONbjlkBpEkz9svLFc__M80HmAHy7FTjZ-yLMbyYA/formResponse" method="post" name="ContactForm" target="dummyIframe" id="contact-formForm">
-					<div>
-						<label class="lang" language="ja">メールアドレス</label>
-						<label class="lang" language="en">MAIL ADDRESS</label>
-						<br />
-						<input type="text" id="contact-form-mailaddress" name="entry.713871945" placeholder="mailaddress@example.com" value="" required />
-						<div id="contact-form-error1">
-							<p class="lang contact-form-error" style="display:none;" language="ja">記入漏れがあります!</p>
-							<p class="lang contact-form-error" style="display:none;" language="en">Missing entry!</p>
+									<li><a href="./assets/loader/contact.html" class="switchModal">CONTACT</a></li>
+
+									<li><a href="./assets/loader/donate.html" class="switchModal">DONATE</a></li>
+								</ul>
+							</nav>
 						</div>
-						<div id="contact-form-error2">
-							<p class="lang contact-form-error" style="display:none;" language="ja">フォーマットが間違っています! (例: mailaddress@example.com)</p>
-							<p class="lang contact-form-error" style="display:none;" language="en">Wrong format! (Ex: mailaddress@example.com)</p>
-						</div>
+					</header>
+
+					<div class="header-logo">
+						<a href="./"><img src="./assets/image/logo_w.png" class="title-img" /></a>
 					</div>
-					<div class="contact-form-form-space-sp"></div>
-					<div>
-						<label class="lang" language="ja">件名</label>
-						<label class="lang" language="en">SUBJECT</label>
-						<br />
-						<input type="text" id="contact-form-subject" name="entry.1444656011" placeholder="QUESTION"  value="" required />
-						<div id="contact-form-error3">
-							<p class="lang contact-form-error" style="display:none;" language="ja">記入漏れがあります!</p>
-							<p class="lang contact-form-error" style="display:none;" language="en">Missing entry!</p>
-						</div>
-					</div>
-					<div class="contact-form-form-space-sp"></div>
-					<div>
-						<label class="lang" language="ja">内容</label>
-						<label class="lang" language="en">YOUR MESSAGE</label>
-						<br />
-						<textarea id="contact-form-message" name="entry.95113534"></textarea>
-						<div id="contact-form-error4">
-							<p class="lang contact-form-error" style="display:none;" language="ja">記入漏れがあります!</p>
-							<p class="lang contact-form-error" style="display:none;" language="en">Missing entry!</p>
-						</div>
-					</div>
-					<div class="contact-form-form-space-sp"></div>
-					<div>
-						<input type="button" value="送信" onclick="sendGformContactForm()" class="lang" language="ja">
-						<input type="button" value="SEND" onclick="sendGformContactForm()" class="lang" language="en">
-					</div>
-				</form>
-				<iframe name="dummyIframe" style="display:none;"></iframe>
 
-				<div id="closeContact-form" class="closeContact-form">
-					×
-				</div>
-			</div>
-			<div id="contact-form-thxMessage" style="display: none;" class="demo_center flash">
-				<p class="lang contact-form-thx-message" language="ja">送信を完了しました。</p>
-				<p class="lang contact-form-thx-message" language="en">Transmission completed.</p>
-			</div>
-			<script>
-				function sendGformContactForm(){
-					gtag('event', 'click', {'event_category': 'Submit', 'event_label': 'ContactForm'});
+					<!-- TOP FIRST VIEW -->
+					<div id="top">
+						<div class="bg">
+							<div class="top-inner">
+								<h1 class="title">Mine Art Online</h1>
 
-					var tex = document.getElementById("contact-form-mailaddress").value;
-					var Seiki = /^[a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
-
-					if (tex == '') {
-						document.getElementById("contact-form-error1").style.display = 'block';
-						return false;
-					} else {
-						document.getElementById("contact-form-error1").style.display = 'none';
-					}
-
-					if (!(tex.match(Seiki))) {
-						document.getElementById("contact-form-error2").style.display = 'block';
-						return false;
-					} else {
-						document.getElementById("contact-form-error2").style.display = 'none';
-					}
-
-					var tex = document.getElementById("contact-form-subject").value;
-
-					if (tex == '') {
-						document.getElementById("contact-form-error3").style.display = 'block';
-						return false;
-					} else {
-						document.getElementById("contact-form-error3").style.display = 'none';
-					}
-
-					var tex = document.getElementById("contact-form-message").value;
-
-					if (tex == '') {
-						document.getElementById("contact-form-error4").style.display = 'block';
-						return false;
-					} else {
-						document.getElementById("contact-form-error4").style.display = 'none';
-					}
-
-					document.ContactForm.submit();
-					document.getElementById('contact-formForm').style.display = 'none';
-					document.getElementById('contact-form-thxMessage').style.display = 'block';
-					$('._drawer_bg').fadeOut();
-					$('._drawer_button').removeClass('active');
-					$('nav').removeClass('open');
-					$('body').css('overflow', 'auto');
-								// window.removeEventListener( 'touchmove' , movefun, { passive: false } );
-
-							}
-						</script>
-					</div>
-				</div>
-			</section>
-
-			<header>
-				<div class="header-drawer left">
-					<div class="_drawer_bg"></div>
-					<button type="button" class="_drawer_button">
-						<span class="_drawer_bar _drawer_bar1"></span>
-						<span class="_drawer_bar _drawer_bar2"></span>
-						<span class="_drawer_bar _drawer_bar3"></span>
-						<span class="_drawer_menu_text _drawer_text">MENU</span>
-						<span class="_drawer_close _drawer_text">CLOSE</span>
-					</button>
-					<nav class="_drawer_nav_wrapper">
-						<ul class="_drawer_nav">
-							<li><a href="./" onclick="gtag('event', 'click', {'event_category': 'Menu', 'event_label': 'Top'});">TOP</a></li>
-
-							<li><a href="./" onclick="gtag('event', 'click', {'event_category': 'Menu', 'event_label': 'Info'});">INFO</a></li>
-
-							<li><a class="layer_board_btn" href="#" onclick="gtag('event', 'click', {'event_category': 'Menu', 'event_label': 'News'});">NEWS</a></li>
-
-							<li><a href="https://goo.gl/Zrg1r4" target="_blank" onclick="gtag('event', 'click', {'event_category': 'Menu', 'event_label': 'YouTube'});">YOUTUBE</a></li>
-
-							<li><a href="https://goo.gl/Prtyc3" target="_blank" onclick="gtag('event', 'click', {'event_category': 'Menu', 'event_label': 'Discord'});">DISCORD</a></li>
-
-							<br />
-
-							<li><a href="https://goo.gl/z3w6ux" target="_blank" onclick="gtag('event', 'click', {'event_category': 'Menu', 'event_label': 'Twitter'});">TWITTER</a></li>
-
-							<li><a id="openContact-form" href="#" onclick="gtag('event', 'click', {'event_category': 'Menu', 'event_label': 'Contact'});">CONTACT</a></li>
-
-							<li><a id="openModal" href="#" onclick="gtag('event', 'click', {'event_category': 'Menu', 'event_label': 'Donate'});">DONATE</a></li>
-
-							<li>
-								<div class="lang" language="en"><a class="language" href="#ja" onclick="gtag('event', 'click', {'event_category': 'Menu', 'event_label': 'Japanese'});">JAPANESE</a></div>
-								<div class="lang" language="ja"><a class="language" href="#en" onclick="gtag('event', 'click', {'event_category': 'Menu', 'event_label': 'English'});">ENGLISH</a></div>
-							</li>
-						</ul>
-					</nav>
-				</div>
-			</header>
-
-			<div class="header-logo">
-				<a href="./"><img src="./assets/image/logo_w.png" class="title-img mosaic" /></a>
-			</div>
-			<div id="top">
-				<div class="bg mosaic">
-					<div class="top-inner">
-						<h1 class="title lang ja" language="ja">ようこそ この世界へ。</h1>
-						<h1 class="title lang en" language="en">Welcome to this world.</h1>
-						<!-- <h1 class="title lang ja" language="ja">アルファテストまで...</h1> -->
-						<!-- <h1 class="title lang en" language="en">Until alpha test...</h1> -->
-						<!-- <div class="title" id="countdown"></div> -->
-
-
-<!-- 						<script type="text/javascript" src="./assets/js/count.js"></script>
+								<!-- COUNT DOWN -->
+<!-- 						<h1 class="title lang ja">アルファテストまで...</h1>
+						<div class="title" id="countdown"></div>
+						<script type="text/javascript" src="./assets/js/count.js"></script>
 						<script type="text/javascript">
 							countDown();
 						</script> -->
-						<!-- <img src="./assets/image/logo_w.png" class="title-img"> -->
 						<div class="top-span"></div>
 						<h3>===ACCESS===</h3><br />
 						<h3>IP: xxxxxxxxxxxx</h3>
@@ -381,35 +137,18 @@
 					<h2>STORY</h2>
 				</div>
 				<div class="story-about demo_center flash">
-					<div class="lang" language="ja">
-						<h4>20xx年 人類はついに―</h4><br />
-						<h4>完全なる仮想世界を実現した</h4><br />
-						<br />
-						<h4>今だ人気を誇る、Sword Art Online</h4><br />
-						<h4>SAOをマインクラフトスケールでお届けする</h4><br />
-						<br />
-						<h4>― 日本最大級の建築(だと思う)</h4><br />
-						<h4>― 各フロアに待ち受けるフロアボス(を作成予定)</h4><br />
-						<h4>―100層にも及ぶフィールド(もつくりたい)</h4><br />
-						<br />
-						<h4>― MMORPGのかつてない冒険へ ―</h4><br />
-						<br />
-					</div>
-
-					<div class="lang" language="en">
-						<h4> 20xx years mankind finally―</h4><br />
-						<h4> Realized a complete virtual world</h4><br />
-						<br />
-						<h4> Boasting popularity now, Sword Art Online</h4><br />
-						<h4> Deliver SAO on Maincraft Scale</h4><br />
-						<br />
-						<h4>― Japan's largest architecture (I think it is)</h4><br />
-						<h4>― Floor boss waiting for each floor (planned to be created)</h4><br />
-						<h4>― 100 field-wide field (I also want to make it)</h4><br />
-						<br />
-						<h4>― To the unprecedented adventure of MMORPG ―</h4><br />
-						<br />
-					</div>
+					<h4>20xx年 人類はついに―</h4><br />
+					<h4>完全なる仮想世界を実現した</h4><br />
+					<br />
+					<h4>今だ人気を誇る、Sword Art Online</h4><br />
+					<h4>SAOをマインクラフトスケールでお届けする</h4><br />
+					<br />
+					<h4>― 日本最大級の建築(だと思う)</h4><br />
+					<h4>― 各フロアに待ち受けるフロアボス(を作成予定)</h4><br />
+					<h4>―100層にも及ぶフィールド(もつくりたい)</h4><br />
+					<br />
+					<h4>― MMORPGのかつてない冒険へ ―</h4><br />
+					<br />
 				</div>
 			</div>
 
@@ -417,9 +156,9 @@
 				<div class="table-tag demo_center flash">
 					<h2>MOVIE</h2>
 				</div>
-				<div onclick="gtag('event', 'click', {'event_category': 'Videos', 'event_label': 'OfficialPV'});">
-					<iframe id="ytplayer" class="demo_center flash" type="text/html" src="https://www.youtube.com/embed/jfzF1ojRt0A?color=white?rel=0&start=0?end=144" frameborder="0" allowfullscreen></iframe>
-				</div>
+				<a href="https://www.youtube.com/embed/jfzF1ojRt0A?autoplay=1&color=white" class="switchModal">
+					<img src="./assets/image/movie.jpg" />
+				</a>
 			</div>
 			<div id="thanks">
 				<div class="table-tag white demo_center flash">
@@ -428,21 +167,18 @@
 				<div id="thanks-list" class="demo_center flash">
 					<div class="thanks-list-content">
 						<img src="https://yt3.ggpht.com/a-/AAuE7mAtkF1oRsz78EMM6qzEVaxhCrJN-yu0PIkoDA=s288-mo-c-c0xffffffff-rj-k-no" />
-						<h5 class="lang" language="ja">ゆーけむProject!</h5>
-						<h5 class="lang" language="en">Yu_kemu</h5>
+						<h5>ゆーけむProject!</h5>
 						<h6><a href="https://goo.gl/qETjTr" target="_blank" onclick="gtag('event', 'click', {'event_category': 'Thanks', 'event_label': 'Yukemu'});">LINK</a></h6>
 					</div>
 					<div class="thanks-list-content">
 						<img src="https://yt3.ggpht.com/a-/AAuE7mCHCPFLB1o90uGccJ3bIoGOgggw-1hWiFijLQ=s288-mo-c-c0xffffffff-rj-k-no" />
-						<h5 class="lang" language="ja">きらくん。</h5>
-						<h5 class="lang" language="en">KIRA</h5>
+						<h5>きらくん。</h5>
 						<!-- <h6><a>LINK</a></h6> -->
 						<h6><a href="https://goo.gl/gs9Agd" target="_blank" onclick="gtag('event', 'click', {'event_category': 'Thanks', 'event_label': 'Kira'});">LINK</a></h6>
 					</div>
 					<div class="thanks-list-content">
 						<img src="https://yt3.ggpht.com/a-/AAuE7mCJBTbXH5M5Wp7c3y2HZVWJywbXJ1v-EmIDpw=s288-mo-c-c0xffffffff-rj-k-no" />
-						<h5 class="lang" language="ja">実況者ねが</h5>
-						<h5 class="lang" language="en">NEGA</h5>
+						<h5>実況者ねが</h5>
 						<!-- <h6><a>LINK</a></h6> -->
 						<h6><a href="https://goo.gl/XJsPBY" target="_blank" onclick="gtag('event', 'click', {'event_category': 'Thanks', 'event_label': 'Nega'});">LINK</a></h6>
 					</div>
@@ -452,18 +188,17 @@
 		</div>
 
 		<footer>
-			<img src="./assets/image/logo_w.png" class="mosaic" />
+			<img src="./assets/image/logo_w.png" />
 			<h3>Copyright ©Nazuna All Rights Reserved.</h3>
 		</footer>
 
 		<script type="text/javascript" src="./assets/js/cookie.js"></script>
-		<script type="text/javascript" src="./assets/js/lang.js"></script>
-		<script type="text/javascript" src="./assets/js/header.js"></script>
-		<script type="text/javascript" src="./assets/js/type.js"></script>
 		<script type="text/javascript" src="./assets/js/news.js"></script>
 		<script type="text/javascript" src="./assets/js/modal.js"></script>
 
 		<script type="text/javascript" src="./assets/js/scroll.js"></script>
+
+		<script type="text/javascript" src="./assets/js/load.js"></script>
 	</div>
 </div>
 </body>

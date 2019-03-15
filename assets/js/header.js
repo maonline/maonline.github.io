@@ -2,10 +2,6 @@ movefun = function( event ){
 	event.preventDefault();
 }
 
-function BanScroll() {
-
-}
-
 $(function () {
 	$('._drawer_button').click(function () {
 
