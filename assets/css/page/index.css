@@ -4,8 +4,8 @@
 /*font-family: 'Teko', sans-serif;*/
 
 @font-face {
-	font-family: 'SAO UI';
-	src: url("../font/SAO.otf");
+	font-family: 'SAOUI-Regular';
+	src: url("../../font/SAOUI-Regular.otf");
 }
 
 /* TOP */
@@ -46,7 +46,7 @@
 
 	/*font-family: 'Kaiso-Next-B', monospace;*/
 	/*font-family: 'Teko', sans-serif;*/
-	font-family: 'SAO UI';
+	font-family: 'SAOUI-Regular';
 	font-size: 5.5vw;
 	letter-spacing: 0.4vw;
 }
