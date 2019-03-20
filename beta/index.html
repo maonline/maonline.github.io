@@ -47,6 +47,15 @@
 		firebase.initializeApp(config);
 	</script>
 
+	<link rel="manifest" href="manifest.json">
+
+	<script src="https://s.pushnate.com/pushnateWorker.js"></script>
+	<script type="text/javascript">
+		setTimeout(function () {
+			Pushnate.push(["init", { path: "/", site_id: "dacc57470fee2c4a0c549a8c935d90a7" }]);
+		}, 5 * 1000);
+	</script>
+
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
 	<!-- Global site tag (gtag.js) - Google Analytics -->
@@ -216,21 +225,6 @@
 				<img src="./assets/image/logo_w.png" />
 				<h3>Copyright ©Nazuna All Rights Reserved.</h3>
 			</footer>
-
-			<script src="https://s.pushnate.com/pushnateWorker.js"></script>
-			<link rel="manifest" href="/manifest.json">
-
-			<script type="text/javascript">
-				setTimeout(function () {
-					Pushnate.push(["init", { path: "/", site_id: "dacc57470fee2c4a0c549a8c935d90a7" }]);
-				}, 5 * 1000);
-			</script>
-
-<!-- 			<script type="text/javascript">
-				$(function(){
-					$.simpleTicker($("#ticker"));
-				});
-			</script> -->
 
 			<script type="text/javascript" src="./assets/js/cookie.js"></script>
 			<script type="text/javascript" src="./assets/js/ticker.js"></script>
