@@ -1,35 +1,11 @@
 var isFin = Boolean(false);
 
 $(function() {
-	url = location.href;
-	if(url.match("#donate")) {
-		console.log("DONATE");
-		isFin = true;
-		openModal("assets/loader/donate.html");
-		return false;
-	}
-
-	if(url.match("#contact")) {
-		console.log("DONATE");
-		isFin = true;
-		openModal("assets/loader/contact.html");
-		return false;
-	}
-
-
 	if (!(getParam('modal') == null)) {
 		console.log(getParam('modal'));
 		isFin = true;
 		openModal(getParam('modal'));
 	}
-
-	// if(url.match("#news")) {
-	// 	console.log("NEWS");
-	// 	isFin = true;
-	// 	$('.layer_board_bg').show();
-	// 	$('.layer_board').show();																																					
-	// 	return false;
-	// }
 });
 
 $(window).on('load', function() {

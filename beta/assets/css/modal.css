@@ -2,13 +2,16 @@
    CHAPTER ELEMENTS
 ------------------------------ */
 #mdOverlay {
+	display: none;
+	position: fixed;
 	top: 0;
 	left: 0;
-	width: 100%;
-	position: fixed;
+	right: 0;
+	bottom: 0;
 	z-index: 8000;
 	background: #000;
-	display: none;
+	overflow: hidden;
+	overflow-y: auto;
 }
 
 #mdWindow {
@@ -22,22 +25,22 @@
 	background: #fff;
 	display: none;
 	text-align: center;
+	-webkit-overflow-scrolling: touch;		
 }
 
 #mdWindow > .mdClose {
-	top: -15px;
-	right: -15px;
+	top: 6px;
+	right: 6px;
 	width: 30px;
 	height: 30px;
 	line-height: 30px;
-	color: #fff;
+	color: #ffffff;
 	font-size: 1.5em;
-	background: #757575;
-	border-radius: 30px;
+	background: #333333;
+	border-radius: 35px;
 	position: absolute;
 	z-index: 99;
 	cursor: pointer;
-	box-shadow: 0 0 3px 0 #000;
 }
 
 #modalInclude {
@@ -68,9 +71,16 @@
 }
 
 @media (max-width: 767px) {
+
 	#mdWindow {
-		width: 90vw;
-		height: 90vh;
+		width: 80vw;
+		height: 80vh;
+		overflow: scroll;
+	}
+
+	.showing_modal {
+		position: fixed;
+		overflow: hidden;
 	}
 
 }

@@ -37,8 +37,9 @@ $(function () {
 		$('._drawer_button').removeClass('active');
 		$('nav').removeClass('open');
 
-		console.log("off");
-		$('.header-drawer').css('height', '100px');
+		sleep(50, function () {
+			$('.header-drawer').css('height', '100px');
+		});
 	});
 })
 
