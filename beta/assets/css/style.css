@@ -1,0 +1,287 @@
+@font-face {
+	font-family: 'Kaiso-Next-B';
+	src: url("../font/Kaiso-Next-B.otf");
+}
+
+/*スクロールバー全体*/
+::-webkit-scrollbar {
+	width: 10px;
+}
+
+/*スクロールバーの軌道*/
+::-webkit-scrollbar-track {
+	background: #111111;
+	/*border-left: solid 1px #ececec;*/
+}
+
+/*スクロールバーの動く部分*/
+::-webkit-scrollbar-thumb {
+	background-color: #666666;
+	border-radius: 10px;
+	/*box-shadow: inset 0 0 0 2px #fff;*/
+}
+
+#loader-bg {
+	display: none;
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0px;
+	left: 0px;
+	color: #daf6ff;
+	background: #0f3854;
+	background: radial-gradient(ellipse at center, #0a2e38 0%, #000000 70%);
+	background-size: 100%;
+	z-index: 11000;
+	text-align: center;
+}
+
+#loader {
+	display: none;
+	position: fixed;
+	
+	width: 500px;
+	left: calc((100% - 500px) / 2);
+	height: 60px;
+	top: calc((100% - 60px) / 2);
+
+	z-index: 11001;
+
+	text-align: center;
+	color: #fff;
+	text-shadow: 0 0 20px #0aafe6, 0 0 20px rgba(10, 175, 230, 0);
+	font-family: 'Share Tech Mono', monospace;
+	font-size: 6.5vh;
+
+	animation: loading-flash 1.5s infinite linear;
+	-webkit-animation: loading-flash 1.5s infinite linear;
+	-moz-animation: loading-flash 1.5s infinite linear;
+
+}
+
+@keyframes loading-flash {
+	0% { opacity: 0.2; }
+	50% { opacity: 1; }
+	100% { opacity: 0.2; }
+}
+@-webkit-keyframes loading-flash {
+	0% { opacity: 0.2; }
+	50% { opacity: 1; }
+	100% { opacity: 0.2; }
+}
+@-moz-keyframes loading-flash {
+	0% { opacity: 0.2; }
+	50% { opacity: 1; }
+	100% { opacity: 0.2; }
+}
+
+.flash {
+	opacity: 0;
+}
+
+.flash.do {
+	-webkit-animation: FlashAni .1s cubic-bezier(.47, 0, .745, .715) forwards normal;
+	animation: FlashAni .1s cubic-bezier(.47, 0, .745, .715) forwards normal;
+	animation-iteration-count: 4;
+
+	-webkit-animation-iteration-count: 4;
+}
+
+@-webkit-keyframes FlashAni {
+	0% {
+		-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+		opacity: 1;
+	}
+	50% {
+		-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+		opacity: 0;
+	}
+	to {
+		-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+		opacity: 1;
+	}
+}
+
+@keyframes FlashAni {
+	0% {
+		-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+		opacity: 1;
+	}
+	50% {
+		-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+		opacity: 0;
+	}
+	to {
+		-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+		opacity: 1;
+	}
+}
+
+.table-tag {
+	width: 100%;
+}
+
+.table-tag h2 {
+	position: relative;
+	font-size: 6vw;
+	line-height: 0.6;
+	padding:0.25em 1em;
+	display: inline-block;
+	top: 0;
+	margin: 40px;
+	color: #003996;
+	text-shadow: 0 0 20px #0aafe6, 0 0 20px rgba(10, 175, 230, 0);
+	font-family: 'Share Tech Mono', monospace;
+}
+
+.table-tag h2:before, .table-tag h2:after { 
+	position: absolute;
+	top: 0;
+	content:'';
+	width: 8px;
+	height: 100%;
+	display: inline-block;
+}
+
+.table-tag h2:before {
+	border-left: solid 8px #003996;
+	border-top: solid 3px #003996;
+	border-bottom: solid 3px #003996;
+	left: 0;
+}
+
+.table-tag h2:after {
+	content: '';
+	border-top: solid 3px #003996;
+	border-right: solid 8px #003996;
+	border-bottom: solid 3px #003996;
+	right: 0;
+}
+
+.table-tag.white h2 {
+	color: #FFFFFF;
+}
+
+.table-tag.white h2:before {
+	border-left: solid 8px #FFFFFF;
+	border-top: solid 3px #FFFFFF;
+	border-bottom: solid 3px #FFFFFF;
+}
+
+.table-tag.white h2:after {
+	border-top: solid 3px #FFFFFF;
+	border-right: solid 8px #FFFFFF;
+	border-bottom: solid 3px #FFFFFF;
+}
+
+@media (max-width: 767px) {
+
+	.table-tag h2 {
+		font-size: 14vw;
+	}
+
+}
+
+/* ============[NEWS CSS BIGIN]============ */
+
+* html .layer_board_bg,
+* html .layer_board {
+	position: absolute;
+}
+
+.layer_board_bg {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	overflow-y: hidden;
+	opacity: 0.8;
+	
+	z-index: 1000;
+	
+	top: 0;
+	left: 0;
+	
+	display: none;
+	cursor: pointer;
+	background: #000;
+}
+
+.layer_board {
+	display: none;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	/*left: 50%;*/
+	/*margin: 50px 0px 0px -285px;*/
+	/*background-color: red;*/
+	
+	text-align: center;
+	z-index: 2000;
+}
+
+.news_img {
+	width: 50vw;
+	border-radius: 15px;
+	box-shadow: 0 0 16px #000000;
+}
+
+.news_close {
+	margin-top: 10px;
+	width: 10vw;
+}
+
+
+@media (max-width: 767px) {
+	.news_img {
+		width: 90vw;
+	}
+
+	.news_close {
+		margin-top: 10px;
+		width: 30vw;
+	}
+}
+
+/* [ FOOTER ] */
+
+footer {
+	width: 100%;
+	height: 30vh;
+
+	background-color: #111111;
+	color: #eeeeee;
+	text-align: center;
+
+	font-family: 'Share Tech Mono', monospace;
+}
+
+footer img {
+	padding-top: 30px;
+	height: 100px;
+}
+
+footer h3 {
+	font-size: 18px;
+	padding-top: 10px;
+	/*background-color: red;*/
+}
+
+@media (max-width: 959px) {
+
+	footer {
+		height: 22vh;
+	}
+
+	footer img {
+		height: 15vw;
+		padding-top: 20px;
+	}
+
+	footer h3 {
+		font-size: 12px;
+		padding-top: 20px;
+		/*background-color: red;*/
+	}
+
+}
