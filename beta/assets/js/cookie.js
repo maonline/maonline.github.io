@@ -63,7 +63,7 @@
 				options.path    ? '; path=' + options.path : '',
 				options.domain  ? '; domain=' + options.domain : '',
 				options.secure  ? '; secure' : ''
-			].join(''));
+				].join(''));
 		}
 
 		// Read
@@ -76,12 +76,12 @@
 			i = 0,
 			l = cookies.length;
 
-		for (; i < l; i++) {
-			var parts = cookies[i].split('='),
+			for (; i < l; i++) {
+				var parts = cookies[i].split('='),
 				name = decode(parts.shift()),
 				cookie = parts.join('=');
 
-			if (key === name) {
+				if (key === name) {
 				// If second argument (value) is a function it's a converter...
 				result = read(cookie, value);
 				break;

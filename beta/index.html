@@ -106,7 +106,7 @@
 					</header>
 
 					<div class="header-logo">
-						<a href="./"><img src="./assets/image/logo_w.png" class="title-img" /></a>
+						<a href="/"><img src="./assets/image/logo_w.png" class="title-img" /></a>
 					</div>
 
 					<!-- TOP FIRST VIEW -->
@@ -209,12 +209,40 @@
 				<h3>Copyright ©Nazuna All Rights Reserved.</h3>
 			</footer>
 
+			<script src="https://www.gstatic.com/firebasejs/5.9.0/firebase.js"></script>
+			<script>
+				// Initialize Firebase
+				var config = {
+					apiKey: "AIzaSyDvzuWZIrfSlOEJBuvnP-sJy--zr6oAdxA",
+					authDomain: "maominenetwork.firebaseapp.com",
+					databaseURL: "https://maominenetwork.firebaseio.com",
+					projectId: "maominenetwork",
+					storageBucket: "",
+					messagingSenderId: "771551748346"
+				};
+				firebase.initializeApp(config);
+			</script>
+
+<!-- 			<script src="pushnateSDK.js"></script>
+			<link rel="manifest" href="/manifest.json">
+
+			<script type="text/javascript">
+				Pushnate.push(["userStatus", function() {
+					console.log("installed");
+				}, function() {
+					console.log("un installed");
+					setTimeout(function () {
+						Pushnate.push(["init", { path: "/", site_id: "AIzaSyAY16it2F8UnnGnWVBWrViqX3sH_mC3EX0" }]);
+					}, 5 * 1000);
+				}]);
+
+			</script> -->
+
 			<script type="text/javascript" src="./assets/js/cookie.js"></script>
 			<script type="text/javascript" src="./assets/js/ticker.js"></script>
 			<script type="text/javascript" src="./assets/js/news.js"></script>
 			<script type="text/javascript" src="./assets/js/modal.js"></script>
 			<script type="text/javascript" src="./assets/js/scroll.js"></script>
-
 			<script type="text/javascript" src="./assets/js/load.js"></script>
 		</div>
 	</div>
