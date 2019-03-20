@@ -55,24 +55,28 @@ $(function(){
 });
 
 function stopload(){
-	$('#wrap').css('display','block');
-	$('#loader-bg').delay(900).fadeOut(800);
-	$('#loader').delay(600).fadeOut(300);
-	showNews();
+	if (isFin == false) {
+		isFin = true;
+	
+		$(function(){
+			$.simpleTicker($("#ticker"));
+		});
+		$('#wrap').css('display','block');
+		$('#loader-bg').delay(900).fadeOut(800);
+		$('#loader').delay(600).fadeOut(300);
+		showNews();
+	}
 }
 
 
 function showNews() {
-	if (isFin == false) {
-		isFin = true;
-		$('#layer_board_area').layerBoard({
-			delayTime: 0,
-			fadeTime : 1000,
-			alpha : 0.8,
-			limitMin : 15,
-			limitCookie : 10
-		});
-	}
+	$('#layer_board_area').layerBoard({
+		delayTime: 0,
+		fadeTime : 1000,
+		alpha : 0.8,
+		limitMin : 15,
+		limitCookie : 10
+	});
 }
 
 function getParam(name, url) {

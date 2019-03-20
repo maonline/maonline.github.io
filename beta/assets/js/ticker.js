@@ -26,7 +26,7 @@ var inSite = Boolean("true");
 
 		var defaults = {
 			speed : 1000,
-			delay : 3000,
+			delay : 4000,
 			easing : 'swing',
 			effectType : 'slide'
 		}
