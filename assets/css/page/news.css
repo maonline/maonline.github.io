@@ -19,7 +19,7 @@ h1 {
 
 hr {
 	text-align: center;
-	height: 5px;
+	height: 10px;
 	background-color: #333333;
 	width: 90%;
 	border: none;
@@ -52,6 +52,10 @@ p {
 
 	p {
 		font-size: 15px;
+	}
+
+	hr {
+		height: 5px;
 	}
 
 }
