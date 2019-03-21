@@ -17,13 +17,20 @@ h1 {
 	font-size: 30px;
 }
 
+hr {
+	text-align: center;
+	height: 5px;
+	background-color: #333333;
+	width: 90%;
+	border: none;
+}
+
 #title {
 	width: 100%;
 }
 
 #date {
 	display: inline;
-	float: right;
 	font-size: 22px;
 	vertical-align: middle;
 }
@@ -31,4 +38,20 @@ h1 {
 p {
 	font-family: 'Sawarabi Gothic', sans-serif;
 	font-size: 20px;
+}
+
+@media (max-width: 767px) {
+
+	h1 {
+		font-size: 20px;
+	}
+
+	#date {
+		font-size: 15px;
+	}
+
+	p {
+		font-size: 15px;
+	}
+
 }
