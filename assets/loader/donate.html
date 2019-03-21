@@ -1,0 +1,78 @@
+<body>
+	<link rel="stylesheet" href="../css/form.css">
+
+	<section id="modalArea" class="modalArea">
+		<div class="modalWrapper">
+			<div class="Contents demo_center flash">
+				<div id="formWrapper">
+					<p class="desc">
+						MineNetWorkは寄付を受け付けております。<br />
+						寄付のお礼として、サーバー内ランクを付与いたします。<br />
+						この寄付に対しての返金は対応していません。<br />
+						ご了承ください。<br />
+					</p>
+					<form action="https://docs.google.com/forms/d/e/1FAIpQLScVnMpfZet9Yt09fkJHASjzqGgiZCvaqhV530iprx1jI83gGQ/formResponse" method="post" name="myForm" target="dummyIframe" id="Form">
+						<div>
+							<label>ディスコード ID</label>
+							<br />
+							<input type="text" id="discord-id" name="entry.2005620554" placeholder="Kirito#1234" value="" required />
+						</div>
+						<div class="form-space-sp"></div>
+						<div>
+							<label>アマゾンギフトコード</label>
+							<br />
+							<input type="text" id="gift-code" name="entry.1065046570" placeholder="ABCD-EFGHIJ-KLMNO"  value="" required />
+						</div>
+						<div class="form-space-sp"></div>
+						<div>
+							<label>メッセージ</label>
+							<br />
+							<textarea id="message" placeholder="※必須ではありません" name="entry.839337160"></textarea>
+						</div>
+						<div class="form-space-sp"></div>
+						<div>
+							<input type="button" value="送信" onclick="sendGform()">
+						</div>
+					</form>
+					<iframe name="dummyIframe" style="display:none;"></iframe>
+
+				</div>
+				<div id="thxMessage" style="display: none;" class="demo_center flash">
+					<p class="thx-message">寄付の送信ありがとうございました!</p>
+				</div>
+				<script>
+					function sendGform(){
+
+						var tex = document.getElementById("discord-id").value;
+						var Seiki = /^.+#([0-9]{4,4})$/;
+
+						if (tex == '') {
+							alert('ディスコードIDを記入してください。');
+							return false;
+						}
+
+						if (!(tex.match(Seiki))) {
+							alert('ディスコードIDのフォーマットが異なります。');
+							return false;
+						}
+
+						var tex = document.getElementById("gift-code").value;
+
+						if (tex == '') {
+							alert('ギルトコードを記入してください。');
+							return false;
+						}
+
+						document.myForm.submit();
+						document.getElementById('Form').style.display = 'none';
+						document.getElementById('thxMessage').style.display = 'block';
+						$('._drawer_bg').fadeOut();
+						$('._drawer_button').removeClass('active');
+						$('nav').removeClass('open');
+						// window.removeEventListener( 'touchmove' , movefun, { passive: false } );
+					}
+				</script>
+			</div>
+		</div>
+	</section>
+</body>

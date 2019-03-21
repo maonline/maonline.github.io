@@ -1,0 +1,84 @@
+<body>
+	<link rel="stylesheet" href="../css/form.css">
+
+	<section id="contact-form" class="contact-form">
+		<div class="formWrapper">
+			<div class="Contents demo_center flash">
+				<div id="Wrapper">
+					<p class="desc">
+						運営に対しての意見・要望はこちらにて受け付けております。<br />
+						返信には最大2週間ほどいただきます。<br />
+						ご了承ください。<br />
+					</p>
+					<form action="https://docs.google.com/forms/d/e/1FAIpQLSdMqbOUZkONbjlkBpEkz9svLFc__M80HmAHy7FTjZ-yLMbyYA/formResponse" method="post" name="ContactForm" target="dummyIframe" id="Form">
+						<div>
+							<label>メールアドレス</label>
+							<br />
+							<input type="text" id="mailaddress" name="entry.713871945" placeholder="mailaddress@example.com" value="" required />
+						</div>
+						<div class="form-space-sp"></div>
+						<div>
+							<label>件名</label>
+							<br />
+							<input type="text" id="subject" name="entry.1444656011" placeholder="QUESTION"  value="" required />
+						</div>
+						<div class="form-space-sp"></div>
+						<div>
+							<label>内容</label>
+							<br />
+							<textarea id="message" name="entry.95113534"></textarea>
+						</div>
+						<div class="form-space-sp"></div>
+						<div>
+							<input type="button" value="送信" onclick="sendGformContactForm()">
+						</div>
+					</form>
+					<iframe name="dummyIframe" style="display:none;"></iframe>
+
+				</div>
+				<div id="thxMessage" style="display: none;" class="demo_center flash">
+					<p class="thx-message">送信を完了しました。</p>
+				</div>
+				<script>
+					function sendGformContactForm(){
+
+						var tex = document.getElementById("mailaddress").value;
+						var Seiki = /^[a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+
+						if (tex == '') {
+							alert('メールアドレスを記入してください。');
+							return false;
+						}
+
+						if (!(tex.match(Seiki))) {
+							alert('メールアドレスが正しくありません。');
+							return false;
+						}
+
+						var tex = document.getElementById("subject").value;
+
+						if (tex == '') {
+							alert('件名を記入してください。');
+							return false;
+						}
+
+						var tex = document.getElementById("message").value;
+
+						if (tex == '') {
+							alert('内容を記入してください。');
+							return false;
+						}
+
+						document.ContactForm.submit();
+						document.getElementById('Form').style.display = 'none';
+						document.getElementById('thxMessage').style.display = 'block';
+						$('._drawer_bg').fadeOut();
+						$('._drawer_button').removeClass('active');
+						$('nav').removeClass('open');
+									// window.removeEventListener( 'touchmove' , movefun, { passive: false } );
+					}
+				</script>
+			</div>
+		</div>
+	</section>
+</body>
