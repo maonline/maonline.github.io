@@ -29,7 +29,7 @@
 	position: absolute;
 	width: 100%;
 	height: 60vh;
-	top: 40vh;
+	top: 35vh;
 	text-align: center;
 
 }
@@ -114,7 +114,7 @@
 	@media (max-width: 767px) {
 
 		.top-inner {
-			top: 40vh;
+			top: 30vh;
 		}
 
 		#top .title-img {
