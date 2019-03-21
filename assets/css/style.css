@@ -3,6 +3,26 @@
 	src: url("../font/Kaiso-Next-B.otf");
 }
 
+@media screen and (min-width:1000px) {
+	/*スクロールバー全体*/
+	::-webkit-scrollbar {
+		width: 10px;
+	}
+
+	/*スクロールバーの軌道*/
+	::-webkit-scrollbar-track {
+		background: #111111;
+		/*border-left: solid 1px #ececec;*/
+	}
+
+	/*スクロールバーの動く部分*/
+	::-webkit-scrollbar-thumb {
+		background-color: #666666;
+		border-radius: 10px;
+		/*box-shadow: inset 0 0 0 2px #fff;*/
+	}
+}
+
 #loader-bg {
 	display: none;
 	position: fixed;
@@ -42,19 +62,19 @@
 }
 
 @keyframes loading-flash {
-    0% { opacity: 0.2; }
-    50% { opacity: 1; }
-    100% { opacity: 0.2; }
+	0% { opacity: 0.2; }
+	50% { opacity: 1; }
+	100% { opacity: 0.2; }
 }
 @-webkit-keyframes loading-flash {
-    0% { opacity: 0.2; }
-    50% { opacity: 1; }
-    100% { opacity: 0.2; }
+	0% { opacity: 0.2; }
+	50% { opacity: 1; }
+	100% { opacity: 0.2; }
 }
 @-moz-keyframes loading-flash {
-    0% { opacity: 0.2; }
-    50% { opacity: 1; }
-    100% { opacity: 0.2; }
+	0% { opacity: 0.2; }
+	50% { opacity: 1; }
+	100% { opacity: 0.2; }
 }
 
 .flash {

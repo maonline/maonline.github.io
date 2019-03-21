@@ -1,6 +1,6 @@
 var posi_top,wih_half,current_view;
 
-$(window).load(function(){
+$(window).on('load', function() {
 
 	var wih = window.innerHeight;
 	var wih_half = wih/2;

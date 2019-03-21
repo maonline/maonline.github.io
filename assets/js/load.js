@@ -1,68 +1,63 @@
-var isFin = Boolean(false);
+var isFin = false;
+var noOpenNews = false;
 
 $(function() {
-	url = location.href;
-	if(url.match("#donate")) {
-		console.log("DONATE");
-		isFin = true;
-		return false;
+
+	//If URL has parameter
+	if (!(getParam('modal') == null)) {
+			console.log(getParam('modal'));
+			noOpenNews = true;
 	}
-
-	if(url.match("#contact")) {
-		console.log("DONATE");
-		isFin = true;
-		return false;
-	}
-
-	// if(url.match("#news")) {
-	// 	console.log("NEWS");
-	// 	isFin = true;
-	// 	$('.layer_board_bg').show();
-	// 	$('.layer_board').show();																																					
-	// 	return false;
-	// }
-});
-
-$(window).load(function(){
-	$('html, body').animate({ scrollTop: 0 }, '1');
-});
-
-$(function() {
-	// console.log("LOAD");
-	var h = $(window).height();
-
-	$('#wrap').css('display','none');
-	$('#loader-bg, #loader').height(h).css('display', 'block');
-
-});
-
-$(window).load(function () { //全ての読み込みが完了したら実行
-	stopload();
-});
-
-//10秒たったら強制的にロード画面を非表示
-$(function(){
 	setTimeout('stopload()', 5000);
 });
 
+$(window).on('load', function() { //全ての読み込みが完了したら実行
+	stopload();
+});
+
 function stopload(){
-	$('#wrap').css('display','block');
-	$('#loader-bg').delay(900).fadeOut(800);
-	$('#loader').delay(600).fadeOut(300);
-
-	showNews();
-}
-
-
-function showNews() {
 	if (isFin == false) {
 		isFin = true;
-		$('#layer_board_area').layerBoard({
-			delayTime: 0,
-			fadeTime : 1000,
-			alpha : 0.8,
-			limitMin : 15,
-			limitCookie : 10
+		//Reset Scroll
+		$('html, body').animate({ scrollTop: 0 }, '1');
+		//Run Ticker
+		$('.ticker').slick({
+			arrows: false,
+			autoplay: true,
+			autoplaySpeed: 5000,
+			dots: true,
+    		appendDots: $("#apDots")
 		});
+		//Blink Reset
+		$('.demo_center').each(function() {
+			$(this).removeClass('do');
+		});
+
+		//Show
+		$('#wrap').css('display','block');
+		$('#loader-bg').delay(900).fadeOut(800);
+		$('#loader').delay(600).fadeOut(300);
+
+		if (noOpenNews == false) {
+			$('#layer_board_area').layerBoard({
+				delayTime: 0,
+				fadeTime : 1000,
+				alpha : 0.8,
+				limitMin : 15,
+				limitCookie : 10
+			});
+		} else {
+			openModal(getParam('modal'));
+		}
 	}
+}
+
+function getParam(name, url) {
+	if (!url) url = window.location.href;
+	name = name.replace(/[\[\]]/g, "\\$&");
+	var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+	results = regex.exec(url);
+	if (!results) return null;
+	if (!results[2]) return '';
+	return decodeURIComponent(results[2].replace(/\+/g, " "));
 }

@@ -1,11 +1,11 @@
 .header-drawer {
 	position: absolute;
-	z-index: 999;
+	z-index: 12;
 	left: 0;
 	visibility: visible;
 	overflow: hidden;
 	width: 100%;
-	height: 100%;
+	height: auto;
 	padding-top: 0;
 	text-align: right;
 	opacity: 1;
@@ -37,6 +37,7 @@
 }
 
 .header-drawer a::after {
+	z-index: 999;
 	position: absolute;
 	bottom: 50%;
 	left: 0;
@@ -61,7 +62,7 @@
 @media (max-width: 959px) {
 
 	.header-drawer {
-		height: 130%;
+		height: 100px;
 	}
 
 	.header-drawer * {
@@ -210,6 +211,7 @@
 
 	.header-drawer.left ._drawer_nav_wrapper.open {
 		transform: translate(0);
+		height: 130%;
 	}
 
 	/*+++ Default Navigation CSS +++*/
