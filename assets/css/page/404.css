@@ -1,13 +1,3 @@
-@font-face {
-	font-family: 'SAOUI-Regular';
-	src: url("../../font/SAOUI-Regular.otf");
-}
-
-@font-face {
-	font-family: 'Kaiso-Next-B';
-	src: url("../../font/Kaiso-Next-B.otf");
-}
-
 body {
 	position: relative;
 	background-repeat: no-repeat;
@@ -19,32 +9,15 @@ body {
 	height: 100vh;
 	margin: auto;
 	transform:translate3d(0,0,0);
+	text-align: center;
 }
 
 #content {
 	display: inline-block;
 	position: relative;
 	width: 100%;
-	height: 50vh;
 	top: 30vh;
 	text-align: center;
-}
-
-.con {
-	position: absolute;
-	top: 12.5vh;
-	right: 0;
-	left: 0;
-}
-
-.con2 {
-	position: absolute;
-	top: 25vh;
-	right: 0;
-	left: 0;
-}
-
-#content {
 	opacity: 0;
 
 	animation: flash 0.1s 3 linear forwards;
@@ -59,19 +32,6 @@ body {
 	width: 30vw;
 }
 
-#content h1 {
-	font-family: 'SAOUI-Regular';
-	font-size: 5.5vw;
-	color: #111111;
-	/*text-shadow: black 0 0 5px;*/
-}
-
-#content h2 {
-	font-family: 'Kaiso-Next-B';
-	font-size: 1.5vw;
-	color: #111111;
-}
-
 @keyframes flash {
 	0%{
 		opacity: 1;
@@ -84,13 +44,10 @@ body {
 	}
 }
 
-@keyframes img-wrap {
-  0% {
-    clip-path: circle(0 at 50% 50%);
-    -webkit-clip-path: circle(0 at 50% 50%);
-  }
-  100% {
-    clip-path: circle(100% at 50% 50%);
-    -webkit-clip-path: circle(100% at 50% 50%);
-  }
+@media (max-width: 767px) {
+
+	#content img {
+		width: 80vw;
+	}
+
 }
