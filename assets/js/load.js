@@ -1,15 +1,23 @@
 var isFin = false;
 var noOpenNews = false;
+var type = "NONE";
 
 $(function() {
 
-	console.log('v1.8.2');
+	console.log('v1.8.3');
 
-	//If URL has parameter
 	if (!(getParam('modal') == null)) {
-			console.log(getParam('modal'));
-			noOpenNews = true;
+		//If URL has parameter
+		console.log(getParam('modal'));
+		noOpenNews = true;
+		type = "MODAL";
 	}
+
+	if (!(getParam('news') == null)) {
+		noOpenNews = true;
+		type = "NEWS";
+	}
+
 	setTimeout('stopload()', 5000);
 });
 
@@ -49,7 +57,21 @@ function stopload(){
 				limitCookie : 10
 			});
 		} else {
-			openModal(getParam('modal'));
+			console.log(type);
+
+			if (type == "NEWS") {
+				$('#layer_board_area').layerBoard({
+					delayTime: 0,
+					fadeTime : 1000,
+					alpha : 0.8,
+					limitMin : 0,
+					limitCookie : 10
+				});
+			} else {
+				if (type == "MODAL") {
+					openModal(getParam('modal'));
+				}
+			}
 		}
 	}
 }
