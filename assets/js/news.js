@@ -71,6 +71,9 @@
 				$(this).fadeOut(option.fadeTime);
 
 				$('body').css('overflow', 'auto');
+				sleep(500, function () {
+					$('.policy_check').css('display', 'none');
+				});
 				// window.removeEventListener( 'touchmove' , movefun, { passive: false } );
 			});
 
@@ -81,6 +84,9 @@
 				$('.layer_board_bg', elements).fadeOut(option.fadeTime);
 				
 				$('body').css('overflow', 'auto');
+				sleep(500, function () {
+					$('.policy_check').css('display', 'none');
+				});
 				// window.removeEventListener( 'touchmove' , movefun, { passive: false } );
 			});
 
@@ -88,7 +94,7 @@
 				ボタンによる表示処理
 				----------------------------------------*/
 			$('.layer_board_btn').click(function() {
-
+				$('.policy_check').css('display', 'none');
 				closeHeader();
 
 				$('.layer_board_bg', elements).show().animate({opacity: 0}, 0).delay(option.delayTime).animate({opacity: option.alpha},option.fadeTime,function(){
