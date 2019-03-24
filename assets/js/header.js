@@ -71,3 +71,15 @@ function sleep(waitSec, callbackFunc) {
         }
     }, 1);
 }
+
+function closeHeader() {
+	
+	$('body').css('overflow', 'auto');
+	// window.removeEventListener( 'touchmove' , movefun, { passive: false } );
+	$('._drawer_bg').fadeOut();
+	$('._drawer_button').removeClass('active');
+	$('nav').removeClass('open');
+	sleep(50, function () {
+		$('.header-drawer').css('height', '100px');
+	});
+}

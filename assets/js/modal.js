@@ -11,9 +11,7 @@ $(function(){
 });
 
 function openModal(href) {
-	$('._drawer_bg').fadeOut();
-	$('._drawer_button').removeClass('active');
-	$('nav').removeClass('open');
+	closeHeader();
 
 	setHref = href,
 	wdHeight = $(window).height();
@@ -21,6 +19,7 @@ function openModal(href) {
 
 	$('#contWrap').attr('src', setHref);
 	$('body').css('overflow', 'hidden');
+	// modalResize();
 	$('#mdOverlay, #mdWindow').css({display:'block',opacity:'0'});
 	$('#mdOverlay').css({height:wdHeight}).stop().animate({opacity:overlayOpacity},fadeTime);
 	$('#mdWindow').stop().animate({opacity:'1'},fadeTime);

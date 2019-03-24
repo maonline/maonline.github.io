@@ -1,11 +1,8 @@
 (function($) {
 	
 	$.fn.layerBoard = function(option) {
-
 		var elements = this;
-		
-		elements.each(function(){
-			
+		elements.each(function() {
 			option = $.extend({
 				delayTime: 200,						//表示までの待ち時間
 				fadeTime : 500,						//表示のフェード時間
@@ -18,27 +15,22 @@
 				limitCookie : 1	 					//cookie保存期間
 			}, option);
 
-
 			var limitSec = option.limitMin * 60; //秒数に変換
 
-			if(navigator.cookieEnabled) {	
+			if (navigator.cookieEnabled) {	
 				if ($.cookie('LastNewsTime') == undefined) {
-					
 					/*----------------------------------------
 						cookieがない場合
 						----------------------------------------*/
-						LayerBoardFunc ();
+						LayerBoardFunc();
 
 					//cookieに現在の時間をセット
 					var start = new Date();
 					$.cookie('LastNewsTime', start.getTime(), { expires: option.limitCookie, path: '/' });
-					
 				} else {
-					
 					/*----------------------------------------
 						cookieがある場合
 						----------------------------------------*/
-
 					//現在のミリ秒を取得し、秒数に変換
 					var now = new Date();
 					secDiff = now.getTime() - $.cookie('LastNewsTime');
@@ -47,30 +39,25 @@
 					//指定時間を経過していた場合は、LayerBoardを表示
 					//cookieを削除後、再度cookieに現在のミリ秒をセット
 					if (secTime >= limitSec) {
-						
 						LayerBoardFunc ();
-						
 						$.cookie('LastNewsTime', null, { expires:-1,path: '/' });
-						
 						var start = new Date();
 						$.cookie('LastNewsTime', start.getTime(), { expires:option.limitCookie,path: '/' });
-						
 					}
 				}
 			} else {
 				LayerBoardFunc();
 			}
-
 			
 			/*----------------------------------------
 				表示処理
 				----------------------------------------*/
-				function LayerBoardFunc () {			
-					$('.layer_board_bg', elements).show().animate({opacity: 0}, 0).delay(option.delayTime).animate({opacity: option.alpha},option.fadeTime,function(){
-						$('.layer_board', elements).fadeIn(option.fadeTime);																																				
-					});
+			function LayerBoardFunc () {			
+				$('.layer_board_bg', elements).show().animate({opacity: 0}, 0).delay(option.delayTime).animate({opacity: option.alpha},option.fadeTime,function(){
+					$('.layer_board', elements).fadeIn(option.fadeTime);																																				
+				});
 
-					$('body').css('overflow', 'hidden');
+				$('body').css('overflow', 'hidden');
 				// window.addEventListener( 'touchmove' , movefun , { passive: false } );
 				$('html,body').animate({ scrollTop: 0 }, '50');
 			}
@@ -79,12 +66,11 @@
 			/*----------------------------------------
 				非表示処理
 				----------------------------------------*/
-				$('.layer_board_bg', elements).click(function() {
+			$('.layer_board_bg', elements).click(function() {
+				$('.layer_board', elements).fadeOut(option.fadeTime);
+				$(this).fadeOut(option.fadeTime);
 
-					$('.layer_board', elements).fadeOut(option.fadeTime);
-					$(this).fadeOut(option.fadeTime);
-
-					$('body').css('overflow', 'auto');
+				$('body').css('overflow', 'auto');
 				// window.removeEventListener( 'touchmove' , movefun, { passive: false } );
 			});
 
@@ -98,32 +84,25 @@
 				// window.removeEventListener( 'touchmove' , movefun, { passive: false } );
 			});
 
-			
-			
 			/*----------------------------------------
 				ボタンによる表示処理
 				----------------------------------------*/
-				$('.layer_board_btn').click(function() {
+			$('.layer_board_btn').click(function() {
 
-					$('._drawer_bg').fadeOut();
-					$('._drawer_button').removeClass('active');
-					$('nav').removeClass('open');
+				closeHeader();
 
-					$('.layer_board_bg', elements).show().animate({opacity: 0},0).delay(option.delayTime).animate({opacity: option.alpha},option.fadeTime,function(){
-						$('.layer_board', elements).fadeIn(option.fadeTime);																																					
-					});
+				$('.layer_board_bg', elements).show().animate({opacity: 0}, 0).delay(option.delayTime).animate({opacity: option.alpha},option.fadeTime,function(){
+					$('.layer_board', elements).fadeIn(option.fadeTime);																																					
+				});
 
-					$('body').css('overflow', 'hidden');
+				$('body').css('overflow', 'hidden');
 				// window.addEventListener( 'touchmove' , movefun , { passive: false } );
 				$('html,body').animate({ scrollTop: 0 }, '50');
 			});
 
-			});
+		});
 		
-		return this;		
-		
+	return this;
 	};
-	
+
 })( jQuery );
-
-

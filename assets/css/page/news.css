@@ -4,7 +4,7 @@ body {
 	display: block;
 	width: 90%;
 	height: auto;
-	display:block
+	display: block;
 }
 
 /*スクロールバー全体*/
@@ -33,6 +33,7 @@ h1 {
 	display: inline;
 	font-family: 'Sawarabi Gothic', sans-serif;
 	font-size: 30px;
+	padding: 0.3em 0.5em;
 }
 
 h2 {
@@ -57,7 +58,7 @@ hr {
 	text-align: center;
 	height: 10px;
 	background-color: #333333;
-	width: 90%;
+	width: 100%;
 	border: none;
 }
 
@@ -74,9 +75,14 @@ hr {
 p {
 	font-family: 'Sawarabi Gothic', sans-serif;
 	font-size: 20px;
+	word-break: break-all;
 }
 
 @media (max-width: 767px) {
+
+	body {
+		overflow: hidden;
+	}
 
 	h1 {
 		font-size: 20px;
@@ -96,6 +102,14 @@ p {
 
 	hr {
 		height: 5px;
+	}
+
+}
+
+@media screen and (min-width: 700px) {
+
+	h1 {
+		border-left: solid 5px #4286f4;
 	}
 
 }

@@ -7,28 +7,27 @@
 			<div class="Contents demo_center flash">
 				<div id="formWrapper">
 					<p class="desc">
-						MineNetWorkは寄付を受け付けております。<br />
-						寄付のお礼として、サーバー内ランクを付与いたします。<br />
-						この寄付に対しての返金は対応していません。<br />
-						ご了承ください。<br />
+						MineNetWorkはBANに対する異議申し立てを受け付けております。<br />
+						送信された異議申し立てに関しては運営にて検討し、処置を行います。<br />
+						メールアドレスでのご返信をさせていただきます。<br />
 					</p>
-					<form action="https://docs.google.com/forms/d/e/1FAIpQLScVnMpfZet9Yt09fkJHASjzqGgiZCvaqhV530iprx1jI83gGQ/formResponse" method="post" name="myForm" target="dummyIframe" id="Form">
+					<form action="https://docs.google.com/forms/d/e/1FAIpQLSfU3ZJTdzd8nj7q6HJ1Tlwr_uT58K1xXHHBQ-RiAOnHQZomhQ/formResponse" method="post" name="myForm" target="dummyIframe" id="Form">
 						<div>
-							<label>ディスコード ID</label>
+							<label>ディスコードID または メールアドレス</label>
 							<br />
-							<input type="text" id="discord-id" name="entry.2005620554" placeholder="Kirito#1234" value="" required />
+							<input type="text" id="discord-id" name="entry.1397590675" placeholder="Kirito#1234" value="" required />
 						</div>
 						<div class="form-space-sp"></div>
 						<div>
-							<label>アマゾンギフトコード</label>
+							<label>MCID</label>
 							<br />
-							<input type="text" id="gift-code" name="entry.1065046570" placeholder="ABCD-EFGHIJ-KLMNO"  value="" required />
+							<input type="text" id="mcid" name="entry.1526591503" value="" required />
 						</div>
 						<div class="form-space-sp"></div>
 						<div>
 							<label>メッセージ</label>
 							<br />
-							<textarea id="message" placeholder="※必須ではありません" name="entry.839337160"></textarea>
+							<textarea id="message" name="entry.1354407382"></textarea>
 						</div>
 						<div class="form-space-sp"></div>
 						<div>
@@ -39,28 +38,29 @@
 
 				</div>
 				<div id="thxMessage" style="display: none;" class="demo_center flash">
-					<p class="thx-message">寄付の送信ありがとうございました!</p>
+					<p class="thx-message">	異議申し立てを送信しました!</p>
 				</div>
 				<script>
 					function sendGform(){
 
 						var tex = document.getElementById("discord-id").value;
-						var Seiki = /^.+#([0-9]{4,4})$/;
 
 						if (tex == '') {
-							alert('ディスコードIDを記入してください。');
+							alert('ディスコードIDまたはメールアドレスを記入してください。');
 							return false;
 						}
 
-						if (!(tex.match(Seiki))) {
-							alert('ディスコードIDのフォーマットが異なります。');
+						var tex = document.getElementById("mcid").value;
+
+						if (tex == '') {
+							alert('MCIDを記入してください。');
 							return false;
 						}
 
-						var tex = document.getElementById("gift-code").value;
+						var tex = document.getElementById("message").value;
 
 						if (tex == '') {
-							alert('ギルトコードを記入してください。');
+							alert('メッセージを入力してください。');
 							return false;
 						}
 

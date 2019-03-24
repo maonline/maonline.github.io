@@ -4,11 +4,11 @@ var type = "NONE";
 
 $(function() {
 
-	console.log('v1.8.3');
+	console.log('v1.8.4');
 
 	if (!(getParam('modal') == null)) {
 		//If URL has parameter
-		console.log(getParam('modal'));
+		// console.log(getParam('modal'));
 		noOpenNews = true;
 		type = "MODAL";
 	}
@@ -19,6 +19,7 @@ $(function() {
 	}
 
 	setTimeout('stopload()', 5000);
+	
 });
 
 $(window).on('load', function() { //全ての読み込みが完了したら実行

@@ -1,0 +1,47 @@
+#infoTitle .bg {
+	z-index: 1;
+	position: relative;
+	background-repeat: no-repeat;
+	background-attachment: scroll;
+	background-size: cover;
+	background-position: center;
+	background-image: url(../../image/bg_1.jpg);
+
+	height: 30vh;
+	margin: auto;
+	transform:translate3d(0,0,0);
+}
+
+.top-inner {
+	display: inline-block;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	margin: auto auto;
+	text-align: center;
+
+}
+
+.top-span {
+	height: 10vh;
+}
+
+.top-span2 {
+	height: 5vh;
+}
+
+.top-inner .title {
+	display: block;
+	width: 100%;
+	color: #00FFFF;
+	/*font-weight: 500;*/
+	text-shadow: 0 0 10px #000000;
+
+	/*font-family: 'Kaiso-Next-B', monospace;*/
+	/*font-family: 'Teko', sans-serif;*/
+	font-family: 'SAOUI-Regular';
+	font-size: 5.5vw;
+	letter-spacing: 0.4vw;
+}

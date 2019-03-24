@@ -15,11 +15,16 @@
 }
 
 #mdWindow {
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
 	width: 60vw;
 	height: 33.75vw;
+
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: auto auto;
+
 	position: fixed;
 	z-index: 8001;
 	background: #fff;
@@ -70,46 +75,6 @@
 	font-size: 1em;
 }
 
-.policy_check p {
-	font-size: 1.5vw;
-}
-
-.policy_check a {
-	text-decoration-line: none;
-	color: #FFFFFF;
-}
-
-.policy_check {
-	margin-top: 20px;
-	position: relative;
-	padding: 0.1em 0.3em;
-	display: inline-block;
-	transition: .3s;
-	color: #FFFFFF;
-	text-decoration-line: none;
-}
-.policy_check::before,
-.policy_check::after {
-	position: absolute;
-	content: '';
-	width: 0;
-	height: 2px;
-	background-color: #FFFFFF;
-	transition: .3s;
-}
-.policy_check::before {
-	top: 0;
-	left: 0;
-}
-.policy_check::after {
-	bottom: 0;
-	right: 0;
-}
-.policy_check:hover::before,
-.policy_check:hover::after {
-	width: 100%;
-}
-
 @media (max-width: 767px) {
 
 	#mdWindow {
@@ -121,10 +86,6 @@
 	.showing_modal {
 		position: fixed;
 		overflow: hidden;
-	}
-
-	.policy_check p {
-		font-size: 2.8vw;
 	}
 
 }
