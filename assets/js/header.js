@@ -9,14 +9,7 @@ $(function () {
 		if (canRun == false) return;
 		canRun = false;
 
-		if ($('body').css('overflow') == 'hidden') {
-			$('body').css('overflow', 'auto');
-			// window.removeEventListener( 'touchmove' , movefun, { passive: false } );
-		} else {
-			$('body').css('overflow', 'hidden');
-			// window.addEventListener( 'touchmove' , movefun , { passive: false } );
-			$('html,body').animate({ scrollTop: 0 }, '50');
-		}
+		$('html,body').animate({ scrollTop: 0 }, '50');
 
 		if (window.getComputedStyle(document.getElementById("header-height-tag"), null).getPropertyValue('height') == "100px") {
 			$('.header-drawer').css('height', '130%');
@@ -38,7 +31,6 @@ $(function () {
 	$('._drawer_bg').click(function () {
 		if (canRun == false) return;
 		canRun = false
-		$('body').css('overflow', 'auto');
 		// window.removeEventListener( 'touchmove' , movefun, { passive: false } );
 		$(this).fadeOut();
 		$('._drawer_button').removeClass('active');
@@ -74,7 +66,6 @@ function sleep(waitSec, callbackFunc) {
 
 function closeHeader() {
 	
-	$('body').css('overflow', 'auto');
 	// window.removeEventListener( 'touchmove' , movefun, { passive: false } );
 	$('._drawer_bg').fadeOut();
 	$('._drawer_button').removeClass('active');

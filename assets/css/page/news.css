@@ -5,6 +5,7 @@ body {
 	width: 90%;
 	height: auto;
 	display: block;
+	overflow-y: auto;
 }
 
 /*スクロールバー全体*/
@@ -79,10 +80,6 @@ p {
 }
 
 @media (max-width: 767px) {
-
-	body {
-		overflow: hidden;
-	}
 
 	h1 {
 		font-size: 20px;

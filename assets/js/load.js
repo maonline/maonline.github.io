@@ -4,7 +4,7 @@ var type = "NONE";
 
 $(function() {
 
-	console.log('v1.8.4');
+	console.log('v1.8.5');
 
 	if (!(getParam('modal') == null)) {
 		//If URL has parameter
