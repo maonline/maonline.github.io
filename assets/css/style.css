@@ -320,7 +320,7 @@ footer {
 }
 
 footer img {
-	height: 12vh;
+	width: 30vw;
 	padding-top: 3vh;
 }
 
@@ -333,16 +333,16 @@ footer h3 {
 @media (max-width: 959px) {
 
 	footer {
-		height: 22vh;
+		height: 25vw;
 	}
 
 	footer img {
-		height: 12vh;
+		width: 70vw;
 		padding-top: 3vh;
 	}
 
 	footer h3 {
-		font-size: 3vh;
+		font-size: 3vw;
 		padding-top: 2vh;
 		/*background-color: red;*/
 	}
