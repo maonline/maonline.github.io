@@ -15,7 +15,7 @@ $(function() {
 		var string  = getParam('modal');
 		var pattern = 'https://www.minenet.work/';
 
-		if (string.indexOf(pattern) == 0 && string.indexOf('script') <= -1) {
+		if (string.indexOf(pattern) == 0 && string.indexOf('script') <= -1 && string.length <= 80) {
 			//If URL has parameter
 			console.log(string);
 			noOpenNews = true;
