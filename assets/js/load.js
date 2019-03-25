@@ -4,14 +4,14 @@ var type = "NONE";
 
 $(function() {
 
-	console.log('v1.8.5');
+	console.log('v1.8.6');
 
-	if (!(getParam('modal') == null)) {
-		//If URL has parameter
-		// console.log(getParam('modal'));
-		noOpenNews = true;
-		type = "MODAL";
-	}
+	// if (!(getParam('modal') == null)) {
+	// 	//If URL has parameter
+	// 	// console.log(getParam('modal'));
+	// 	noOpenNews = true;
+	// 	type = "MODAL";
+	// }
 
 	if (!(getParam('news') == null)) {
 		noOpenNews = true;
