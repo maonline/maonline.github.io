@@ -4,18 +4,25 @@ var type = "NONE";
 
 $(function() {
 
-	console.log('v1.8.6');
-
-	// if (!(getParam('modal') == null)) {
-	// 	//If URL has parameter
-	// 	// console.log(getParam('modal'));
-	// 	noOpenNews = true;
-	// 	type = "MODAL";
-	// }
+	console.log('v1.8.7');
 
 	if (!(getParam('news') == null)) {
 		noOpenNews = true;
 		type = "NEWS";
+	}
+
+	if (!(getParam('modal') == null)) {
+		var string  = getParam('modal');
+		var pattern = 'https://www.minenet.work/';
+
+		if (string.indexOf(pattern) == 0 && string.indexOf('script') <= -1) {
+			//If URL has parameter
+			console.log(string);
+			noOpenNews = true;
+			type = "MODAL";
+		} else {
+			console.log('That URL is not allowed.');
+		}
 	}
 
 	setTimeout('stopload()', 5000);
