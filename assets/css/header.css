@@ -5,7 +5,7 @@
 	visibility: visible;
 	overflow: hidden;
 	width: 100%;
-	height: auto;
+	height: 200px;
 	padding-top: 0;
 	text-align: right;
 	opacity: 1;
@@ -241,6 +241,7 @@
 	position: absolute;
 	opacity: 1;
 	z-index: 12;
+	padding: 5px;
 }
 
 .header-logo img {
