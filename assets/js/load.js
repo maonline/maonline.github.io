@@ -4,7 +4,7 @@ var type = "NONE";
 
 $(function() {
 
-	console.log('v1.8.8');
+	console.log('v1.9.0');
 
 	if (!(getParam('news') == null)) {
 		noOpenNews = true;
