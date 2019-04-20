@@ -1,6 +1,6 @@
 function countDown() {
 	var nowTime = new Date();
-	var endTime = new Date('2019/02/27 20:00:00');
+	var endTime = new Date('2019/04/27 20:00:00');
 	var diff  = endTime - nowTime;
 	var times = 24 * 60 * 60 * 1000;
 	var day   = ('0' + Math.floor(diff / times)).slice(-2);
@@ -13,6 +13,8 @@ function countDown() {
 		// document.getElementById("countdown").innerText = day + 'd ' + hour + 'h ' + min + 'm ' + sec +'s ' + ms;
 		setTimeout('countDown()', 10);
 	} else {
-		document.getElementById("countdown").innerText = '00d 00h 00m 00s';
+		openModal("https://www.youtube.com/embed/jfzF1ojRt0A&color=white");
+		document.getElementById("bg").style.backgroundImage = "url(./assets/image/bg_5.jpg)";
+		document.getElementById("countdown").innerText = 'LINK START';
 	}
 }
