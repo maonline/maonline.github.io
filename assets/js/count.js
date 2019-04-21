@@ -16,5 +16,6 @@ function countDown() {
 		openModal("https://www.youtube.com/embed/jfzF1ojRt0A&color=white");
 		document.getElementById("bg").style.backgroundImage = "url(./assets/image/bg_5.jpg)";
 		document.getElementById("countdown").innerText = 'LINK START';
+		document.getElementById("change").innerText = 'IP: minenet.work';
 	}
 }
