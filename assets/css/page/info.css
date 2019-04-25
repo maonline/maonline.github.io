@@ -1,4 +1,7 @@
-#infoTitle .bg {
+@import url('https://fonts.googleapis.com/css?family=Sawarabi+Gothic');
+
+/* About */
+#about {
 	z-index: 1;
 	position: relative;
 	background-repeat: no-repeat;
@@ -7,41 +10,22 @@
 	background-position: center;
 	background-image: url(../../image/bg_1.jpg);
 
-	height: 30vh;
+	height: 50vh;
 	margin: auto;
 	transform:translate3d(0,0,0);
 }
 
-.top-inner {
+.desc {
 	display: inline-block;
 	position: absolute;
-	top: 0;
-	bottom: 0;
-	right: 0;
-	left: 0;
-	margin: auto auto;
 	text-align: center;
-
-}
-
-.top-span {
-	height: 10vh;
-}
-
-.top-span2 {
-	height: 5vh;
-}
-
-.top-inner .title {
-	display: block;
 	width: 100%;
-	color: #00FFFF;
-	/*font-weight: 500;*/
-	text-shadow: 0 0 10px #000000;
+	height: 60vh;
+	top: 25vh;
+	font-family: 'Sawarabi Gothic', sans-serif;
+	font-weight: 100;
+}
 
-	/*font-family: 'Kaiso-Next-B', monospace;*/
-	/*font-family: 'Teko', sans-serif;*/
-	font-family: 'SAOUI-Regular';
-	font-size: 5.5vw;
-	letter-spacing: 0.4vw;
+.desc h3 {
+	font-size: 30px;
 }
