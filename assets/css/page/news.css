@@ -30,6 +30,13 @@ img {
 	width: 100%;
 }
 
+#title img {
+	width: 20px;
+	height: auto;
+	right: 0;
+	margin: auto auto;
+}
+
 h1 {
 	display: inline;
 	font-family: 'Sawarabi Gothic', sans-serif;
@@ -53,6 +60,16 @@ a {
 a:hover{
 	color: #ffffff;
 	background: #4286f4;
+}
+
+#title a {
+	text-decoration-line: none;
+	color: none;
+}
+
+#title a:hover {
+	color: none;
+	background: none;
 }
 
 hr {
