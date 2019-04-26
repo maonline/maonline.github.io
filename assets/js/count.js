@@ -7,13 +7,17 @@ function countDown() {
 	var hour  = ('0' + Math.floor(diff % times / (60 * 60 * 1000))).slice(-2);
 	var min   = ('0' + Math.floor(diff % times / (60 * 1000)) % 60).slice(-2);
 	var sec   = ('0' + Math.floor(diff % times / 1000) % 60 % 60).slice(-2);
-	// var ms    = ('0' + Math.floor(diff % times / 10) % 100).slice(-2);
-	if(diff > 0){
-		document.getElementById("countdown").innerText = day + 'd ' + hour + 'h ' + min + 'm ' + sec +'s';
-		// document.getElementById("countdown").innerText = day + 'd ' + hour + 'h ' + min + 'm ' + sec +'s ' + ms;
-		setTimeout('countDown()', 10);
+	var ms    = ('0' + Math.floor(diff % times / 10) % 100).slice(-2);
+	if (diff > 0){
+		if (diff <= 3600000) {
+			document.getElementById("countdown").innerText = day + 'd ' + hour + 'h ' + min + 'm ' + sec +'s ' + ms;
+			setTimeout('countDown()', 10);
+		} else {
+			document.getElementById("countdown").innerText = day + 'd ' + hour + 'h ' + min + 'm ' + sec +'s';
+			setTimeout('countDown()', 10);
+		}
 	} else {
-		openModal("https://www.youtube.com/embed/jfzF1ojRt0A&color=white");
+		openModal("https://www.youtube.com/embed/jfzF1ojRt0A?color=white");
 		document.getElementById("bg").style.backgroundImage = "url(./assets/image/bg_5.jpg)";
 		document.getElementById("countdown").innerText = 'LINK START';
 		document.getElementById("change").innerText = 'IP: minenet.work';

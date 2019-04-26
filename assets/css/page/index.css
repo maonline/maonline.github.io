@@ -57,9 +57,11 @@
 }
 
 #countdown {
+	font-size: 4.5vw;
+	font-weight: 600;
 	margin-top: 40px;
-	letter-spacing: 1vw;
-	font-family: 'Teko', sans-serif;
+	letter-spacing: 0.6vw;
+	font-family: 'SAOUI-Regular', sans-serif;
 }
 
 /*#top .title-img {
@@ -108,8 +110,7 @@
 	#top .title {
 		width: 100%;
 		font-weight: 800;
-		font-size: 14.5vw;
-
+		font-size: 10.5vw;
 	}
 
 	.top-span {
