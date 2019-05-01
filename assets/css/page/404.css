@@ -4,7 +4,7 @@ body {
 	background-attachment: scroll;
 	background-size: cover;
 	background-position: center;
-	background-image: url(../../image/bg_2.jpg);
+	background-image: url(../../image/bg/bg_2.jpg);
 
 	height: 100vh;
 	margin: auto;
