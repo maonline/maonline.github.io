@@ -4,7 +4,7 @@ var type = "NONE";
 
 $(function() {
 
-	console.log('v1.11.0');
+	console.log('v1.11.1');
 
 	if (!(getParam('news') == null)) {
 		noOpenNews = true;
@@ -25,7 +25,7 @@ $(function() {
 		}
 	}
 
-	setTimeout('stopload()', 5000);
+	setTimeout('stopload()', 8000);
 	
 });
 
@@ -52,7 +52,7 @@ function stopload(){
 		});
 
 		//Show
-		$('#wrap').css('display','block');
+		$('#wrap').css('display', 'block');
 		$('#loader-bg').delay(900).fadeOut(800);
 		$('#loader').delay(600).fadeOut(300);
 
