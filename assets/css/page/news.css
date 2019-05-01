@@ -53,13 +53,20 @@ h2 {
 a {
 	text-decoration-line: none;
 	color: #4286f4;
-	transition-property: all;
-	transition: 0.3s linear;
 }
 
-a:hover{
-	color: #ffffff;
-	background: #4286f4;
+
+@media screen and (min-width:960px) {
+
+	a {
+		transition-property: all;
+		transition: 0.3s linear;
+	}
+
+	a:hover{
+		color: #ffffff;
+		background: #4286f4;
+	}
 }
 
 #title a {
