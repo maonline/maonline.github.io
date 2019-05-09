@@ -7,17 +7,38 @@
 	background-repeat: no-repeat;
 	background-attachment: scroll;
 	background-size: cover;
-	background-position: center;
-	background-image: url(../../image/bg_1.jpg);
+	background-image: url(../../image/bg/bg_4.jpg);
 
 	height: 50vh;
 	margin: auto;
-	transform:translate3d(0,0,0);
+	transform: translate3d(0,0,0);
+	text-align: center;
+}
+
+.about-title h2 {
+	position: relative;
+	display: inline-block;
+	font-size: 6vw;
+	line-height: 0.6;
+	margin: 200px 0px;
+	color: #ffffff;
+	text-shadow: 0 0 10px #ffffff, 0 0 10px rgba(10, 175, 230, 0);
+	font-family: 'Share Tech Mono', monospace;
+}
+
+@media (max-width: 767px) {
+	#about {
+		height: 100px;
+	}
+	.about-title h2 {
+		margin: 25px 0px;
+		font-size: 15vw;
+	}
 }
 
 .desc {
 	display: inline-block;
-	position: absolute;
+	position: relative;
 	text-align: center;
 	width: 100%;
 	height: auto;
@@ -31,41 +52,36 @@
 }
 
 #admins {
-	background-color: #ffffff;
+	background-color: #002f7c;
+	text-align: center;
 }
 
-.admins-list-content {
+#admins-list {
+	text-align: center;
+}
+
+.admins-list-contents {
 	display: inline-block;
-	width: 20vw;
+	width: 130px;
 	height: auto;
 	margin: 10px;
-	background-color: #333333;
-	background-color: rgb(50, 50, 50, 0.7);
-	border: solid 3px #111111;/*線*/
-	border-radius: 10px;/*角の丸み*/
-}
-
-.admins-list-content h5 {
-	font-family: 'Kaiso-Next-B';
-	font-size: 2vw;
-	color: #ffffff;
 }
 
 figure.cp_caption {
 	position: relative;
-	overflow: hidden;
 	width: 100%;
 	height: 100%;
 	text-align: center;
 	color: #fff;
+	background: rgba(27, 37, 56, 1);
 }
 figure.cp_caption * {
 	-webkit-box-sizing: border-box;
 	        box-sizing: border-box;
 }
 figure.cp_caption img {
-	width: 60%;
-	margin: 5px;
+	vertical-align: bottom;
+	width: 100%;
 	-webkit-transition: opacity 0.3s;
 	        transition: opacity 0.3s;
 	opacity: 1;
@@ -76,19 +92,17 @@ figure.cp_caption figcaption {
 	left: 0;
 	width: 100%;
 	height: 100%;
-	padding: 3em 3em;
+	padding: 3em 0;
 }
 figure.cp_caption figcaption::before {
 	position: absolute;
 	top: 50%;
-	right: 30px;
+	right: 5px;
 	bottom: 50%;
-	left: 30px;
+	left: 5px;
 	content: '';
 	-webkit-transition: all 0.4s;
 	        transition: all 0.4s;
-	-webkit-transition-delay: 0.2s;
-	        transition-delay: 0.2s;
 	opacity: 0;
 	border-top: 1px solid rgba(255, 255, 255, 0.8);
 	border-bottom: 1px solid rgba(255, 255, 255, 0.8);
@@ -96,10 +110,22 @@ figure.cp_caption figcaption::before {
 }
 figure.cp_caption h2,
 figure.cp_caption p {
-	margin: 0 0 5px;
-	-webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
-	        transition: opacity 0.3s, transform 0.3s;
+	width: 100%;
+	margin: 0 0 1px;
+	font-family: 'Share Tech Mono';
+    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+    transition: opacity 0.35s,-webkit-transform 0.35s,-moz-transform 0.35s,-o-transform 0.35s,transform 0.35s;
+    transition-property: opacity, -webkit-transform, -moz-transform, -o-transform, transform;
 	opacity: 0;
+}
+figure.cp_caption h2 {
+	font-size: 17px;
+	font-weight: 500;
+}
+
+figure.cp_caption p {
+	font-size: 15px;
+	text-decoration: underline;
 }
 figure.cp_caption a {
 	position: absolute;
@@ -113,15 +139,15 @@ figure.cp_caption:hover img {
 	opacity: 0.35;
 }
 figure.cp_caption:hover figcaption h2 {
-	-webkit-transition-delay: 0.1s;
-	        transition-delay: 0.1s;
+	-webkit-transition-delay: 0.2s;
+	        transition-delay: 0.2s;
 	-webkit-transform: translate3d(0%, 0%, 0);
 	        transform: translate3d(0%, 0%, 0);
 	opacity: 1;
 }
 figure.cp_caption:hover figcaption p {
-	-webkit-transition-delay: 0.2s;
-	        transition-delay: 0.2s;
+	-webkit-transition-delay: 0.4s;
+	        transition-delay: 0.4s;
 	opacity: 0.9;
 }
 figure.cp_caption:hover figcaption::before {
@@ -131,4 +157,32 @@ figure.cp_caption:hover figcaption::before {
 	        transition-delay: 0s;
 	opacity: 1;
 	background: rgba(27, 37, 56, 0);
+}
+
+@media (max-width: 767px) {
+
+	figure.cp_caption img {
+		opacity: 0.35;
+	}
+	figure.cp_caption figcaption h2 {
+		-webkit-transition-delay: 0.2s;
+		        transition-delay: 0.2s;
+		-webkit-transform: translate3d(0%, 0%, 0);
+		        transform: translate3d(0%, 0%, 0);
+		opacity: 1;
+	}
+	figure.cp_caption figcaption p {
+		-webkit-transition-delay: 0.4s;
+		        transition-delay: 0.4s;
+		opacity: 0.9;
+	}
+	figure.cp_caption figcaption::before {
+		top: 30px;
+		bottom: 30px;
+		-webkit-transition-delay: 0s;
+		        transition-delay: 0s;
+		opacity: 1;
+		background: rgba(27, 37, 56, 0);
+	}
+
 }
