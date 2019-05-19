@@ -17,7 +17,7 @@
 	background-attachment: scroll;
 	background-size: cover;
 	background-position: center;
-	background-image: url(../../image/bg/bg_5.jpg);
+	background-image: url(../../image/bg/bg_7.jpg);
 
 	height: 100vh;
 	margin: auto;
@@ -56,13 +56,13 @@
 	letter-spacing: 0.4vw;
 }
 
-/*#countdown {
+#countdown {
 	font-size: 4.5vw;
 	font-weight: 600;
 	margin-top: 40px;
 	letter-spacing: 0.6vw;
 	font-family: 'SAOUI-Regular', sans-serif;
-}*/
+}
 
 /*#top .title-img {
 	position: absolute;

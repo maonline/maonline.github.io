@@ -1,6 +1,6 @@
 function countDown() {
 	var nowTime = new Date();
-	var endTime = new Date('2019/04/27 15:00:00');
+	var endTime = new Date('2019/05/21 00:00:00');
 	var diff  = endTime - nowTime;
 	var times = 24 * 60 * 60 * 1000;
 	var day   = ('0' + Math.floor(diff / times)).slice(-2);
@@ -17,8 +17,8 @@ function countDown() {
 			setTimeout('countDown()', 10);
 		}
 	} else {
-		document.getElementById("bg").style.backgroundImage = "url(./assets/image/bg_5.jpg)";
-		document.getElementById("countdown").innerText = 'THANK YOU';
-		document.getElementById("change").innerText = 'IP: minenet.work';
+		openModal("./assets/loader/news/first_anniv.html");
+		document.getElementById("bg").style.backgroundImage = "url(./assets/image/bg/bg_8.jpg)";
+		document.getElementById("countdown").innerText = 'Celebrating 1st anniversary!';
 	}
 }
