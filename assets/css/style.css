@@ -6,7 +6,7 @@
 @media screen and (min-width:1000px) {
 	/*スクロールバー全体*/
 	::-webkit-scrollbar {
-		width: 10px;
+		width: 5px;
 	}
 
 	/*スクロールバーの軌道*/
@@ -18,7 +18,7 @@
 	/*スクロールバーの動く部分*/
 	::-webkit-scrollbar-thumb {
 		background-color: #666666;
-		border-radius: 10px;
+		/*border-radius: 10px;*/
 		/*box-shadow: inset 0 0 0 2px #fff;*/
 	}
 }
