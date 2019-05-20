@@ -152,6 +152,77 @@
 
 }
 
+/* JOIN */
+#join {
+	width: 100%;
+	min-height: 400px;
+	position: relative;
+
+	background-color: #FFFFFF;
+	text-align: center;
+}
+
+.join-list-content {
+	display: inline-block;
+	width: 28vw;
+	margin: 1vw;
+	height: auto;
+	background-color: #002f7c;
+	background-color: rgb(0, 47, 124, 0.9);
+	border: solid 3px #002f7c;/*線*/
+	border-radius: 10px;/*角の丸み*/
+}
+
+.attention {
+	background-color: #f44242;
+	background-color: rgb(244, 66, 66, 0.9);
+	border: solid 3px #f44242;/*線*/
+	width: 32vw;
+}
+
+.join-list-content img {
+	margin: 10px;
+	width: 25%;
+}
+
+.join-list-content h5 {
+	font-family: 'Kaiso-Next-B';
+	color: #ffffff;
+	font-size: 2vw;
+	padding: 2px;
+}
+
+.join-list-content p {
+	font-family: 'Kaiso-Next-B';
+	color: #ffffff;
+	font-size: 1.5vw;
+	padding: 2px;
+}
+
+@media (max-width: 767px) {
+
+	.join-list-content {
+		width: 85vw;
+		background-color: #002f7c;
+		margin-bottom: 3vh;
+		color: #eeeeee;
+	}
+
+	.attention {
+		background-color: #f44242;
+	}
+
+	.join-list-content h5 {
+		font-size: 5vw;
+	}
+
+	.join-list-content p {
+		font-size: 4vw;
+	}
+
+}
+
+
 /* MOVIE */
 
 #movie {
