@@ -44,10 +44,18 @@
 	content: '';
 	width: 100%;
 	height: 3px;
-	background: #111;
+	background: #fff;
 	transform: scale(0, 1);
 	transform-origin: right top;
 	transition: transform .3s;
+}
+
+.header-drawer a:hover {
+	-webkit-animation: FlashAni .1s cubic-bezier(.47, 0, .745, .715) forwards normal;
+	animation: FlashAni .1s cubic-bezier(.47, 0, .745, .715) forwards normal;
+	animation-iteration-count: 4;
+
+	-webkit-animation-iteration-count: 4;
 }
 
 .header-drawer a:hover::after {

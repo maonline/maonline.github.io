@@ -130,7 +130,7 @@
 	padding:0.25em 1em;
 	display: inline-block;
 	top: 0;
-	margin: 40px;
+	margin: 40px 0px;
 	color: #003996;
 	text-shadow: 0 0 20px #0aafe6, 0 0 20px rgba(10, 175, 230, 0);
 	font-family: 'Share Tech Mono', monospace;
@@ -347,8 +347,4 @@ footer h3 {
 		/*background-color: red;*/
 	}
 
-}
-
-#p7frame {
-	display: none!important;
 }

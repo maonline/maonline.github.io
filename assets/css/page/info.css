@@ -186,3 +186,101 @@ figure.cp_caption:hover figcaption::before {
 	}
 
 }
+
+#rule {
+	width: 100%;
+	text-align: center;
+	background-color: #FFFFFF;
+	padding-bottom: 30px;
+}
+
+.rule_button {
+	width: 190px;
+	height: 45px;
+	font-family: 'Sawarabi Gothic', sans-serif;
+	font-size: 12px;
+	text-transform: uppercase;
+	letter-spacing: 2.5px;
+	font-weight: 500;
+	color: #000;
+	background-color: #90edc8;
+	border: none;
+	border-radius: 45px;
+	box-shadow: 0px 8px 15px rgba(144, 237, 200, 0.1);
+	transition: all 0.3s ease 0s;
+	cursor: pointer;
+	outline: none;
+}
+
+.rule_button:hover {
+	background-color: #2EE59D;
+	box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+	color: #fff;
+	transform: translateY(-7px);
+}
+
+#archive {
+	width: 100%;
+	text-align: center;
+	background-color: #002f7c;
+	padding-bottom: 30px;
+}
+
+.archive_list {
+	width: 50%;
+	max-height: 1000px;
+	margin: auto;
+	overflow-y: scroll;
+	display: block;
+	border: solid 6px #111111;
+	border-right: solid 2px #111111;
+}
+
+.archive_content {
+	width: 100%;
+	height: 30px;
+	background-color: #fff;
+	color: #111;
+	border-bottom: solid 1px #333;
+	font-family: 'Sawarabi Gothic', sans-serif;
+	font-size: 20px;
+	line-height: 30px;
+	transition: 0.4s;
+}
+
+.archive_content:hover {
+	transition: 0.4s;
+	background-color: #a3c6ff;
+	color: #000;
+}
+
+.date {
+	float: left;
+	font-weight: bold;
+	padding-left: 30px;
+	padding-right: 15px;
+}
+
+.title {
+	float: left;
+}
+
+@media (max-width: 767px) {
+
+	.date {
+		padding-left: 15px;
+		padding-right: 7px;
+	}
+
+	.archive_content {
+		font-size: 12px;
+	}
+
+	.archive_list {
+		border: solid 6px #111111;
+	}
+
+	.archive_list {
+		width: calc(100% - 12px);
+	}
+}

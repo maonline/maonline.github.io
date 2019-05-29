@@ -17,7 +17,7 @@
 	background-attachment: scroll;
 	background-size: cover;
 	background-position: center;
-	background-image: url(../../image/bg/bg_7.jpg);
+	background-image: url(../../image/bg/bg_8.jpg);
 
 	height: 100vh;
 	margin: auto;
@@ -31,17 +31,6 @@
 	height: 60vh;
 	top: 35vh;
 	text-align: center;
-}
-
-.anniv_logo {
-	position: fixed;
-	top: 0;
-	bottom: 0;
-	left: 0;
-	right: 0;
-	margin: auto;
-	z-index: -2;
-	width: 40%;
 }
 
 .top-span {
@@ -66,13 +55,13 @@
 	letter-spacing: 0.4vw;
 }
 
-#countdown {
+/*#countdown {
 	font-size: 4.5vw;
 	font-weight: 600;
 	margin-top: 40px;
 	letter-spacing: 0.6vw;
 	font-family: 'SAOUI-Regular', sans-serif;
-}
+}*/
 
 /*#top .title-img {
 	position: absolute;
@@ -131,9 +120,6 @@
 		font-size: 3vh;
 	}
 
-	.anniv_logo {
-		width: 60%;
-	}
 }
 
 /* ABOUT */
