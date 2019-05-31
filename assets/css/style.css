@@ -206,6 +206,11 @@
 	display: none;
 	cursor: pointer;
 	background: #000;
+
+
+	/** Summer Style **/
+	opacity: 0.2;
+	background: #440000;
 }
 
 .layer_board {

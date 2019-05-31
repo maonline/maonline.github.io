@@ -194,7 +194,14 @@ figure.cp_caption:hover figcaption::before {
 	padding-bottom: 30px;
 }
 
+#inline-frame {
+	width: 60%;
+	height: 400px;
+	border: solid 4px #1a2384;
+}
+
 .rule_button {
+	display: none;
 	width: 190px;
 	height: 45px;
 	font-family: 'Sawarabi Gothic', sans-serif;
@@ -219,6 +226,18 @@ figure.cp_caption:hover figcaption::before {
 	transform: translateY(-7px);
 }
 
+@media (max-width: 767px) {
+
+	#inline-frame {
+		display: none;
+	}
+
+	.rule_button {
+		display: inline-block;
+	}
+
+}
+
 #archive {
 	width: 100%;
 	text-align: center;
@@ -228,23 +247,29 @@ figure.cp_caption:hover figcaption::before {
 
 .archive_list {
 	width: 50%;
-	max-height: 1000px;
+	max-height: 400px;
 	margin: auto;
 	overflow-y: scroll;
 	display: block;
+	background-color: #111;
 	border: solid 6px #111111;
 	border-right: solid 2px #111111;
 }
 
 .archive_content {
 	width: 100%;
-	height: 30px;
+	height: 80px;
 	background-color: #fff;
 	color: #111;
-	border-bottom: solid 1px #333;
+	border-bottom: solid 2px #333;
 	font-family: 'Sawarabi Gothic', sans-serif;
 	font-size: 20px;
-	line-height: 30px;
+	/*line-height: 80px;*/
+
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+
 	transition: 0.4s;
 }
 
@@ -255,14 +280,26 @@ figure.cp_caption:hover figcaption::before {
 }
 
 .date {
-	float: left;
 	font-weight: bold;
 	padding-left: 30px;
 	padding-right: 15px;
+	float: left;
+	text-decoration: none;
 }
 
 .title {
 	float: left;
+	text-decoration: none;
+}
+
+.key_picture img {
+	vertical-align: bottom;
+	height: 80px;
+	border-left: solid 2px #333;
+}
+
+#archive a {
+	text-decoration: none;
 }
 
 @media (max-width: 767px) {
@@ -273,6 +310,7 @@ figure.cp_caption:hover figcaption::before {
 	}
 
 	.archive_content {
+		height: 40px;
 		font-size: 12px;
 	}
 
@@ -283,4 +321,9 @@ figure.cp_caption:hover figcaption::before {
 	.archive_list {
 		width: calc(100% - 12px);
 	}
+
+	.key_picture {
+		display: none;
+	}
+
 }
