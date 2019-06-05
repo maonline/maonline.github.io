@@ -40,7 +40,7 @@
 					//cookieを削除後、再度cookieに現在のミリ秒をセット
 					if (secTime >= limitSec) {
 						LayerBoardFunc ();
-						$.cookie('LastNewsTime', null, { expires:-1,path: '/' });
+						$.cookie('LastNewsTime', null, { expires: -1,path: '/' });
 						var start = new Date();
 						$.cookie('LastNewsTime', start.getTime(), { expires:option.limitCookie,path: '/' });
 					}

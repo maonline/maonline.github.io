@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Sawarabi+Gothic');
 
+@font-face {
+	font-family: 'SAOUI-Regular';
+	src: url("../../font/SAOUI-Regular.otf");
+}
+
 body {
 	display: block;
 	width: 90%;
@@ -37,6 +42,55 @@ img {
 	margin: auto auto;
 }
 
+input {
+	border: 0;
+	padding: 10px;
+	font-size: 1em;
+	font-family: 'SAOUI-Regular';
+	color: #00c;
+	border: solid 1px #ccc;
+	margin: 0 0 20px;
+	width: 300px;
+	text-align: center;
+
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+
+	-moz-box-shadow: inset 0 0 4px rgba(0,0,0,0.2);
+	-webkit-box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.2);
+	box-shadow: inner 0 0 4px rgba(0, 0, 0, 0.2);
+
+	transition: 0.3s;
+}
+
+input:focus {
+    border:solid 1px #33f;
+    transition: 0.3s;
+}
+
+button {
+	border: solid 1px #ccc;
+	padding: 10px 30px;
+	margin: 0 0 20px;
+	font-family: 'SAOUI-Regular';
+	font-size: 1em;
+	text-transform: uppercase;
+	font-weight: bold;
+	color: #333;
+	cursor: pointer;
+}
+
+@media (max-width: 767px) {
+	input {
+		width: 100%;
+	}
+
+	button {
+		width: 100%;
+	}
+}
+
 h1 {
 	display: inline;
 	font-family: 'Sawarabi Gothic', sans-serif;
@@ -56,7 +110,7 @@ a {
 }
 
 
-@media screen and (min-width:960px) {
+@media (max-width:960px) {
 
 	a {
 		transition-property: all;
@@ -67,6 +121,8 @@ a {
 		color: #ffffff;
 		background: #4286f4;
 	}
+
+
 }
 
 #title a {
