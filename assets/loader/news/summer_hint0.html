@@ -1,9 +1,9 @@
 <meta charset="UTF-8">
 <body>
 	<link rel="stylesheet" href="../../css/page/news.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="../../js/sha256.js"></script>
 	<script src="../../js/cookie.js"></script>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-123405637-2"></script>
@@ -55,8 +55,11 @@
 				// console.log(shaObj.getHash("HEX"));
 
 				if (pass == shaObj.getHash("HEX")) {
-					$.cookie('cou2', null, { expires: -1, path: '/' });
-					$.cookie('cou2', 6, { expires: 10, path: '/' });
+					$(function() {
+						$.cookie('cou2', null, { expires: -1, path: '/' });
+						$.cookie('cou2', 6, { expires: 10, path: '/' });
+					});
+
 					location.href = "summer_qz2.html";
 				} else {
 					document.getElementById("result").innerText = "✖不正解";

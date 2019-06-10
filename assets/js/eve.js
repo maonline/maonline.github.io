@@ -12,7 +12,7 @@ $('.sme').click(function() {
 $('.lgs').click(function() {
 	if ($.cookie('cou2') == undefined) {
 		$.cookie('cou2', 1, { expires: 1 / 24 / 60, path: '/' });
-
+		location.href = 'https://www.minenet.work';
 	} else {
 
 		cou2 = $.cookie('cou2');
@@ -35,7 +35,7 @@ $('.lgs').click(function() {
 			$.cookie('cou2', null, { expires: -1, path: '/' });
 			cou2++;
 			$.cookie('cou2', cou2, { expires: 1 / 24 / 60, path: '/' });
-			location.href = '/';
+			location.href = 'https://www.minenet.work';
 		}
 
 	}

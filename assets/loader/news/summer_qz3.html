@@ -1,10 +1,10 @@
 <meta charset="UTF-8">
 <body>
 	<link rel="stylesheet" href="../../css/page/news.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="../../js/sha256.js"></script>
 	<script src="../../js/cookie.js"></script>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-	
+
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-123405637-2"></script>
 	<script>
@@ -134,7 +134,10 @@
 				document.AnswerReport.submit();
 				document.getElementById('Form').style.display = 'none';
 				document.getElementById('thxMessage').style.display = 'block';
-				$.cookie('cou2', null, { expires: -1, path: '/' });
+				$(function() {
+					$.cookie('cou2', null, { expires: -1, path: '/' });
+				});
+
 							// window.removeEventListener( 'touchmove' , movefun, { passive: false } );
 			}
 		</script>
