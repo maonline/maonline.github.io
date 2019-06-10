@@ -67,7 +67,10 @@
 				// console.log(shaObj.getHash("HEX"));
 
 				if (pass == shaObj.getHash("HEX")) {
+					$.cookie('cou2', null, { expires: -1, path: '/' });
+					$.cookie('cou2', 7, { expires: 10, path: '/' });
 					location.href = "summer_qz3.html";
+
 				} else {
 					document.getElementById("result").innerText = "✖不正解";
 					document.getElementById("result").style.color = 'red';

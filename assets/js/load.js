@@ -4,7 +4,7 @@ var type = "NONE";
 
 $(function() {
 
-	console.log('v1.17.0');
+	console.log('v1.17.1');
 
 	if (!(getParam('news') == null)) {
 		noOpenNews = true;
@@ -13,9 +13,10 @@ $(function() {
 
 	if (!(getParam('modal') == null)) {
 		var string  = getParam('modal');
-		var pattern = 'https://www.minenet.work/';
+		var pattern1 = 'https://www.minenet.work/';
+		var pattern2 = 'http://localhost/';
 
-		if (string.indexOf(pattern) == 0 && string.indexOf('script') <= -1 && string.length <= 80) {
+		if ((string.indexOf(pattern1) == 0 || string.indexOf(pattern2) == 0) && string.indexOf('script') <= -1 && string.length <= 80) {
 			//If URL has parameter
 			console.log(string);
 			noOpenNews = true;

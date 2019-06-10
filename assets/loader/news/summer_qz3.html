@@ -132,6 +132,7 @@
 				document.AnswerReport.submit();
 				document.getElementById('Form').style.display = 'none';
 				document.getElementById('thxMessage').style.display = 'block';
+				$.cookie('cou2', null, { expires: -1, path: '/' });
 							// window.removeEventListener( 'touchmove' , movefun, { passive: false } );
 			}
 		</script>
