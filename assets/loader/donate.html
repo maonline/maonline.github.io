@@ -38,6 +38,12 @@
 						</div>
 						<div class="form-space-sp"></div>
 						<div>
+							<label>MINECRAFT ID</label>
+							<br />
+							<input type="text" id="minecraft-id" name="entry.648023444" placeholder="Kirito" value="" required />
+						</div>
+						<div class="form-space-sp"></div>
+						<div>
 							<label>アマゾンギフトコード</label>
 							<br />
 							<input type="text" id="gift-code" name="entry.1065046570" placeholder="ABCD-EFGHIJ-KLMNO"  value="" required />
@@ -75,10 +81,17 @@
 							return false;
 						}
 
+						var tex = document.getElementById("minecraft-id").value;
+
+						if (tex == '') {
+							alert('Minecraft IDを記入してください。');
+							return false;
+						}
+
 						var tex = document.getElementById("gift-code").value;
 
 						if (tex == '') {
-							alert('ギルトコードを記入してください。');
+							alert('ギフトコードを記入してください。');
 							return false;
 						}
 
