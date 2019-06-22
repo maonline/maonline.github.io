@@ -1,0 +1,145 @@
+<meta charset="UTF-8">
+<body>
+	<link rel="stylesheet" href="../../css/page/news.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="../../js/sha256.js"></script>
+	<script src="../../js/cookie.js"></script>
+
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-123405637-2"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+		gtag('config', 'UA-123405637-2');
+	</script>
+
+	<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+	<script>
+		(adsbygoogle = window.adsbygoogle || []).push({
+			google_ad_client: "ca-pub-7882595875618210",
+			enable_page_level_ads: true
+		});
+	</script>
+
+	<div id="title">
+		<h1>#3
+			<div id="date">2022/10/31</div>
+		</h1>
+		<a href="#" onClick="window.open(location.href, '_blank');"><img src="../../image/open.svg" /></a>
+	</div>
+	<hr />
+	<div id="content">
+		<div id="Wrapper">
+			<h2>カイトウヲホウコクセヨ。</h2>
+			<form action="https://docs.google.com/forms/d/e/1FAIpQLSfpUFsGnPKsFJpqS2nqLHcnplFMkWldiL-qC1GZE9NpXUWkMg/formResponse" method="post" name="AnswerReport" target="dummyIframe" id="Form">
+				<div>
+					<p>メールアドレスヲ入力セヨ</p>
+					<input type="text" id="mailaddress" name="emailAddress" placeholder="mailaddress@example.com" value="" required />
+				</div>
+				<br />
+				<div>
+					<p>問#1ノカイトウヲホウコクセヨ</p>
+					<input type="text" id="q1" name="entry.298884475" placeholder="ANSWER"  value="" required />
+				</div>
+				<br />
+				<div>
+					<p>問#2ノカイトウヲホウコクセヨ</p>
+					<input type="text" id="q2" name="entry.1401756328" placeholder="ANSWER"  value="" required />
+				</div>
+				<br />
+				<div>
+					<p>問#3</p>
+					<p>
+						□□■■■■■<br />
+						■□■□□□
+					</p>
+					<input type="text" id="q3" name="entry.1011937762" placeholder="ANSWER"  value="" required />
+				</div>
+				<br />
+				<div>
+					<input type="button" value="Enter" onclick="sendGformContactForm()">
+				</div>
+			</form>
+			<iframe name="dummyIframe" style="display:none;"></iframe>
+
+		</div>
+		<div id="thxMessage" style="display: none;" class="demo_center flash">
+			<p class="thx-message">送信ヲ完了。<br />運営カラノヘンシンヲマテ</p>
+		</div>
+		<script>
+			var shaObj = new jsSHA("SHA-256", "TEXT");
+
+			function sendGformContactForm(){
+
+				var tex = document.getElementById("mailaddress").value;
+				var Seiki = /^[a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+				var pass1 = "0917b13a9091915d54b6336f45909539cce452b3661b21f386418a257883b30a";
+				var pass2 = "fb8e9c929bbc4ccaebcf8d68296c419464bdfaf01a69708a4d01a0d3159f3116";
+				var pass3 = "17797625c9ce30f6bdb1d7af18ebaf968ddc31f7de6a8ced1084bb6e165f6327";
+
+				if (tex == '') {
+					alert('メールアドレスを記入してください。');
+					return false;
+				}
+
+				if (!(tex.match(Seiki))) {
+					alert('メールアドレスが正しくありません。');
+					return false;
+				}
+
+				shaObj = new jsSHA("SHA-256", "TEXT");
+				shaObj.update(document.getElementById('q1').value.toUpperCase());
+				var tex = document.getElementById("q1").value;
+
+				if (tex == '') {
+					alert('問#1ノカイトウヲ入力シテクダサイ');
+					return false;
+				}
+
+				if (!(pass1 == shaObj.getHash("HEX"))) {
+					alert('問#1ノカイトウガ不正デス');
+					return false;
+				}
+
+				shaObj = new jsSHA("SHA-256", "TEXT");
+				shaObj.update(document.getElementById('q2').value.toUpperCase());
+				var tex = document.getElementById("q2").value;
+
+				if (tex == '') {
+					alert('問#2ノカイトウヲ入力シテクダサイ');
+					return false;
+				}
+
+				if (!(pass2 == shaObj.getHash("HEX"))) {
+					alert('問#2ノカイトウガ不正デス');
+					return false;
+				}
+
+				shaObj = new jsSHA("SHA-256", "TEXT");
+				shaObj.update(document.getElementById('q3').value.toUpperCase());
+				var tex = document.getElementById("q3").value;
+
+				if (tex == '') {
+					alert('問#3ノカイトウヲ入力シテクダサイ');
+					return false;
+				}
+
+				if (!(pass3 == shaObj.getHash("HEX"))) {
+					alert('問#3ノカイトウガ不正デス');
+					return false;
+				}
+
+				document.AnswerReport.submit();
+				document.getElementById('Form').style.display = 'none';
+				document.getElementById('thxMessage').style.display = 'block';
+				$(function() {
+					$.cookie('cou2', null, { expires: -1, path: '/' });
+				});
+
+							// window.removeEventListener( 'touchmove' , movefun, { passive: false } );
+			}
+		</script>
+	</div>
+</body>
