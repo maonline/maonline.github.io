@@ -1,6 +1,6 @@
 function countDown() {
 	var nowTime = new Date();
-	var endTime = new Date('2019/05/21 00:00:00');
+	var endTime = new Date('2019/08/10 00:00:00');
 	var diff  = endTime - nowTime;
 	var times = 24 * 60 * 60 * 1000;
 	var day   = ('0' + Math.floor(diff / times)).slice(-2);
@@ -18,7 +18,7 @@ function countDown() {
 		}
 	} else {
 		// openModal("./assets/loader/news/first_anniv.html");
-		document.getElementById("bg").style.backgroundImage = "url(./assets/image/bg/bg_8.jpg)";
-		document.getElementById("countdown").innerText = 'Celebrating 1st anniversary!';
+		document.getElementById("bg").style.backgroundImage = "url(./assets/image/bg/bg_12.jpg)";
+		document.getElementById("countdown").innerText = 'MAO SUMMER START';
 	}
 }
