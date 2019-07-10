@@ -10,6 +10,11 @@ $(function(){
 	});
 });
 
+
+function updateButtons() {
+	mdwBtn = $('.switchModal');
+}
+
 function openModal(href) {
 	closeHeader();
 

@@ -52,7 +52,8 @@
 }
 
 #admins {
-	background-color: #002f7c;
+	/*background-color: #002f7c;*/
+	background-image: url("../../image/bg/loop_1.png");
 	text-align: center;
 }
 
@@ -135,8 +136,26 @@ figure.cp_caption a {
 	left: 0;
 	color: #fff;
 }
+figure.cp_caption .twitter_img {
+	width: 50px;
+	opacity: 0;
+}
+figure.cp_caption:hover .twitter_img {
+	-webkit-transition-delay: 0.6s;
+	        transition-delay: 0.6s;
+	-webkit-transform: translate3d(0%, 0%, 0);
+	        transform: translate3d(0%, 0%, 0);
+	opacity: 0.8;
+}
 figure.cp_caption:hover img {
 	opacity: 0.35;
+}
+figure.cp_caption:hover figcaption h2 {
+	-webkit-transition-delay: 0.2s;
+	        transition-delay: 0.2s;
+	-webkit-transform: translate3d(0%, 0%, 0);
+	        transform: translate3d(0%, 0%, 0);
+	opacity: 1;
 }
 figure.cp_caption:hover figcaption h2 {
 	-webkit-transition-delay: 0.2s;
@@ -185,12 +204,17 @@ figure.cp_caption:hover figcaption::before {
 		background: rgba(27, 37, 56, 0);
 	}
 
+	figure.cp_caption .twitter_img {
+		opacity: 0.8;
+	}
+
 }
 
 #rule {
 	width: 100%;
 	text-align: center;
-	background-color: #FFFFFF;
+	/*background-color: #FFFFFF;*/
+	background-image: url("../../image/bg/loop_2.png");
 	padding-bottom: 30px;
 }
 
@@ -198,19 +222,21 @@ figure.cp_caption:hover figcaption::before {
 	width: 60%;
 	height: 400px;
 	border: solid 4px #1a2384;
+	background-color: #ffffff;
 }
 
 .rule_button {
 	display: none;
-	width: 190px;
+	width: 200px;
 	height: 45px;
 	font-family: 'Sawarabi Gothic', sans-serif;
 	font-size: 12px;
 	text-transform: uppercase;
 	letter-spacing: 2.5px;
 	font-weight: 500;
-	color: #000;
-	background-color: #90edc8;
+	color: #fff;
+	/*background-color: #90edc8;*/
+	background-image: url("../../image/bg/ticker_background.jpg");
 	border: none;
 	border-radius: 45px;
 	box-shadow: 0px 8px 15px rgba(144, 237, 200, 0.1);
@@ -220,7 +246,6 @@ figure.cp_caption:hover figcaption::before {
 }
 
 .rule_button:hover {
-	background-color: #2EE59D;
 	box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
 	color: #fff;
 	transform: translateY(-7px);
@@ -241,12 +266,13 @@ figure.cp_caption:hover figcaption::before {
 #archive {
 	width: 100%;
 	text-align: center;
-	background-color: #002f7c;
+	/*background-color: #002f7c;*/
+	background-image: url("../../image/bg/loop_1.png");
 	padding-bottom: 30px;
 }
 
 .archive_list {
-	width: 50%;
+	width: 40%;
 	max-height: 400px;
 	margin: auto;
 	overflow-y: scroll;
@@ -305,25 +331,16 @@ figure.cp_caption:hover figcaption::before {
 @media (max-width: 767px) {
 
 	.date {
-		padding-left: 15px;
-		padding-right: 7px;
+		display: none;
 	}
 
-	.archive_content {
-		height: 40px;
-		font-size: 12px;
+	.key_picture img {
+		border-left: none;
 	}
 
 	.archive_list {
 		border: solid 6px #111111;
-	}
-
-	.archive_list {
-		width: calc(100% - 12px);
-	}
-
-	.key_picture {
-		display: none;
+		width: 243px;
 	}
 
 }

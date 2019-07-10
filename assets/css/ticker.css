@@ -2,8 +2,10 @@
 	margin: 0 auto;
 	width: 20vw;
 	height: auto;
-	border: #333333 3px solid;
-	background-color: #333333;
+	border: rgba(51, 51, 51, 0) 6px solid;
+	/*background-color: #333333;*/
+	background-image: url("../image/bg/ticker_background.jpg");
+	background-repeat: repeat;
 	position: relative;
 }
 
@@ -74,7 +76,7 @@ a img {
 	height: 10px;
 	margin: 0 5px;
 	padding: 0;
-	top: -28px;
+	top: -25px;
 
 	cursor: pointer;
 }

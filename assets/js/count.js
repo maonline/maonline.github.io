@@ -18,7 +18,7 @@ function countDown() {
 		}
 	} else {
 		// openModal("./assets/loader/news/first_anniv.html");
-		document.getElementById("bg").style.backgroundImage = "url(./assets/image/bg/bg_12.jpg)";
+		// document.getElementById("bg").style.backgroundImage = "url(./assets/image/bg/bg_12.jpg)";
 		document.getElementById("countdown").innerText = 'MAO SUMMER START';
 	}
 }
