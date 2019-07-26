@@ -58,7 +58,7 @@ function stopload(){
 		$('#loader').delay(600).fadeOut(300);
 
 		if ($.cookie('Movie20190726') == undefined) {
-				$.cookie('Movie20190726', 1, { expires: 1440, path: '/' });
+				$.cookie('Movie20190726', 1, { expires: 1, path: '/' });
 				openModal("https://www.youtube.com/embed/phkWBWyPafU");
 		} else if (noOpenNews == false) {
 			// $('#layer_board_area').layerBoard({
