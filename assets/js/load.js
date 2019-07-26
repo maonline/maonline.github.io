@@ -57,7 +57,10 @@ function stopload(){
 		$('#loader-bg').delay(900).fadeOut(800);
 		$('#loader').delay(600).fadeOut(300);
 
-		if (noOpenNews == false) {
+		if ($.cookie('Movie20190726') == undefined) {
+				$.cookie('Movie20190726', 1, { expires: 1440, path: '/' });
+				openModal("https://www.youtube.com/embed/phkWBWyPafU");
+		} else if (noOpenNews == false) {
 			// $('#layer_board_area').layerBoard({
 			// 	delayTime: 0,
 			// 	fadeTime : 1000,
@@ -65,7 +68,6 @@ function stopload(){
 			// 	limitMin : 15,
 			// 	limitCookie : 10
 			// });
-			openModal("https://www.youtube.com/embed/phkWBWyPafU");
 		} else {
 			console.log(type);
 
