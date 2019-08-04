@@ -33,6 +33,8 @@ body {
 
 img {
 	width: 80%;
+	height: auto;
+	margin: 20px 0;
 }
 
 #title img {

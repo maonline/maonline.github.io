@@ -33,6 +33,26 @@
 	transform:translate3d(0,0,0);
 }
 
+.top-mini-news {
+	display: block;
+	right: 0;
+	left: 0;
+	margin: auto;
+	margin-top: 15px;
+	width: 500px;
+	height: 20px;
+	background-color: rgba(255, 255, 255, 0.6);
+	border-radius: 0.5em;
+}
+
+.top-mini-news h4 {
+	line-height: 20px;
+}
+
+.top-mini-news a {
+	color: #33f;
+}
+
 .top-inner {
 	display: inline-block;
 	position: absolute;
@@ -102,6 +122,10 @@
 
 @media (max-width: 767px) {
 
+	.top-mini-news {
+		width: 90%;
+	}
+
 	.top-inner {
 		top: 30vh;
 	}
@@ -140,6 +164,7 @@
 
 .story-about img {
 	width: 40vw;
+	margin-bottom: 20px;
 }
 
 .movie img {

@@ -58,13 +58,13 @@ function stopload(){
 		$('#loader').delay(600).fadeOut(300);
 
 		if (noOpenNews == false) {
-			// $('#layer_board_area').layerBoard({
-			// 	delayTime: 0,
-			// 	fadeTime : 1000,
-			// 	alpha : 0.8,
-			// 	limitMin : 15,
-			// 	limitCookie : 10
-			// });
+			$('#layer_board_area').layerBoard({
+				delayTime: 0,
+				fadeTime : 1000,
+				alpha : 0.8,
+				limitMin : 15,
+				limitCookie : 10
+			});
 		} else {
 			console.log(type);
 

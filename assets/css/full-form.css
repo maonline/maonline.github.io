@@ -247,3 +247,45 @@ label.question-label {
 	font-size: 25px;
 	margin: 80px 0;
 }
+
+.flash {
+	opacity: 0;
+}
+
+.flash.do {
+	-webkit-animation: FlashAni .1s cubic-bezier(.47, 0, .745, .715) forwards normal;
+	animation: FlashAni .1s cubic-bezier(.47, 0, .745, .715) forwards normal;
+	animation-iteration-count: 4;
+
+	-webkit-animation-iteration-count: 4;
+}
+
+@-webkit-keyframes FlashAni {
+	0% {
+		-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+		opacity: 1;
+	}
+	50% {
+		-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+		opacity: 0;
+	}
+	to {
+		-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+		opacity: 1;
+	}
+}
+
+@keyframes FlashAni {
+	0% {
+		-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+		opacity: 1;
+	}
+	50% {
+		-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+		opacity: 0;
+	}
+	to {
+		-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+		opacity: 1;
+	}
+}
