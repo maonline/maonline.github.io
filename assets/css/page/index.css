@@ -126,6 +126,10 @@
 		width: 90%;
 	}
 
+	.top-mini-news h4 {
+		font-size: 4vw;
+	}
+
 	.top-inner {
 		top: 30vh;
 	}
@@ -150,6 +154,74 @@
 
 }
 
+
+
+#special {
+	width: 100%;
+	min-height: 400px;
+	position: relative;
+
+	/*background-color: #002f7c;*/
+	background-image: url("../../image/bg/loop_6.png");
+	text-align: center;
+}
+
+#special iframe {
+	display: block;
+	width: 560px;
+	height: 315px;
+	margin: 10px 10px;
+	margin: 20px;
+}
+
+.special-list-content {
+	display: inline-block;
+	width: auto;
+	margin: 1vw;
+	height: auto;
+	background-color: #ffffff;
+	background-color: rgb(255, 255, 255, 0.7);
+	border: solid 3px #FFFFFF;/*線*/
+	border-radius: 10px;/*角の丸み*/
+}
+
+.special-list-content img {
+	border-radius: 50%;
+	padding: 3px;
+	border: 10px solid #111111;
+	margin: 10px;
+	width: 25%;
+	pointer-events: none;
+}
+
+.special-list-content h5 {
+	font-family: 'Kaiso-Next-B';
+	font-size: 2vw;
+}
+
+@media (max-width: 767px) {
+
+	.special-list-content {
+		width: 85vw;
+		background-color: #ededed;
+		margin-bottom: 3vh;
+	}
+
+	#special iframe {
+		width: 84vw;
+		height: calc(84vw * (9 / 16));
+		margin: 0px;
+		margin-bottom: 20px;
+	}
+
+	.special-list-content h5 {
+		font-size: 5vw;
+	}
+
+
+}
+
+
 /* ABOUT */
 
 #about {
@@ -165,6 +237,7 @@
 .story-about img {
 	width: 40vw;
 	margin-bottom: 20px;
+	pointer-events: none;
 }
 
 .movie img {
@@ -234,6 +307,7 @@
 .join-list-content img {
 	margin: 10px;
 	width: 25%;
+	pointer-events: none;
 }
 
 .attention img {
@@ -299,8 +373,12 @@
 }
 
 .thanks-list-content img {
+	border-radius: 50%;
+	padding: 3px;
+	border: 5px solid #111111;
 	margin: 10px;
 	width: 25%;
+	pointer-events: none;
 }
 
 .thanks-list-content h5 {
