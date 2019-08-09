@@ -17,8 +17,8 @@ function countDown() {
 			setTimeout('countDown()', 10);
 		}
 	} else {
-		openModal("https://www.youtube.com/embed/phkWBWyPafU");
-		document.getElementById("bg").style.backgroundImage = "url(./assets/image/bg/bg_14.jpg)";
-		document.getElementById("countdown").innerText = 'MAO SUMMER START';
+		// openModal("https://www.youtube.com/embed/phkWBWyPafU");
+		// document.getElementById("bg").style.backgroundImage = "url(./assets/image/bg/bg_14.jpg)";
+		// document.getElementById("countdown").innerText = 'MAO SUMMER START';
 	}
 }
