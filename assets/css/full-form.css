@@ -26,7 +26,7 @@ body {
 	display: inline-block;
 	color: #ffffff;
 }
-#title:before {
+/*#title:before {
 	content: '';
 	height: 30px;
 	width: 60px;
@@ -47,7 +47,7 @@ body {
 	right:  0;
 	bottom: 0;
 	margin: auto;
-}
+}*/
 #sub-title {
     display: block;
     font-size: 14px;
