@@ -21,6 +21,20 @@
 		});
 	</script>
 
+	<script src="https://www.google.com/recaptcha/api.js?render=6Ldy2roUAAAAAB1qUZbzumSj2bR9ymaE390ssDCj"></script>
+	<script type="text/javascript">
+		var correctCaptcha = function(response) {
+			alert(response);
+		};
+
+		var onloadCallback = function() {
+			grecaptcha.render('user_auth', {
+				'sitekey' : '6Ldy2roUAAAAAB1qUZbzumSj2bR9ymaE390ssDCj',
+				'callback' : correctCaptcha
+			});
+		};
+	</script>
+
 	<div id="title">
 		<h1>MAOコンタクトフォーム</h1>
 		<a href="#" onClick="window.open(location.href, '_blank');"><img src="../../image/open.svg" /></a>
@@ -96,10 +110,23 @@
 								return false;
 							}
 
-							document.ContactForm.submit();
-							document.getElementById('Form').style.display = 'none';
-							document.getElementById('thxMessage').style.display = 'block';
-										// window.removeEventListener( 'touchmove' , movefun, { passive: false } );
+							//reCAPTCHA
+							grecaptcha.ready(function() {
+								try{
+									grecaptcha.execute('6Ldy2roUAAAAAB1qUZbzumSj2bR9ymaE390ssDCj', 
+										{action: 'contact'}).then(function(token) {
+										document.ContactForm.submit();
+										document.getElementById('Form').style.display = 'none';
+										document.getElementById('thxMessage').style.display = 'block';
+									}, function(reason) {
+							        alert('ERROR');
+									});
+								} catch(e) {
+							      alert('ERROR');
+								}
+							});
+
+							// window.removeEventListener( 'touchmove' , movefun, { passive: false } );
 						}
 					</script>
 				</div>

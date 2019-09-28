@@ -3,6 +3,10 @@
 	src: url("../font/Kaiso-Next-B.otf");
 }
 
+.grecaptcha-badge {
+	display: none !important;
+}
+
 .formWrapper {
 	overflow-x: hidden;
 	overflow-y: auto;

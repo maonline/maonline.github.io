@@ -10,6 +10,10 @@ body {
 	background-image: url("../image/bg/loop_1.png");
 }
 
+.grecaptcha-badge {
+	display: none !important;
+}
+
 #title-back {
 	/*background-image: url("../image/bg/loop_1.png");*/
 	text-align: center;
