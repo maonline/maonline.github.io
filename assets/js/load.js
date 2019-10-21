@@ -6,26 +6,6 @@ $(function() {
 
 	console.log('v1.25.0');
 
-	if (!(getParam('news') == null)) {
-		noOpenNews = true;
-		type = "NEWS";
-	}
-
-	if (!(getParam('modal') == null)) {
-		var string  = getParam('modal');
-		var pattern1 = 'https://www.minenet.work/';
-		var pattern2 = 'http://localhost/';
-
-		if ((string.indexOf(pattern1) == 0 || string.indexOf(pattern2) == 0) && string.indexOf('script') <= -1 && string.length <= 80) {
-			//If URL has parameter
-			console.log(string);
-			noOpenNews = true;
-			type = "MODAL";
-		} else {
-			console.log('That URL is not allowed.');
-		}
-	}
-
 	setTimeout('stopload()', 8000);
 	
 });
@@ -57,31 +37,6 @@ function stopload(){
 		$('#loader-bg').delay(900).fadeOut(800);
 		$('#loader').delay(600).fadeOut(300);
 
-		if (noOpenNews == false) {
-			$('#layer_board_area').layerBoard({
-				delayTime: 0,
-				fadeTime : 1000,
-				alpha : 0.8,
-				limitMin : 15,
-				limitCookie : 10
-			});
-		} else {
-			console.log(type);
-
-			if (type == "NEWS") {
-				$('#layer_board_area').layerBoard({
-					delayTime: 0,
-					fadeTime : 1000,
-					alpha : 0.8,
-					limitMin : 0,
-					limitCookie : 10
-				});
-			} else {
-				if (type == "MODAL") {
-					openModal(getParam('modal'));
-				}
-			}
-		}
 	}
 }
 
