@@ -101,8 +101,9 @@ $('.nazo_list_clicker').click(function(){
 
 function onCheckAnswer() {
 	var QNumber = $("#nazo_area_form_inp").attr('data-form_inp');
-	var PlayerAnswer = $("#nazo_area_form_inp").val();
+	var PlayerAnswer = $("#nazo_area_form_inp").val().toUpperCase();
 	var SHA_OBJ = new jsSHA("SHA-256", "TEXT");
+
 	if (QNumber == 0) return;
 
 	for ( var i = 0; i < 10; i++ ) {
