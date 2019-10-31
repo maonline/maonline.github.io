@@ -13,13 +13,13 @@
 		<meta property="og:title" content="Mine Art Online | 「マイン・アート・オンライン」 オフィシャルサイト">
 		<meta property="og:type" content="website">
 		<meta property="og:url" content="https://www.minenet.work/">
-		<meta property="og:image" content="https://www.minenet.work/assets/image/pr/pr_1.jpg">
+		<meta property="og:image" content="https://www.minenet.work/assets/image/pr/pr_2.jpg">
 		<meta property="og:site_name" content="Mine Art Online | 「マイン・アート・オンライン」 オフィシャルサイト">
 		<meta property="og:description" content="SAO をマインクラフトスケールで完全再現 VR世界のかつてない冒険へ。">
 		<meta property="og:locale" content="ja_JP">
 		<meta name="twitter:card" content="summary_large_image">
-		<meta name="twitter:image" content="https://www.minenet.work/assets/image/pr/pr_1.jpg">
-		<meta property="og:image:secure_url" content="https://www.minenet.work/assets/image/pr/pr_1.jpg" />
+		<meta name="twitter:image" content="https://www.minenet.work/assets/image/pr/pr_2.jpg">
+		<meta property="og:image:secure_url" content="https://www.minenet.work/assets/image/pr/pr_2.jpg" />
 		<meta property="og:image:alt" content="You can see beautiful builings and natures" />
 		<meta name="theme-color" content="#A901DB" />
 		<meta http-equiv="Pragma" content="no-cache">
@@ -32,6 +32,7 @@
 		<link rel="stylesheet" href="./assets/css/reset.css">
 		<link rel="stylesheet" href="./assets/css/page/index.css">
 		<link rel="stylesheet" href="./assets/css/style.css">
+		<link rel="stylesheet" href="./assets/css/season.css">
 		<link rel="stylesheet" href="./assets/css/ticker.css">
 		<link rel="stylesheet" href="./assets/css/modal.css">
 		<link rel="stylesheet" href="./assets/css/header.css">
@@ -135,16 +136,23 @@
 
 					<div class="header-logo">
 						<a href="/">
-							<img src="./assets/image/logo_w.png" class="title-img" />
+							<img src="./assets/image/logo_w.png" class="title-img" id="title_img" />
+							<!-- <img src="./assets/image/logo_w_1.png" class="title-img" /> -->
 						</a>
 					</div>
 
 					<!-- TOP FIRST VIEW -->
 					<div id="top">
 						<div class="bg" id="bg">
+							<canvas id="canvas"></canvas>
 							<div id="bg_filter"></div>
 							<div class="top-inner">
-								<h1 class="title">HAPPY HALLOWEEN</h1>
+								<div id="glitch_logo" class="screen glitch">
+									<div class="title_glitch">
+										<span data="MERRY XMAS">MERRY XMAS</span>
+									</div>
+								</div>
+								<h1 class="title" id="title_logo_n">MERRY XMAS</h1>
 								<!-- COUNT DOWN -->
 								<!-- <h1 class="title">MAO SUMMER</h1> -->
 								<!-- <div class="title" id="countdown"></div> -->
@@ -154,7 +162,7 @@
 								</div> -->
 
 								<div class="top-span"></div>
-								<h3>===ACCESS===</h3><br />
+								<h3 id="access_text">===ACCESS===</h3><br />
 								<h3>現在メンテナンス中です!</h3>
 								<h3 id="change">IP: minenet.work</h3>
 								<h3>version: 1.12.2</h3>
@@ -162,6 +170,10 @@
 								<div class="top-span2"></div>
 								<div id="ticker">
 									<ul class="ticker">
+
+										<li>
+											<a href="https://youtu.be/sXy5OiFN56c" target="_blank"><img src="./assets/image/news/broadcast_news.png"></a>
+										</li>
 
 										<li>
 											<a href="youridea.html"><img src="./assets/image/news/youridea.png"></a>
@@ -199,9 +211,81 @@
 						</div>
 					</div> -->
 
+					<div id="nazo_event">
+						<div class="table-tag white demo_center flash">
+							<h2 id="story_tag">EVENT</h2>
+						</div>
+						<div class="nazo_event demo_center flash">
+							<div class="nazo_content">
+								<div class="nazo_event_cont_area">
+									<div id="nazo_area_desc">
+										<p>
+											無限雪面のクリプトグラフ<br />
+											<span id="eng_title_mystery">―The Infinite Cryptograph of Snow Field―</span><br />
+										</p>
+										<div class="move">
+											<iframe width="80%" height="45%" src="https://www.youtube.com/embed/da8TbT7wd5A" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+										</div>
+										<p>
+											<span style="font-size: 20px"><a href="./assets/loader/news/winter_mystery_desc.html" class="switchModal">ゲームを開始する前にお読みください。</a></span><br />
+										</p>
+									</div>
+
+									<div id="nazo_area_last_answer_desc">
+										<p>
+											最終解答<br />
+											<span id="eng_title_mystery">オワリノコトバを入力セヨ</span><br />
+										</p>
+									</div>
+
+									<img id="nazo_area_img" src="./assets/image/event/winter_mystery/q_1.png" />
+									<div id="nazo_area_form">
+										<input type="text" id="nazo_area_form_inp" data-form_inp="1">
+										<button type="submit" id="nazo_area_form_sub" onClick="onCheckAnswer()">確定</button>
+									</div>
+								</div>
+								<div class="nazo_event_cont_list">
+									<ul>
+										<a class="nazo_list_clicker" data-numb="0" data-sel="true">
+											<li>STORY</li>
+										</a>
+										<a class="nazo_list_clicker" data-numb="1" data-sel="false">
+											<li>MYSTERY 1</li>
+										</a>
+										<a class="nazo_list_clicker" data-numb="2" data-sel="false">
+											<li>MYSTERY 2</li>
+										</a>
+										<a class="nazo_list_clicker" data-numb="3" data-sel="false">
+											<li>MYSTERY 3</li>
+										</a>
+										<a class="nazo_list_clicker" data-numb="4" data-sel="false">
+											<li>MYSTERY 4</li>
+										</a>
+										<a class="nazo_list_clicker" data-numb="5" data-sel="false">
+											<li>MYSTERY 5</li>
+										</a>
+										<a class="nazo_list_clicker" data-numb="6" data-sel="false">
+											<li>MYSTERY 6</li>
+										</a>
+										<a class="nazo_list_clicker" data-numb="7" data-sel="false">
+											<li>MYSTERY 7</li>
+										</a>
+
+										<a class="nazo_list_clicker" data-numb="8" data-sel="false">
+											<li>MYSTERY FINAL</li>
+										</a>
+										<a class="nazo_list_clicker" data-numb="9" data-sel="false">
+											<li>LAST ANSWER</li>
+										</a>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+
 					<div id="about">
 						<div class="table-tag white demo_center flash">
-							<h2>STORY</h2>
+							<h2 id="story_tag">STORY</h2>
 						</div>
 						<div class="movie demo_center flash">
 							<a href="https://www.youtube.com/embed/jfzF1ojRt0A?autoplay=1&color=white" class="switchModal">
@@ -209,7 +293,7 @@
 							</a>
 						</div>
 						<div class="story-about demo_center flash">
-							<img src="./assets/image/desc.png" />
+							<img src="./assets/image/desc.png" id="desc_pic" />
 						</div>
 					</div>
 
@@ -287,18 +371,18 @@
 									<a href="https://www.youtube.com/channel/UClpgAZCoIpHtB_y1tzuWmDQ" target="_blank" onclick="gtag('event', 'click', {'event_category': 'Thanks', 'event_label': 'Shei'});">LINK</a>
 								</h6>
 							</div>
-<!-- 							<div class="thanks-list-content unknown">
-								<img src="./assets/image/profile.jpg" style="border-color: #333333;" />
+							<div class="thanks-list-content unknown" id="unknown_promoter">
+								<img src="./assets/image/who.gif" style="border-color: #ffffff;" />
 								<h5>？？？</h5>
 								<h6><a>LINK</a></h6>
-							</div> -->
+							</div>
 						</div>
 					</div>
 				</div>
 
 				<!-- <div id="footer_deco"></div> -->
 				<footer>
-					<img src="./assets/image/logo_w.png" />
+					<img src="./assets/image/logo_w.png" id="footer_logo_mark" />
 					<h3>Copyright ©Nazuna All Rights Reserved.</h3>
 				</footer>
 			</div>
@@ -311,9 +395,10 @@
 		<script type="text/javascript" src="./assets/js/modal.js"></script>
 		<!-- BLINK -->
 		<script type="text/javascript" src="./assets/js/scroll.js"></script>
+		<script type="text/javascript" src="./assets/js/sha256.js"></script>
+		<script type="text/javascript" src="./assets/js/event.js"></script>
 		<!-- LOAD PROCESS -->
 		<script type="text/javascript" src="./assets/js/load.js"></script>
-		
 		<!-- <script type="text/javascript" src="./assets/js/count.js"></script> -->
 		<!-- <script type="text/javascript"> -->
 			<!-- countDown(); -->

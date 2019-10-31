@@ -3,8 +3,9 @@ var noOpenNews = false;
 var type = "NONE";
 
 $(function() {
-
-	console.log('v1.25.0');
+	console.log('v1.26.0');
+	/* EVENT */
+	checkCookie();
 
 	setTimeout('stopload()', 8000);
 	
@@ -48,4 +49,65 @@ function getParam(name, url) {
 	if (!results) return null;
 	if (!results[2]) return '';
 	return decodeURIComponent(results[2].replace(/\+/g, " "));
+}
+
+/** EVENT CONTENT **/
+
+function checkCookie() {
+	if (navigator.cookieEnabled) {
+
+		if ($.cookie('Q1') === 'true') ReverseStory();
+		if ($.cookie('Q2') === 'true') RedSnow();
+		if ($.cookie('Q3') === 'true') LoadingNoise();
+		if ($.cookie('Q4') === 'true') GarbledTexts();
+		if ($.cookie('Q5') === 'true') GlitchBackGround();
+		if ($.cookie('Q6') === 'true') UnknownPromoter();
+		if ($.cookie('Q7') === 'true') GlitchLogo();
+	}
+}
+
+function GlitchLogo() {
+	$("#glitch_logo").css('display', 'block');
+	$("#title_logo_n").css('display', 'none');
+}
+
+function GlitchBackGround() {
+	$("#bg").css('background-image', 'url(./assets/image/bg/bg_17_1.jpg)');
+	$("#bg_filter").css('background-image', 'url(./assets/image/bg/bg_noise_1.gif)');
+}
+
+function RedSnow() {
+	BeRed();
+}
+
+function ReverseStory() {
+	$("#story_tag").css('transform', 'scale(1, -1)');
+	$("#desc_pic").attr('src', './assets/image/desc_1.png');
+}
+
+function UnknownPromoter() {
+	$("#unknown_promoter").css('display', 'inline-block');
+}
+
+function LoadingNoise() {
+	$("#loader-bg").css('background-image', 'url(./assets/image/bg/bg_noise.gif)');
+}
+
+function GarbledTexts() {
+	$("#title_img").attr('src', './assets/image/logo_w_1.png');
+	$("#footer_logo_mark").attr('src', './assets/image/logo_w_1.png');
+	setInterval("GarbledTextChange()", 10);
+}
+
+function GarbledTextChange() {
+	var l = 6;
+	var c = "abcdefghijklmnopqrstuvwxyz0123456789";
+
+	var cl = c.length;
+	var r = "";
+	for(var i=0; i<l; i++){
+	  r += c[Math.floor(Math.random()*cl)];
+	}
+
+	$("#access_text").text('===' + r + '===');
 }

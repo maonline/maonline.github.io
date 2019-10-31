@@ -34,6 +34,7 @@
 	/*background: #0f3854;
 	background: radial-gradient(ellipse at center, #0a2e38 0%, #000000 70%);*/
 	background-image: url(../image/bg/loop_1.png);
+	/*background-image: url(../image/bg/bg_noise.gif);*/
 	z-index: 11000;
 	text-align: center;
 }
