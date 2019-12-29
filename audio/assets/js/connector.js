@@ -67,7 +67,11 @@ function RunProgress(json_map) {
 		document.getElementById('connect_button').style.display = "none";
 		document.getElementById('center_panel').style.display = "block";
 
-		PlayMusic("assets/voice/connect_voice_1.wav");
+		var min = 1;
+		var max = 3;
+		var a = Math.floor(Math.random() * (max + 1 - min)) + min;
+
+		PlayMusic("assets/voice/connect_voice_" + a + ".wav");
 
 	} else if (Order_Type == "BAD_REQUEST") {
 		//TODO
