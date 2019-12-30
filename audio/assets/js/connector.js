@@ -13,7 +13,7 @@ $(function() {
 		PLAYER_TOKEN = getParam('token');
 		PORT = getParam('p');
 	}
-	connection = new WebSocket('ws://ddos-proxy01.my-server.pro:' + PORT);
+	connection = new WebSocket('wss://ddos-proxy01.my-server.pro:' + PORT);
 
 	connection.onopen = function () {
 		console.log('Connected!');
