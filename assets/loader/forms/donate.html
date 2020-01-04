@@ -27,7 +27,7 @@
 	</div>
 	<hr />
 	<div id="content">
-	
+
 		<section id="modalArea" class="modalArea">
 			<div class="modalWrapper">
 				<div class="Contents demo_center flash">
@@ -58,29 +58,41 @@
 							9.この規約は予告なく変更される可能性があり、変更された時点から、変更後の寄付規約は適用され、ユーザーはそれに従う事に同意するものとします。<br />
 							<br />
 						</p>
-						<form action="https://docs.google.com/forms/d/e/1FAIpQLScVnMpfZet9Yt09fkJHASjzqGgiZCvaqhV530iprx1jI83gGQ/formResponse" method="post" name="myForm" target="dummyIframe" id="Form">
+						<form action="https://docs.google.com/forms/d/e/1FAIpQLSezAlCaxRVQcIZqHXmlPqhJsMxTvkx9VfTcqmP5sJKazNQ_iQ/formResponse" method="post" name="myForm" target="dummyIframe" id="Form">
+							<div>
+								<label>メールアドレス</label>
+								<br />
+								<input type="text" id="mailAddress" name="emailAddress" placeholder="minenet@minenet.work" value="" required />
+							</div>
+							<div class="form-space-sp"></div>
 							<div>
 								<label>ディスコード ID</label>
 								<br />
-								<input type="text" id="discord-id" name="entry.2005620554" placeholder="Kirito#1234" value="" required />
+								<input type="text" id="discord-id" name="entry.691355415" placeholder="Kirito#1234" value="" required />
 							</div>
 							<div class="form-space-sp"></div>
 							<div>
 								<label>MINECRAFT ID</label>
 								<br />
-								<input type="text" id="minecraft-id" name="entry.648023444" placeholder="Kirito" value="" required />
+								<input type="text" id="minecraft-id" name="entry.1881452471" placeholder="Kirito" value="" required />
 							</div>
 							<div class="form-space-sp"></div>
 							<div>
 								<label>アマゾンギフトコード</label>
 								<br />
-								<input type="text" id="gift-code" name="entry.1065046570" placeholder="ABCD-EFGHIJ-KLMNO"  value="" required />
+								<input type="text" id="gift-code" name="entry.419015007" placeholder="ABCD-EFGHIJ-KLMNO"  value="" required />
+							</div>
+							<div class="form-space-sp"></div>
+							<div>
+								<label>金額</label>
+								<br />
+								<input type="text" id="money-value" name="entry.439242883" placeholder="1500"  value="" required />
 							</div>
 							<div class="form-space-sp"></div>
 							<div>
 								<label>メッセージ</label>
 								<br />
-								<textarea id="message" placeholder="※必須ではありません" name="entry.839337160"></textarea>
+								<textarea id="message" placeholder="※必須ではありません" name="entry.990706064"></textarea>
 							</div>
 							<div class="form-space-sp"></div>
 							<div>
@@ -95,6 +107,19 @@
 					</div>
 					<script>
 						function sendGform(){
+
+							var tex = document.getElementById("mailAddress").value;
+							var Seiki = /^[a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+
+							if (tex == '') {
+								alert('メールアドレスを記入してください。');
+								return false;
+							}
+
+							if (!(tex.match(Seiki))) {
+								alert('メールアドレスのフォーマットが異なります。');
+								return false;
+							}
 
 							var tex = document.getElementById("discord-id").value;
 							var Seiki = /^.+#([0-9]{4,4})$/;
@@ -120,6 +145,19 @@
 
 							if (tex == '') {
 								alert('ギフトコードを記入してください。');
+								return false;
+							}
+
+							var tex = document.getElementById("money-value").value;
+							var Seiki = /^([1-9]\d*|0)$/;
+
+							if (tex == '') {
+								alert('金額を記入してください。');
+								return false;
+							}
+
+							if (!(tex.match(Seiki))) {
+								alert('金額は半角コンマなしで入力してください。');
 								return false;
 							}
 
