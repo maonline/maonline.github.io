@@ -161,6 +161,12 @@
 								return false;
 							}
 
+							var tex = document.getElementById("message").value;
+
+							if (tex == '') {
+								document.getElementById("message").value = "なし";
+							}
+
 							document.myForm.submit();
 							document.getElementById('Form').style.display = 'none';
 							document.getElementById('thxMessage').style.display = 'block';
