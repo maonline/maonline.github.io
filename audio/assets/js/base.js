@@ -30,8 +30,8 @@ function getParam(param, url) {
         results = regex.exec(url);
     if (!results) return null;
 	if (!results[2]) return '';
-	if ('token' == param) if (!(results[2].length == 64)) return null;
-	if ('p' == param) if (!(results[2].length == 3)) return null;
+	// if ('token' == param) if (!(results[2].length == 64)) return null;
+	// if ('p' == param) if (!(results[2].length == 3)) return null;
     return decodeURIComponent(results[2].replace(/\+/g, " "));
 }
 
