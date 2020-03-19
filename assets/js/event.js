@@ -47,7 +47,7 @@ function setbackGround(num) {
 
 	for ( var i = 1; i < 8; i++ ) {
 		if ($.cookie('Q' + i) == undefined) {
-			return;							
+			return;
 		} else if (!($.cookie('Q' + i) === 'true')) {
 			return;
 		}
@@ -77,7 +77,7 @@ $('.nazo_list_clicker').click(function(){
 		$("#nazo_area_last_answer_desc").css('display', 'none');
 		/* STORY文 表示 */
 		$("#nazo_area_desc").css('display', 'inline-block');
-	
+
 	} else if (numb == 9) {
 		/* IMG, STORY文 非表示 */
 		$("#nazo_area_img").css('display', 'none');
@@ -85,7 +85,7 @@ $('.nazo_list_clicker').click(function(){
 		/* LAST ANSWER文 表示 */
 		$("#nazo_area_last_answer_desc").css('display', 'inline-block');
 		$("#nazo_area_form").css('display', 'inline-block');
-	
+
 	} else {
 		/* LAST ANSWER文, STORY文 表示 */
 		$("#nazo_area_last_answer_desc").css('display', 'none');

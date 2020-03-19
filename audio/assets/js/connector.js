@@ -19,6 +19,8 @@ $(function() {
 		console.log("DEBUG#PORT#" + PORT);
 		console.log("DEBUG#SER_IP#" + SERVER_IP);
 	}
+	console.log("CONNECT-TO: " + SERVER_IP + ":" + PORT);
+
 	connection = new WebSocket(SERVER_IP + ":" + PORT);
 
 	connection.onopen = function () {
