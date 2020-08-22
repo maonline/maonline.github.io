@@ -1,0 +1,82 @@
+<!-- 
+<div class="known_bugs">
+    <h2 class="known_bugs_title">現在報告されているバグ一覧</h2>
+
+    <div class="bugs_list">
+        <div class="bug_tile bug">
+            <h2 class="bug_tile_title">○○に安置があった<span class="update_date">2020/08/19 22:22:22</span></h2>
+            <p class="bug_tile_description">世の中には、大切な事はたくさんある。人によってその基準、とらえ方はさまざまである。その中で、自分の率直な気持ちも、大切な事の一つであると思う。世間体や理論、常識などにとらわれた気持ちではなく、ありのままの気持ちを大切にしたい。
+                人には、何かを思い立っても、なかなか行動に移せないときがある。まず、その行動に対する人々の目が気になるからであろう。人にとがめられたり、迷惑をかけるような事でもないのに、常識はずれとか身のほど知らずとされるような事柄もある。さらに、なまじ相手の気持ちを憶測しすぎて、ついに身動きが取れなくなったりもする。自分自身の正直な気持ちからの行動のはずなのに、何らかの力によって規制されてしまうのである。
+                自分のあるがままの気持ちを大切にしたい。会おうと思えば誰にだって会えるし、やろうと思えば何だってできると信じたい。すべての事の始まりは、ほんの少しのチャンスと勇気なのである。
+                </p>
+            
+        </div>
+        <div class="bug_tile time">
+            <h2 class="bug_tile_title">○○に安置があった<span class="update_date">2020/08/19 22:22:22</span></h2>
+            <p class="bug_tile_description">X-727, Y-727, Z-727 に安置がありました</p>
+        </div>
+        <div class="bug_tile fixed">
+            <h2 class="bug_tile_title">○○に安置があった<span class="update_date">2020/08/19 22:22:22</span></h2>
+            <p class="bug_tile_description">X-727, Y-727, Z-727 に安置がありました</p>
+        </div>
+    </div>
+</div>
+-->
+
+
+<!--
+<div class="info_section" id="ogt_bug_report">
+    <img class="title_index" src="./assets/image/index/index_bug_report.png" />
+    <div class="form_back">
+        <p class="form_info">
+            OGTⅢに関するバグ報告はこちらよりお願いします。<br />
+            発生場所の座標などの細かい情報もご報告いただけると助かります。<br />
+            画像などを添え付けいただける場合は画像アップローダーのサイトをお使い頂き、URLの形式での掲載にご協力をお願いします。<br />
+        </p>
+
+        <form action="https://docs.google.com/forms/u/6/d/e/1FAIpQLSe70Uvrbf1ICQt700cuQOnRb_1-iU95VJce9iS_f0EbBMVT6w/formResponse" method="post" name="BugReportForm" target="dummyIframe" id="form">
+            
+            <div class="input_frame">
+                <label>件名</label>
+                <br/>
+                <input type="text" class="inputter" id="subject" name="entry.1720962292" placeholder="〇〇〇〇に安全地帯がありました"  value="" required />
+            </div>
+            
+            <div class="input_frame">
+                <label>内容</label>
+                <br/>
+                <textarea class="inputter" id="message" name="entry.1588118185" placeholder="できるだけ詳しくご記入ください"></textarea>
+            </div>
+            
+            <input type="button" id="send_button" value="送信" onclick="sendGformContactForm()">
+
+        </form>
+        <iframe name="dummyIframe" style="display:none;"></iframe>
+        
+        <script>
+            function sendGformContactForm(){
+                var tex = document.getElementById("subject").value;
+
+                if (tex == '') {
+                    alert('件名を記入してください。');
+                    return false;
+                }
+
+                var tex = document.getElementById("message").value;
+
+                if (tex == '') {
+                    alert('内容を記入してください。');
+                    return false;
+                }
+
+                document.BugReportForm.submit();
+                document.getElementById('subject').disabled = true;
+                document.getElementById('message').disabled = true;
+                document.getElementById('send_button').disabled = true;
+                alert('送信を完了しました。');
+            }
+        </script>
+
+    </div>
+</div>
+-->

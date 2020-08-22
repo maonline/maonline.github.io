@@ -61,6 +61,7 @@ html, body {
     padding-bottom: 20px;
     height: 40px;
     width: auto;
+    -webkit-user-drag: none;
 }
  
 #loading_bar {
