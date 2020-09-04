@@ -14,4 +14,11 @@
         <date>2020/09/05 00:02:00</date>
         <description>一部MOBのダメージが極端に少なくなる不具合が発生しています。</description>
     </bug>
+    <bug>
+        <id>3</id>
+        <status>found</status>
+        <subject>Lv.2のときに、SPを体力に振っても体力が増えない</subject>
+        <date>2020/09/05 00:23:00</date>
+        <description>Lv.2 の状態でSPを体力に1振っても体力が増えない不具合 2以上振れば正常に動作します。</description>
+    </bug>
 </bugs_list>
