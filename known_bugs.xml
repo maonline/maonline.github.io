@@ -44,9 +44,16 @@
     </bug>
     <bug>
         <id>7</id>
-        <status>found</status>
+        <status>fixed</status>
         <subject>リトルペネントに攻撃があたらない</subject>
         <date>2020/09/05 01:42:27</date>
         <description>リトルペネントに攻撃がヒットしない不具合です。</description>
+    </bug>
+    <bug>
+        <id>8</id>
+        <status>timed</status>
+        <subject>一部MOBに攻撃があたらない</subject>
+        <date>2020/09/05 02:05:02</date>
+        <description>【情報求】一部MOBに攻撃がヒットしない不具合です。 ヒットしないMOBを発見した場合、以下のフォームより報告をお願いいたします。</description>
     </bug>
 </bugs_list>
