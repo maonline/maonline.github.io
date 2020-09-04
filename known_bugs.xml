@@ -1,4 +1,17 @@
-<!-- <?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <bugs_list>
-
-</bugs_list> -->
+    <bug>
+        <id>1</id>
+        <status>found</status>
+        <subject>コートオブミットナイトのテクスチャが反映されない</subject>
+        <date>2020/09/05 00:02:00</date>
+        <description>MineArtOnline-RP-v1.0.1 上で発生している不具合です。</description>
+    </bug>
+    <bug>
+        <id>2</id>
+        <status>found</status>
+        <subject>一部MOBのダメージが極端に少ない</subject>
+        <date>2020/09/05 00:02:00</date>
+        <description>一部MOBのダメージが極端に少なくなる不具合が発生しています。</description>
+    </bug>
+</bugs_list>
