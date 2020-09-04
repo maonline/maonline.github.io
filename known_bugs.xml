@@ -28,4 +28,11 @@
         <date>2020/09/05 00:33:42</date>
         <description>極稀に発生する詳細不明の不具合です。 サーバーに入りなおすか、他ナンバリングサーバーに移動すると治ります。</description>
     </bug>
+    <bug>
+        <id>5</id>
+        <status>found</status>
+        <subject>フィールドゲート付近のフレンシーボアが壁に埋まる</subject>
+        <date>2020/09/05 00:42:25</date>
+        <description>1層主街区のフィールドゲートから出た付近の壁の中に大量のフレンシーボアがスポーンする不具合</description>
+    </bug>
 </bugs_list>
