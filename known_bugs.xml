@@ -21,4 +21,11 @@
         <date>2020/09/05 00:23:00</date>
         <description>Lv.2 の状態でSPを体力に1振っても体力が増えない不具合 2以上振れば正常に動作します。</description>
     </bug>
+    <bug>
+        <id>4</id>
+        <status>found</status>
+        <subject>極稀にSSが発動しなくなる</subject>
+        <date>2020/09/05 00:33:42</date>
+        <description>極稀に発生する詳細不明の不具合です。 サーバーに入りなおすか、他ナンバリングサーバーに移動すると治ります。</description>
+    </bug>
 </bugs_list>
