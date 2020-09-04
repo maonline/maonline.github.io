@@ -56,4 +56,11 @@
         <date>2020/09/05 02:05:02</date>
         <description>【情報求】一部MOBに攻撃がヒットしない不具合です。 ヒットしないMOBを発見した場合、以下のフォームより報告をお願いいたします。</description>
     </bug>
+    <bug>
+        <id>8</id>
+        <status>found</status>
+        <subject>ソジャーの攻撃力が想定と異なる</subject>
+        <date>2020/09/05 02:26:32</date>
+        <description>ソジャーの攻撃力が想定と異なり、非常に高く設定されている不具合です。</description>
+    </bug>
 </bugs_list>
