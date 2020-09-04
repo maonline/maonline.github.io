@@ -33,6 +33,20 @@
         <status>found</status>
         <subject>フィールドゲート付近のフレンシーボアが壁に埋まる</subject>
         <date>2020/09/05 00:42:25</date>
-        <description>1層主街区のフィールドゲートから出た付近の壁の中に大量のフレンシーボアがスポーンする不具合</description>
+        <description>1層主街区のフィールドゲートから出た付近の壁の中に大量のフレンシーボアがスポーンする不具合です。</description>
+    </bug>
+    <bug>
+        <id>6</id>
+        <status>found</status>
+        <subject>小さな鉄片を鋼鉄に合成できない</subject>
+        <date>2020/09/05 01:38:22</date>
+        <description>小さな鉄片を鋼鉄に合成しようとしても「素材が足りません」と表記され、合成できない不具合です。</description>
+    </bug>
+    <bug>
+        <id>7</id>
+        <status>found</status>
+        <subject>リトルペネントに攻撃があたらない</subject>
+        <date>2020/09/05 01:42:27</date>
+        <description>リトルペネントに攻撃がヒットしない不具合です。</description>
     </bug>
 </bugs_list>
