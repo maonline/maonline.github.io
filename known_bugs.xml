@@ -70,4 +70,11 @@
         <date>2020/09/05 02:48:32</date>
         <description>2層にいる防具屋に右クリックしてもGUIが開かない不具合です。</description>
     </bug>
+    <bug>
+        <id>11</id>
+        <status>found</status>
+        <subject>一部のアイテムの作成ができない</subject>
+        <date>2020/09/05 04:10:32</date>
+        <description>一部アイテムの作成が行えない不具合が発生しています。</description>
+    </bug>
 </bugs_list>
