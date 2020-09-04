@@ -63,4 +63,11 @@
         <date>2020/09/05 02:26:32</date>
         <description>ソジャーの攻撃力が想定と異なり、非常に高く設定されている不具合です。</description>
     </bug>
+    <bug>
+        <id>10</id>
+        <status>found</status>
+        <subject>2層の防具屋が正常に動作しない</subject>
+        <date>2020/09/05 02:48:32</date>
+        <description>2層にいる防具屋に右クリックしてもGUIが開かない不具合です。</description>
+    </bug>
 </bugs_list>
