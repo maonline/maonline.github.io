@@ -86,7 +86,7 @@
     </bug>
     <bug>
         <id>13</id>
-        <status>found</status>
+        <status>fixed</status>
         <subject>ブロウがスポーンしない</subject>
         <date>2020/09/05 09:02:31</date>
         <description>ブロウが想定と異なり、スポーンしない不具合が発生しています。</description>
@@ -100,10 +100,10 @@
     </bug>
     <bug>
         <id>15</id>
-        <status>found</status>
+        <status>fixed</status>
         <subject>モンスターの名前が表示されない</subject>
         <date>2020/09/05 09:48:11</date>
-        <description>クリスマスエリア内で、一部MOBの名前が表示されない不具合が発生しています。</description>
+        <description>【仕様】 クリスマスエリア内で、一部MOBの名前が表示されない</description>
     </bug>
     <bug>
         <id>16</id>
@@ -111,5 +111,12 @@
         <subject>テレポートの際にダメージをうける</subject>
         <date>2020/09/05 10:37:31</date>
         <description>ドルイド高原からドルイドの村にワープする際にダメージを受ける不具合です。</description>
+    </bug>
+    <bug>
+        <id>17</id>
+        <status>found</status>
+        <subject>秘密のダンジョンキーが正常に動作しない</subject>
+        <date>2020/09/05 14:20:50</date>
+        <description>秘密のダンジョンキーが右クリックで発動しない不具合です。</description>
     </bug>
 </bugs_list>
