@@ -119,4 +119,11 @@
         <date>2020/09/05 14:20:50</date>
         <description>秘密のダンジョンキーが右クリックで発動しない不具合です。</description>
     </bug>
+    <bug>
+        <id>18</id>
+        <status>found</status>
+        <subject>プロモータークエストのテレポートが正常に動作しない</subject>
+        <date>2020/09/05 19:30:20</date>
+        <description>きらさんのプロモータークエストのテレポートが正常に動作しない不具合が確認されています。</description>
+    </bug>
 </bugs_list>
