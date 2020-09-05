@@ -77,4 +77,39 @@
         <date>2020/09/05 04:10:32</date>
         <description>一部アイテムの作成が行えない不具合が発生しています。</description>
     </bug>
+    <bug>
+        <id>12</id>
+        <status>found</status>
+        <subject>2層ボスが複数体同時に出現する</subject>
+        <date>2020/09/05 08:02:23</date>
+        <description>2層ボスモンスターが複数体スポーンする不具合が発生しています。</description>
+    </bug>
+    <bug>
+        <id>13</id>
+        <status>found</status>
+        <subject>ブロウがスポーンしない</subject>
+        <date>2020/09/05 09:02:31</date>
+        <description>ブロウが想定と異なり、スポーンしない不具合が発生しています。</description>
+    </bug>
+    <bug>
+        <id>14</id>
+        <status>found</status>
+        <subject>サーバーで表示されるNewsが古い状態となっている</subject>
+        <date>2020/09/05 09:26:10</date>
+        <description>マイクラチャット内に表示される定期Newsの内容が想定と異なっている不具合です。</description>
+    </bug>
+    <bug>
+        <id>15</id>
+        <status>found</status>
+        <subject>モンスターの名前が表示されない</subject>
+        <date>2020/09/05 09:48:11</date>
+        <description>クリスマスエリア内で、一部MOBの名前が表示されない不具合が発生しています。</description>
+    </bug>
+    <bug>
+        <id>16</id>
+        <status>found</status>
+        <subject>テレポートの際にダメージをうける</subject>
+        <date>2020/09/05 10:37:31</date>
+        <description>ドルイド高原からドルイドの村にワープする際にダメージを受ける不具合です。</description>
+    </bug>
 </bugs_list>
