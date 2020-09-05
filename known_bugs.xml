@@ -2,14 +2,14 @@
 <bugs_list>
     <bug>
         <id>1</id>
-        <status>found</status>
+        <status>timed</status>
         <subject>コートオブミットナイトのテクスチャが反映されない</subject>
         <date>2020/09/05 00:02:00</date>
         <description>MineArtOnline-RP-v1.0.1 上で発生している不具合です。</description>
     </bug>
     <bug>
         <id>2</id>
-        <status>found</status>
+        <status>timed</status>
         <subject>一部MOBのダメージが極端に少ない</subject>
         <date>2020/09/05 00:02:00</date>
         <description>一部MOBのダメージが極端に少なくなる不具合が発生しています。</description>
@@ -30,7 +30,7 @@
     </bug>
     <bug>
         <id>5</id>
-        <status>found</status>
+        <status>timed</status>
         <subject>フィールドゲート付近のフレンシーボアが壁に埋まる</subject>
         <date>2020/09/05 00:42:25</date>
         <description>1層主街区のフィールドゲートから出た付近の壁の中に大量のフレンシーボアがスポーンする不具合です。</description>
@@ -65,7 +65,7 @@
     </bug>
     <bug>
         <id>10</id>
-        <status>found</status>
+        <status>timed</status>
         <subject>2層の防具屋が正常に動作しない</subject>
         <date>2020/09/05 02:48:32</date>
         <description>2層にいる防具屋に右クリックしてもGUIが開かない不具合です。</description>
@@ -79,7 +79,7 @@
     </bug>
     <bug>
         <id>12</id>
-        <status>found</status>
+        <status>timed</status>
         <subject>2層ボスが複数体同時に出現する</subject>
         <date>2020/09/05 08:02:23</date>
         <description>2層ボスモンスターが複数体スポーンする不具合が発生しています。</description>
@@ -114,7 +114,7 @@
     </bug>
     <bug>
         <id>17</id>
-        <status>found</status>
+        <status>timed</status>
         <subject>秘密のダンジョンキーが正常に動作しない</subject>
         <date>2020/09/05 14:20:50</date>
         <description>秘密のダンジョンキーが右クリックで発動しない不具合です。</description>
