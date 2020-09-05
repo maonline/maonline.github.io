@@ -107,7 +107,7 @@
     </bug>
     <bug>
         <id>16</id>
-        <status>found</status>
+        <status>fixed</status>
         <subject>テレポートの際にダメージをうける</subject>
         <date>2020/09/05 10:37:31</date>
         <description>ドルイド高原からドルイドの村にワープする際にダメージを受ける不具合です。</description>
@@ -121,9 +121,16 @@
     </bug>
     <bug>
         <id>18</id>
-        <status>found</status>
+        <status>fixed</status>
         <subject>プロモータークエストのテレポートが正常に動作しない</subject>
         <date>2020/09/05 19:30:20</date>
         <description>きらさんのプロモータークエストのテレポートが正常に動作しない不具合が確認されています。</description>
+    </bug>
+    <bug>
+        <id>19</id>
+        <status>fixed</status>
+        <subject>突然サーバーがラグくなる</subject>
+        <date>2020/09/05 20:11:31</date>
+        <description>2層ボスモンスターが特定の状況になるとサーバーに多大な負荷をかける不具合です。</description>
     </bug>
 </bugs_list>
