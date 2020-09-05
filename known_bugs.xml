@@ -93,7 +93,7 @@
     </bug>
     <bug>
         <id>14</id>
-        <status>timed</status>
+        <status>fixed</status>
         <subject>サーバーで表示されるNewsが古い状態となっている</subject>
         <date>2020/09/05 09:26:10</date>
         <description>マイクラチャット内に表示される定期Newsの内容が想定と異なっている不具合です。</description>
