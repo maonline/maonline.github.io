@@ -133,4 +133,18 @@
         <date>2020/09/05 20:11:31</date>
         <description>2層ボスモンスターが特定の状況になるとサーバーに多大な負荷をかける不具合です。</description>
     </bug>
+    <bug>
+        <id>20</id>
+        <status>found</status>
+        <subject>右クリックで動作するアイテムが正常に動作しない</subject>
+        <date>2020/09/06 08:42:01</date>
+        <description>右クリックで動作するアイテムが正常に動作しない不具合です。</description>
+    </bug>
+    <bug>
+        <id>21</id>
+        <status>found</status>
+        <subject>銅石のドロップが想定と異なる</subject>
+        <date>2020/09/06 10:21:11</date>
+        <description>一部MOBにて本来ドロップするはずの銅石がドロップしない不具合が発生しています。</description>
+    </bug>
 </bugs_list>
