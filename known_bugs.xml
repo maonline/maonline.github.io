@@ -147,4 +147,11 @@
         <date>2020/09/06 10:21:11</date>
         <description>一部MOBにて本来ドロップするはずの銅石がドロップしない不具合が発生しています。</description>
     </bug>
+    <bug>
+        <id>22</id>
+        <status>found</status>
+        <subject>3層、4層のアイテムが買取屋で買い取ってもらえない</subject>
+        <date>2020/09/06 15:18:32</date>
+        <description>3層、4層のアイテムが買取屋で買い取ってもらえない不具合です。</description>
+    </bug>
 </bugs_list>
