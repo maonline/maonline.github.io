@@ -7,4 +7,11 @@
         <date>2020/09/12 00:15:00</date>
         <description>【仕様】秘密のダンジョンキーが、今回のテストでは使えません。</description>
     </bug>
+    <bug>
+        <id>2</id>
+        <status>found</status>
+        <subject>SHEIさんのプロモクエ</subject>
+        <date>2020/09/12 00:55:00</date>
+        <description>SHEIさんのプロモクエにて、1章クリア失敗したのに2章が解放される</description>
+    </bug>
 </bugs_list>
