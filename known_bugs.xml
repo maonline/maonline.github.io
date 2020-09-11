@@ -1,3 +1,10 @@
-<!-- <?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <bugs_list>
-</bugs_list> -->
+    <bug>
+        <id>1</id>
+        <status></status>
+        <subject>秘密のダンジョンキーが使えない</subject>
+        <date>2020/09/12 00:15:00</date>
+        <description>【仕様】秘密のダンジョンキーが、今回のテストでは使えません。</description>
+    </bug>
+</bugs_list>
