@@ -21,4 +21,11 @@
         <date>2020/09/12 02:26:00</date>
         <description>【情報求】一部モンスターが出現しなくなる不具合です。出現しなくなったMOBを発見した場合、以下のフォームより報告をお願いいたします。</description>
     </bug>
+    <bug>
+        <id>4</id>
+        <status>found</status>
+        <subject>一部モンスターの経験値不具合</subject>
+        <date>2020/09/12 02:26:00</date>
+        <description>【情報求】一部モンスターから落ちる経験値が1になる不具合です。経験値が1になるMOBを発見した場合、以下のフォームより報告をお願いいたします。</description>
+    </bug>
 </bugs_list>
