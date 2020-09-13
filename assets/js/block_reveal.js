@@ -8,4 +8,209 @@
  * Copyright 2016, Codrops
  * http://www.codrops.com
  */
-!function(e){"use strict";function t(e,t){for(var i in t)t.hasOwnProperty(i)&&(e[i]=t[i]);return e}function i(e,t,i){var n=document.createElement(e);return n.className=t||"",n.innerHTML=i||"",n}function n(e,i){this.el=e,this.options=t({},this.options),t(this.options,i),this._init()}n.prototype.options={isContentHidden:!0,revealSettings:{direction:"lr",bgcolor:"#f0f0f0",duration:500,easing:"easeInOutQuint",coverArea:0,onCover:function(){return!1},onStart:function(){return!1},onComplete:function(){return!1}}},n.prototype._init=function(){this._layout()},n.prototype._layout=function(){var e=getComputedStyle(this.el).position;"fixed"!==e&&"absolute"!==e&&"relative"!==e&&(this.el.style.position="static"),this.content=i("div","block-revealer__content",this.el.innerHTML),this.options.isContentHidden&&(this.content.style.opacity=0),this.revealer=i("div","block-revealer__element"),this.el.classList.add("block-revealer"),this.el.innerHTML="",this.el.appendChild(this.content),this.el.appendChild(this.revealer)},n.prototype._getTransformSettings=function(e){var t,i,n;switch(e){case"lr":t="scale3d(0,1,1)",i="0 50%",n="100% 50%";break;case"rl":t="scale3d(0,1,1)",i="100% 50%",n="0 50%";break;case"tb":t="scale3d(1,0,1)",i="50% 0",n="50% 100%";break;case"bt":t="scale3d(1,0,1)",i="50% 100%",n="50% 0";break;default:t="scale3d(0,1,1)",i="0 50%",n="100% 50%"}return{val:t,origin:{initial:i,halfway:n}}},n.prototype.reveal=function(e){if(this.isAnimating)return!1;this.isAnimating=!0;var t={duration:500,easing:"easeInOutQuint",delay:0,bgcolor:"#f0f0f0",direction:"lr",coverArea:0},e=e||this.options.revealSettings,i=e.direction||t.direction,n=this._getTransformSettings(i);this.revealer.style.WebkitTransform=this.revealer.style.transform=n.val,this.revealer.style.WebkitTransformOrigin=this.revealer.style.transformOrigin=n.origin.initial,this.revealer.style.backgroundColor=e.bgcolor||t.bgcolor,this.revealer.style.opacity=1;var r=this,o={complete:function(){r.isAnimating=!1,"function"==typeof e.onComplete&&e.onComplete(r.content,r.revealer)}},a={delay:e.delay||t.delay,complete:function(){r.revealer.style.WebkitTransformOrigin=r.revealer.style.transformOrigin=n.origin.halfway,"function"==typeof e.onCover&&e.onCover(r.content,r.revealer),anime(o)}};a.targets=o.targets=this.revealer,a.duration=o.duration=e.duration||t.duration,a.easing=o.easing=e.easing||t.easing;var s=e.coverArea||t.coverArea;"lr"===i||"rl"===i?(a.scaleX=[0,1],o.scaleX=[1,s/100]):(a.scaleY=[0,1],o.scaleY=[1,s/100]),"function"==typeof e.onStart&&e.onStart(r.content,r.revealer),anime(a)},e.RevealFx=n}(window);
+;(function(window) {
+
+	'use strict';
+
+	// Helper vars and functions.
+	function extend(a, b) {
+		for(var key in b) { 
+			if( b.hasOwnProperty( key ) ) {
+				a[key] = b[key];
+			}
+		}
+		return a;
+	}
+
+	function createDOMEl(type, className, content) {
+		var el = document.createElement(type);
+		el.className = className || '';
+		el.innerHTML = content || '';
+		return el;
+	}
+
+	/**
+	 * RevealFx obj.
+	 */
+	function RevealFx(el, options) {
+		this.el = el;
+		this.options = extend({}, this.options);
+		extend(this.options, options);
+		this._init();
+	}
+
+	/**
+	 * RevealFx options.
+	 */
+	RevealFx.prototype.options = {
+		// If true, then the content will be hidden until it´s "revealed".
+		isContentHidden: true,
+		// The animation/reveal settings. This can be set initially or passed when calling the reveal method.
+		revealSettings: {
+			// Animation direction: left right (lr) || right left (rl) || top bottom (tb) || bottom top (bt).
+			direction: 'lr',
+			// Revealer´s background color.
+			bgcolor: '#f0f0f0',
+			// Animation speed. This is the speed to "cover" and also "uncover" the element (seperately, not the total time).
+			duration: 500,
+			// Animation easing. This is the easing to "cover" and also "uncover" the element.
+			easing: 'easeInOutQuint',
+			// percentage-based value representing how much of the area should be left covered.
+			coverArea: 0,
+			// Callback for when the revealer is covering the element (halfway through of the whole animation).
+			onCover: function(contentEl, revealerEl) { return false; },
+			// Callback for when the animation starts (animation start).
+			onStart: function(contentEl, revealerEl) { return false; },
+			// Callback for when the revealer has completed uncovering (animation end).
+			onComplete: function(contentEl, revealerEl) { return false; }
+		}
+	};
+
+	/**
+	 * Init.
+	 */
+	RevealFx.prototype._init = function() {
+		this._layout();
+	};
+
+	/**
+	 * Build the necessary structure.
+	 */
+	RevealFx.prototype._layout = function() {
+		var position = getComputedStyle(this.el).position;
+		if( position !== 'fixed' && position !== 'absolute' && position !== 'relative' ) {
+			this.el.style.position = 'static';
+		}
+		// Content element.
+		this.content = createDOMEl('div', 'block-revealer__content', this.el.innerHTML);
+		if( this.options.isContentHidden) {
+			this.content.style.opacity = 0;
+		}
+		// Revealer element (the one that animates)
+		this.revealer = createDOMEl('div', 'block-revealer__element');
+		this.el.classList.add('block-revealer');
+		this.el.innerHTML = '';
+		this.el.appendChild(this.content);
+		this.el.appendChild(this.revealer);
+	};
+
+	/**
+	 * Gets the revealer element´s transform and transform origin.
+	 */
+	RevealFx.prototype._getTransformSettings = function(direction) {
+		var val, origin, origin_2;
+
+		switch (direction) {
+			case 'lr' : 
+				val = 'scale3d(0,1,1)';
+				origin = '0 50%';
+				origin_2 = '100% 50%';
+				break;
+			case 'rl' : 
+				val = 'scale3d(0,1,1)';
+				origin = '100% 50%';
+				origin_2 = '0 50%';
+				break;
+			case 'tb' : 
+				val = 'scale3d(1,0,1)';
+				origin = '50% 0';
+				origin_2 = '50% 100%';
+				break;
+			case 'bt' : 
+				val = 'scale3d(1,0,1)';
+				origin = '50% 100%';
+				origin_2 = '50% 0';
+				break;
+			default : 
+				val = 'scale3d(0,1,1)';
+				origin = '0 50%';
+				origin_2 = '100% 50%';
+				break;
+		};
+
+		return {
+			// transform value.
+			val: val,
+			// initial and halfway/final transform origin.
+			origin: {initial: origin, halfway: origin_2},
+		};
+	};
+
+	/**
+	 * Reveal animation. If revealSettings is passed, then it will overwrite the options.revealSettings.
+	 */
+	RevealFx.prototype.reveal = function(revealSettings) {
+		// Do nothing if currently animating.
+		if( this.isAnimating ) {
+			return false;
+		}
+		this.isAnimating = true;
+		
+		// Set the revealer element´s transform and transform origin.
+		var defaults = { // In case revealSettings is incomplete, its properties deafault to:
+				duration: 500,
+				easing: 'easeInOutQuint',
+				delay: 0,
+				bgcolor: '#f0f0f0',
+				direction: 'lr',
+				coverArea: 0
+			},
+			revealSettings = revealSettings || this.options.revealSettings,
+			direction = revealSettings.direction || defaults.direction,
+			transformSettings = this._getTransformSettings(direction);
+
+		this.revealer.style.WebkitTransform = this.revealer.style.transform =  transformSettings.val;
+		this.revealer.style.WebkitTransformOrigin = this.revealer.style.transformOrigin =  transformSettings.origin.initial;
+		
+		// Set the Revealer´s background color.
+		this.revealer.style.backgroundColor = revealSettings.bgcolor || defaults.bgcolor;
+		
+		// Show it. By default the revealer element has opacity = 0 (CSS).
+		this.revealer.style.opacity = 1;
+
+		// Animate it.
+		var self = this,
+			// Second animation step.
+			animationSettings_2 = {
+				complete: function() {
+					self.isAnimating = false;
+					if( typeof revealSettings.onComplete === 'function' ) {
+						revealSettings.onComplete(self.content, self.revealer);
+					}
+				}
+			},
+			// First animation step.
+			animationSettings = {
+				delay: revealSettings.delay || defaults.delay,
+				complete: function() {
+					self.revealer.style.WebkitTransformOrigin = self.revealer.style.transformOrigin = transformSettings.origin.halfway;		
+					if( typeof revealSettings.onCover === 'function' ) {
+						revealSettings.onCover(self.content, self.revealer);
+					}
+					anime(animationSettings_2);		
+				}
+			};
+
+		animationSettings.targets = animationSettings_2.targets = this.revealer;
+		animationSettings.duration = animationSettings_2.duration = revealSettings.duration || defaults.duration;
+		animationSettings.easing = animationSettings_2.easing = revealSettings.easing || defaults.easing;
+
+		var coverArea = revealSettings.coverArea || defaults.coverArea;
+		if( direction === 'lr' || direction === 'rl' ) {
+			animationSettings.scaleX = [0,1];
+			animationSettings_2.scaleX = [1,coverArea/100];
+		}
+		else {
+			animationSettings.scaleY = [0,1];
+			animationSettings_2.scaleY = [1,coverArea/100];
+		}
+
+		if( typeof revealSettings.onStart === 'function' ) {
+			revealSettings.onStart(self.content, self.revealer);
+		}
+		anime(animationSettings);
+	};
+	
+	window.RevealFx = RevealFx;
+
+})(window);

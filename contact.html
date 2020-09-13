@@ -54,6 +54,117 @@
 
 	gtag('config', 'UA-175961269-1');
 	</script>
+
 </head>
 
-<body><div id="content_area"><div class="header"></div><input type="checkbox" class="openSidebarMenu" id="openSidebarMenu"><label for="openSidebarMenu" class="sidebarIconToggle"><div class="spinner diagonal part-1"></div><div class="spinner horizontal"></div><div class="spinner diagonal part-2"></div></label><label id="drawer_close" for="openSidebarMenu"></label><div id="menu_content"><script>header("./", "contact");</script></div><div id="main_content"><section class="section pp-scrollable" id="descript"><section class="scrolling scroll1"><div class="bg" id="block_reveal"><div class="info_section" id="contact"><img class="title_index" src="./assets/image/index/index_contact.png" /><div class="form_back"><p class="form_info">運営に対しての意見・要望はこちらにて受け付けております。<br />※このサイト及び提供しているコンテンツはMojang とは関係がございません。<br /></p><form action="https://docs.google.com/forms/d/e/1FAIpQLSdMqbOUZkONbjlkBpEkz9svLFc__M80HmAHy7FTjZ-yLMbyYA/formResponse" method="post" name="ContactForm" target="dummyIframe" id="form"><div class="input_frame inputWithIcon inputIconBg"><label>メールアドレス</label><br/><input type="text" class="inputter" id="mailaddress" name="entry.713871945" placeholder="mailaddress@example.com" value="" required /> </div> <div class="input_frame"><label>件名</label><br/><input type="text" class="inputter" id="subject" name="entry.1444656011" placeholder="〇〇〇〇に関する質問" value="" required /></div><div class="input_frame"><label>内容</label><br/><textarea class="inputter" id="message" name="entry.95113534" placeholder="できるだけ詳しくご記入ください 1000文字まで"></textarea></div><input type="button" id="send_button" value="送信" onclick="sendGformContactForm()"></form><iframe name="dummyIframe" style="display:none;"></iframe><script>function sendGformContactForm(){var tex = document.getElementById("mailaddress").value;var Seiki = /^[a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;if (tex == '') {alert('メールアドレスを記入してください。');return false;}if (!(tex.match(Seiki))) {alert('メールアドレスが正しくありません。');return false;}var tex = document.getElementById("subject").value;if (tex == '') {alert('件名を記入してください。');return false;}var tex = document.getElementById("message").value;if (tex == '') {alert('内容を記入してください。');return false;}if (document.getElementById("message").value.length > 1000) {alert('内容に記入されている文字数が1000文字を超過しています');return false;}document.ContactForm.submit();document.getElementById('mailaddress').disabled = true;document.getElementById('subject').disabled = true;document.getElementById('message').disabled = true;document.getElementById('send_button').disabled = true;alert('送信を完了しました。');}</script></div></div></div></section><script>footer('./');</script></section></div></div><script src="./assets/js/pagepiling.js"></script><script src="./assets/js/load_animation.js"></script></body>
+<body>
+	<div id="content_area">
+	
+		<div class="header"></div>
+		<input type="checkbox" class="openSidebarMenu" id="openSidebarMenu">
+		<label for="openSidebarMenu" class="sidebarIconToggle">
+			<div class="spinner diagonal part-1"></div>
+			<div class="spinner horizontal"></div>
+			<div class="spinner diagonal part-2"></div>
+		</label>
+		<label id="drawer_close" for="openSidebarMenu"></label>
+
+		<div id="menu_content">
+			<script>header("./", "contact");</script>
+		</div>
+
+		<div id="main_content">
+			<section class="section pp-scrollable" id="descript">
+				<section class="scrolling scroll1">
+					<div class="bg" id="block_reveal">
+						<div class="info_section" id="contact">
+							<img class="title_index" src="./assets/image/index/index_contact.png" />
+							<div class="form_back">
+								<p class="form_info">
+									運営に対しての意見・要望はこちらにて受け付けております。<br />
+									※このサイト及び提供しているコンテンツはMojang とは関係がございません。<br />
+								</p>
+
+								<form action="https://docs.google.com/forms/d/e/1FAIpQLSdMqbOUZkONbjlkBpEkz9svLFc__M80HmAHy7FTjZ-yLMbyYA/formResponse" method="post" name="ContactForm" target="dummyIframe" id="form">
+									
+									<div class="input_frame inputWithIcon inputIconBg">
+										<label>メールアドレス</label>
+										<br/>
+										<input type="text" class="inputter" id="mailaddress" name="entry.713871945" placeholder="mailaddress@example.com" value="" required />
+									  </div>
+									  
+									<div class="input_frame">
+										<label>件名</label>
+										<br/>
+										<input type="text" class="inputter" id="subject" name="entry.1444656011" placeholder="〇〇〇〇に関する質問"  value="" required />
+									</div>
+									
+									<div class="input_frame">
+										<label>内容</label>
+										<br/>
+										<textarea class="inputter" id="message" name="entry.95113534" placeholder="できるだけ詳しくご記入ください 1000文字まで"></textarea>
+									</div>
+									
+									<input type="button" id="send_button" value="送信" onclick="sendGformContactForm()">
+
+								</form>
+								<iframe name="dummyIframe" style="display:none;"></iframe>
+								
+								<script>
+									function sendGformContactForm(){
+										var tex = document.getElementById("mailaddress").value;
+										var Seiki = /^[a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+					
+										if (tex == '') {
+											alert('メールアドレスを記入してください。');
+											return false;
+										}
+					
+										if (!(tex.match(Seiki))) {
+											alert('メールアドレスが正しくありません。');
+											return false;
+										}
+					
+										var tex = document.getElementById("subject").value;
+					
+										if (tex == '') {
+											alert('件名を記入してください。');
+											return false;
+										}
+					
+										var tex = document.getElementById("message").value;
+					
+										if (tex == '') {
+											alert('内容を記入してください。');
+											return false;
+										}
+										
+										if (document.getElementById("message").value.length > 1000) {
+											alert('内容に記入されている文字数が1000文字を超過しています');
+											return false;
+										}
+					
+										document.ContactForm.submit();
+										document.getElementById('mailaddress').disabled = true;
+										document.getElementById('subject').disabled = true;
+										document.getElementById('message').disabled = true;
+										document.getElementById('send_button').disabled = true;
+										alert('送信を完了しました。');
+									}
+								</script>
+
+							</div>
+						</div>
+
+					</div>
+				</section>
+
+				<script>footer('./');</script>
+
+			</section>
+		</div>
+	</div>
+
+	<script src="./assets/js/pagepiling.js"></script>
+	<script src="./assets/js/load_animation.js"></script>
+</body>
