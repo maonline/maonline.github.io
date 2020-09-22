@@ -93,7 +93,6 @@
     border: 2px solid #777;
 }
 
-
 .input_frame textarea {
 	width: 100%;
     height: 200px;
@@ -143,4 +142,57 @@
 #form input[type="button"]:disabled {
     background-color: #aaa;
     border: 2px solid #777;
+}
+
+.radioButton {
+    padding-top: 10px;
+	width: 100%;
+	text-align: left;
+}
+.radioButton ul {
+	padding-top: 0.5rem;
+	list-style: none;
+    border: 2px solid #aaa;
+    border-radius: 6px;
+}
+.radioButton .list_item {
+	margin: 0 0 0.5rem 0.5rem;
+	padding: 0;
+}
+.radioButton label {
+    font-family: 'Noto Sans JP';
+    font-size: 18px;
+	line-height: 135%;
+	position: relative;
+	margin: 0.5rem;
+	cursor: pointer;
+}
+.radioButton .option-input {
+	position: relative;
+	margin: 0 1rem 0 0;
+	cursor: pointer;
+}
+.radioButton .option-input:before, .radioButton .option-input:after {
+	position: absolute;
+	z-index: 1;
+	top: -0.3125rem;
+	left: -0.125rem;
+	width: 1rem;
+	height: 1rem;
+	content: '';
+	-webkit-transition: all 0.3s ease-in-out;
+	        transition: all 0.3s ease-in-out;
+	border: 2px solid #aaa;
+	border-radius: 50%;
+	background: #ffffff;
+}
+.radioButton .option-input:after {
+	z-index: 0;
+	top: -0.0625rem;
+	border: none;
+}
+.radioButton .option-input:checked:before {
+	-webkit-transform: rotateY(180deg);
+	        transform: rotateY(180deg);
+	background: #A727FF;
 }

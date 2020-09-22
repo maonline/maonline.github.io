@@ -32,6 +32,10 @@
 	color: #4286f4;
 }
 
+.nazo_picture {
+    width: 50%;
+}
+
 @media (max-width: 767px) {
     .text_inner {
         width: Calc(90% - 50px);
@@ -51,5 +55,9 @@
     .text_inner .h2 {
         font-size: 18px;
         line-height: 150%;
+    }
+        
+    .nazo_picture {
+        width: 100%;
     }
 }
