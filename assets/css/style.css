@@ -984,6 +984,7 @@ footer #footer {
     height: 400px;
 
     text-align: center;
+    overflow: hidden;
 }
 
 #footer #mao_footer_logo {

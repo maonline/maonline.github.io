@@ -5,8 +5,8 @@
             rev1 = new RevealFx(scrollElemToWatch_1, {
                 revealSettings : {
                     bgcolor: '#000',
-                    delay: 200,
-                    duration: 600,
+                    delay: 0,
+                    duration: 400,
                     onStart: function(contentEl, revealerEl) {
                         anime.remove(contentEl);
                         contentEl.style.opacity = 0;
