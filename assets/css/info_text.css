@@ -28,49 +28,59 @@
 }
 
 .text_inner a {
-	text-decoration-line: none;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0) 50%, rgba(0, 158, 253, 1) 50%);
+    background-position: 0 0;
+    background-size: 200% auto;
+    text-decoration-line: none;
+    transition: 0.3s;
 	color: #4286f4;
+}
+
+.text_inner a:hover {
+    background-position: -100% 0;
+    color: #ffffff;
 }
 
 .nazo_picture {
     width: 50%;
 }
 
-.ac-container {
+.ac_container {
     width: 100%;
     margin: 30px auto;
 }
-.ac-container label {
+.ac_container label {
     width: auto;
     text-align: left;
     background: url("../image/loopback/loop_back2.jpg");
     margin: auto;
     position: relative;
     display: block;
-    height: 60px;
+    height: auto;
     line-height: 60px;
     font-size: 20px;
     cursor: pointer;
     color: #fff;
+    padding: 0 10px;
 }
-.ac-container label:hover {
+.ac_container label:hover {
     background: rgba(34, 34, 34);
 }
-.ac-container label .question_head,
-.ac-container label .question_head img {
+.ac_container label .question_head,
+.ac_container label .question_head img {
     height: 60px;
     width: auto;
 }
 
-.ac-container label .question_title {
+.ac_container label .question_title {
     padding: 0px
 
 }
 
-.ac-container input {
+.ac_container input {
    display: none;
 }
-.ac-container div {
+.ac_container div {
     background-color: rgba(255,255,255);
     margin-top: -1px;
     overflow-y: scroll;
@@ -80,26 +90,26 @@
     transition: height 0.3s ease-in-out, box-shadow 0.6s linear;
     margin: 0 1px;
 }
-.ac-container input:checked ~ div {
+.ac_container input:checked ~ div {
     transition: height 0.5s ease-in-out, box-shadow 0.1s linear;
     box-shadow: 0px 0px 0px 1px rgba(155,155,155,0.3);
 }
-.ac-container div p {
+.ac_container div p {
     color: #111;
     line-height: 23px;
     font-size: 18px;
     padding: 20px;
 }
 
-.ac-container input:checked ~ div.ac-small {
+.ac_container input:checked ~ div.ac_small {
     height: 100px;
 }
 
-.ac-container input:checked ~ div.ac-normal {
+.ac_container input:checked ~ div.ac_normal {
     height: 300px;
 }
 
-.ac-container input:checked ~ div.ac-big {
+.ac_container input:checked ~ div.ac_big {
     height: 450px;
 }
 
@@ -128,39 +138,26 @@
         width: 100%;
     }
     
-    .ac-container label {
+    .ac_container label {
         width: Calc(100% - 20px);
-        height: auto;
-        line-height: 40px;
-        font-size: 12px;
+        line-height: 30px;
+        font-size: 16px;
         cursor: pointer;
         color: #fff;
         padding: 10px
     }
-    .ac-container label:hover {
+    .ac_container label:hover {
         background: rgba(34, 34, 34);
     }
-    .ac-container label .question_head {
+    .ac_container label .question_head {
         display: none;
     }
 
-    .ac-container div p {
+    .ac_container div p {
         color: #111;
         line-height: 20px;
         font-size: 14px;
         padding: 10px;
     }
         
-    .ac-container input:checked ~ div.ac-small {
-        height: 200px;
-    }
-
-    .ac-container input:checked ~ div.ac-normal {
-        height: 500px;
-    }
-
-    .ac-container input:checked ~ div.ac-big {
-        height: 800px;
-    }
-
 }

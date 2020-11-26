@@ -36,8 +36,17 @@
 }
 
 .form_info a {
-	text-decoration-line: none;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0) 50%, rgba(0, 158, 253, 1) 50%);
+    background-position: 0 0;
+    background-size: 200% auto;
+    text-decoration-line: none;
+    transition: 0.3s;
 	color: #4286f4;
+}
+
+.form_info a:hover {
+    background-position: -100% 0;
+    color: #ffffff;
 }
 
 @media (max-width: 767px) {
