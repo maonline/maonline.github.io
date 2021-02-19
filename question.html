@@ -38,8 +38,6 @@
 	<link rel="stylesheet" href="./assets/css/style.css">
 	<link rel="stylesheet" href="./assets/css/info_text.css">
 
-	<link rel="stylesheet" href="./assets/css/pagepiling.css">
-
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 	<script src="./assets/js/anime.min.js"></script>
 	<script src="./assets/js/block_reveal.js"></script>
@@ -73,202 +71,80 @@
 		</div>
 
 		<div id="main_content">
-			<section class="section pp-scrollable" id="descript">
-				<section class="scrolling scroll1">
-					<div class="bg" id="block_reveal">
-						<div class="info_section" id="question">
-							<img class="title_index" src="./assets/image/index/index_faq.png" />
-							<div class="text_inner">
-								<div>
-									<div class="ac_container">
-										<input id="ac_1" name="accordion" type="checkbox" />
-										<label for="ac_1">
-											<span class="question_title">現在サーバーは開いていますか？</span>
-										</label>
-										<div class="ac_small">
-											<p>
-												現在は開発中のためサーバーは開いていません。<br />
-												MineNetwork公式Discordサーバーや公式HPにて確認することができます。<br />
-											</p>
-										</div>
-									</div>
-
-									<div class="ac_container">
-										<input id="ac_2" name="accordion" type="checkbox" />
-										<label for="ac_2">
-											<span class="question_title">SAOからテーマの逸脱した武器や防具(特に弓)などの実装予定はありますか？</span>
-										</label>
-										<div class="ac_small">
-											<p>
-												現段階ではテーマの逸脱した武器や防具の実装予定はありません。<br />
-											</p>
-										</div>
-									</div>
-
-									<div class="ac_container">
-										<input id="ac_3" name="accordion" type="checkbox" />
-										<label for="ac_3">
-											<span class="question_title">いつから正式サービスが開始されますか？</span>
-										</label>
-										<div class="ac_small">
-											<p>
-												まだ発表に至っておりません。<br />
-												続報をお待ちください。<br />
-											</p>
-										</div>
-									</div>
-
-									<div class="ac_container">
-										<input id="ac_4" name="accordion" type="checkbox" />
-										<label for="ac_4">
-											<span class="question_title">寄付はどこから出来ますか？</span>
-										</label>
-										<div class="ac_small">
-											<p>
-												公式ホームページのDONATE欄から寄付ができます。<br />
-												寄付URL: <a href="https://www.minenet.work/donate.html">https://www.minenet.work/donate.html</a><br />
-											</p>
-										</div>
-									</div>
-
-									<div class="ac_container">
-										<input id="ac_5" name="accordion" type="checkbox" />
-										<label for="ac_5">
-											<span class="question_title">推奨プレイ環境を教えてください</span>
-										</label>
-										<div class="ac_small">
-											<p>
-												マインクラフトJavaEditionが正常に動作する環境です。<br />
-											</p>
-										</div>
-									</div>
-
-									<div class="ac_container">
-										<input id="ac_6" name="accordion" type="checkbox" />
-										<label for="ac_6">
-											<span class="question_title">リソースパックはどこからダウンロード出来ますか？</span>
-										</label>
-										<div class="ac_small">
-											<p>
-												テストプレイ前にDiscord上で配布しております。<br />
-												また、サーバー上でもダウンロードすることができます。<br />
-											</p>
-										</div>
-									</div>
-									
-									<div class="ac_container">
-										<input id="ac_7" name="accordion" type="checkbox" />
-										<label for="ac_7">
-											<span class="question_title">パソコン版以外でもプレイ出来ますか？</span>
-										</label>
-										<div class="ac_small">
-											<p>
-												Minecraft JavaEdition(パソコン版)のみプレイ可能です。<br />
-											</p>
-										</div>
-									</div>
-
-									<div class="ac_container">
-										<input id="ac_8" name="accordion" type="checkbox" />
-										<label for="ac_8">
-											<span class="question_title">質問があります、どうしたらいいですか？</span>
-										</label>
-										<div class="ac_small">
-											<p>
-												Discord上にてご質問を行えるチャンネルがございます。<br />
-											</p>
-										</div>
-									</div>
-
-									<div class="ac_container">
-										<input id="ac_9" name="accordion" type="checkbox" />
-										<label for="ac_9">
-											<span class="question_title">ドナーランクが付与されているディスコードのメイン垢とは別にサブ垢をいれたのですが、ドナーのランクはどうなりますか？</span>
-										</label>
-										<div class="ac_small">
-											<p>
-												サブ垢にドナーランクの付与はされません。<br />
-											</p>
-										</div>
-									</div>
-
-									<div class="ac_container">
-										<input id="ac_10" name="accordion" type="checkbox" />
-										<label for="ac_10">
-											<span class="question_title">MCIDを変更しました、運営さんに連絡は必要ですか？</span>
-										</label>
-										<div class="ac_small">
-											<p>
-												連絡する必要はございません。<br />
-											</p>
-										</div>
-									</div>
-
-									<div class="ac_container">
-										<input id="ac_11" name="accordion" type="checkbox" />
-										<label for="ac_11">
-											<span class="question_title">モンスターが落とすexpが0になります</span>
-										</label>
-										<div class="ac_small">
-											<p>
-												自分のレベルに近いモンスターを倒すとexpが手に入ります。<br />
-											</p>
-										</div>
-									</div>
-
-									<div class="ac_container">
-										<input id="ac_12" name="accordion" type="checkbox" />
-										<label for="ac_12">
-											<span class="question_title">〇〇は不具合ですか？</span>
-										</label>
-										<div class="ac_small">
-											<p>
-												不具合だと思うものは公式ホームページからご報告をお願いいたします。<br />
-											</p>
-										</div>
-									</div>
-
-									<div class="ac_container">
-										<input id="ac_13" name="accordion" type="checkbox" />
-										<label for="ac_13">
-											<span class="question_title">プロモーターランクとyoutubeランクの申請方法を教えてください</span>
-										</label>
-										<div class="ac_small">
-											<p>
-												youtubeランクの申請受付は終了いたしました。<br />
-												プロモーターランクの申請は公式ホームページのコンタクトから行えます。<br />
-												コンタクトURL: <a href="https://www.minenet.work/contact.html">https://www.minenet.work/contact.html</a><br />
-											</p>
-										</div>
-									</div>
-
-									<div class="ac_container">
-										<input id="ac_14" name="accordion" type="checkbox" />
-										<label for="ac_14">
-											<span class="question_title">サーバーで使えるコマンドを教えてください</span>
-										</label>
-										<div class="ac_small">
-											<p>
-												現在集計を実施しています。掲載までお待ちください。<br />
-											</p>
-										</div>
-									</div>
-
-								</div>
-							</div>
-
-						</div>
+			<div id="block_reveal">
+				<div class="info_section" id="question">
+                    <div class="title_index">
+                        <img class="index_img" src="./assets/image/index/index_faq.png" alt="Question" />
+                    </div>
+					<div class="text_inner">
+						<h1>よくある質問（FAQ）</h1>
+						<h2>現在サーバーは開いていますか？</h2>
+						<p>
+							現在は開発中のためサーバーは開いていません。<br />
+							MineNetwork公式Discordサーバーや公式HPにて確認することができます。<br />
+						</p>
+						<h2>SAOからテーマの逸脱した武器や防具(特に弓)などの実装予定はありますか？</h2>
+						<p>
+							現段階ではテーマの逸脱した武器や防具の実装予定はありません。<br />
+						</p>
+						<h2>いつから正式サービスが開始されますか？</h2>
+						<p>
+							まだ発表に至っておりません。<br />
+							続報をお待ちください。<br />
+						</p>
+						<h2>寄付はどこから出来ますか？</h2>
+						<p>
+							公式ホームページのDONATE欄から寄付ができます。<br />
+							寄付URL: <a href="https://www.minenet.work/donate.html">https://www.minenet.work/donate.html</a><br />
+						</p>
+						<h2>推奨プレイ環境を教えてください</h2>
+						<p>
+							マインクラフトJavaEditionが正常に動作する環境です。<br />
+						</p>
+						<h2>リソースパックはどこからダウンロード出来ますか？</h2>
+						<p>
+							各テスト前にDiscord上で配布しております。<br />
+							また、サーバー上でもダウンロードすることができます。<br />
+						</p>
+						<h2>パソコン版以外でもプレイ出来ますか？</h2>
+						<p>
+							Minecraft JavaEdition(パソコン版)のみプレイ可能です。<br />
+						</p>
+						<h2>質問があります、どうしたらいいですか？</h2>
+						<p>
+							Discord上にてご質問を行えるチャンネルがございます。<br />
+						</p>
+						<h2>ドナーランクが付与されているディスコードのメイン垢とは別にサブ垢をいれたのですが、ドナーのランクはどうなりますか？</h2>
+						<p>
+							サブ垢にドナーランクの付与はされません。<br />
+						</p>
+						<h2>MCIDを変更しました、運営さんに連絡は必要ですか？</h2>
+						<p>
+							連絡する必要はございません。<br />
+						</p>
+						<h2>モンスターが落とすexpが0になります</h2>
+						<p>
+							仕様です。<br />
+							自分のレベルに近いモンスターを倒すとexpが手に入ります。<br />
+						</p>
+						<h2>〇〇は不具合ですか？</h2>
+						<p>
+							不具合だと思うものは公式ホームページからご報告をお願いいたします。<br />
+						</p>
+						<h2>プロモーターランクとyoutubeランクの申請方法を教えてください</h2>
+						<p>
+							youtubeランクの申請受付は終了いたしました。<br />
+							プロモーターランクの申請は公式ホームページのコンタクトから行えます。<br />
+							コンタクトURL: <a href="https://www.minenet.work/contact.html">https://www.minenet.work/contact.html</a><br />
+						</p>
 					</div>
-				</section>
 
-				<script>footer('./');</script>
-
-			</section>
-			<script>angle_lock();</script>
+				</div>
+			</div>
+			<script>footer('./');</script>
 		</div>
 	</div>
 
-	<script src="./assets/js/pagepiling.js"></script>
 	<script src="./assets/js/load_animation.js"></script>
 
 </body>

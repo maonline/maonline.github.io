@@ -12,6 +12,11 @@
 		<changefreq>weekly</changefreq>
 	</url>
    <url>
+		<loc>https://www.minenet.work/question.html</loc>
+		<lastmod>2020-08-25</lastmod>
+		<changefreq>weekly</changefreq>
+	</url>
+   <url>
 		<loc>https://www.minenet.work/policy.html</loc>
 		<lastmod>2020-08-25</lastmod>
 		<changefreq>weekly</changefreq>

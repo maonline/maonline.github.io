@@ -38,8 +38,6 @@
 	<link rel="stylesheet" href="./assets/css/style.css">
 	<link rel="stylesheet" href="./assets/css/article.css">
 
-	<link rel="stylesheet" href="./assets/css/pagepiling.css">
-
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 	<script src="./assets/js/anime.min.js"></script>
 	<script src="./assets/js/block_reveal.js"></script>
@@ -74,85 +72,79 @@
 		</div>
 
 		<div id="main_content">
-			<section class="section pp-scrollable" id="descript">
-				<section class="scrolling scroll1">
-					<div class="bg" id="block_reveal">
+			<div id="block_reveal">
 
-						<div class="info_section" id="news">
-							<img class="title_index" src="./assets/image/index/index_project_news.png" />
-							
-							<div id="article_area">
-								<script>article_get();</script>
+				<div class="info_section" id="news">
+                    <div class="title_index">
+                        <img class="index_img" src="./assets/image/index/index_project_news.png" alt="News" />
+                    </div>
+					
+					<div id="article_area">
+						<script>article_get();</script>
 
-								<a class="return_list_button" href="news.html">
-									<div class="basicBox">
-										一覧に戻る
-										<svg width="130" height="65" viewBox="0 0 130 65">
-											<rect x='0' y='0' fill='none' width='130' height='65'/>
-										</svg>
-									</div>
-								</a>
+						<a class="return_list_button" href="news.html">
+							<div class="basicBox">
+								一覧に戻る
+								<svg width="130" height="65" viewBox="0 0 130 65">
+									<rect x="0" y="0" fill="none" width="130" height="65"/>
+								</svg>
 							</div>
-
-							<div id="list_article_area">
-								<ul id="list_article">
-
-									<a href="news.html?article=mao_note_02">
-										<li class="tile_article">
-											<img class="article_thumbnail" src="./assets/image/article_title/mao_note_2.png" />
-											<p class="article_date">2020.1.1 00:00</p>
-											<hr class="article_border">
-											<div class="article_title_area">
-												<p class="article_title">MAO NOTE #002「新年のご挨拶とチーム紹介」</p>
-											</div>
-										</li>
-									</a>
-									<a href="news.html?article=mao_note_01">
-										<li class="tile_article">
-											<img class="article_thumbnail" src="./assets/image/article_title/mao_note_1.png" />
-											<p class="article_date">2020.11.26 22:00</p>
-											<hr class="article_border">
-											<div class="article_title_area">
-												<p class="article_title">MAO NOTE #001「MineNetwork Owner 秋保からのご挨拶」</p>
-											</div>
-										</li>
-									</a>
-									<a href="news.html?article=mystery_answer_2020">
-										<li class="tile_article">
-											<img class="article_thumbnail" src="./assets/image/article_title/mystery_answer_2020.png" />
-											<p class="article_date">2020.11.26 22:00</p>
-											<hr class="article_border">
-											<div class="article_title_area">
-												<p class="article_title">無限雪面のクリプトグラフ 解答解説</p>
-											</div>
-										</li>
-									</a>
-									<a href="news.html?article=photo_contest_2020">
-										<li class="tile_article">
-											<img class="article_thumbnail" src="./assets/image/article_title/photo_contest_2020.png" />
-											<p class="article_date">2020.11.26 22:00</p>
-											<hr class="article_border">
-											<div class="article_title_area">
-												<p class="article_title">MAO OGTⅢ フォトコンテスト</p>
-											</div>
-										</li>
-									</a>
-
-								</ul>
-							</div>
-
-						</div>
+						</a>
 					</div>
-				</section>
 
-				<script>footer('./');</script>
+					<div id="list_article_area">
+						<ul id="list_article">
 
-			</section>
-			<script>angle_lock();</script>
+							<a href="news.html?article=mao_note_02">
+								<li class="tile_article">
+									<img class="article_thumbnail" src="./assets/image/article_title/mao_note_2.jpg" alt="MAO NOTE #02" />
+									<p class="article_date">2020.1.1 00:00</p>
+									<hr class="article_border">
+									<div class="article_title_area">
+										<p class="article_title">MAO NOTE #002「新年のご挨拶とチーム紹介」</p>
+									</div>
+								</li>
+							</a>
+							<a href="news.html?article=mao_note_01">
+								<li class="tile_article">
+									<img class="article_thumbnail" src="./assets/image/article_title/mao_note_1.jpg" alt="MAO NOTE #01" />
+									<p class="article_date">2020.11.26 22:00</p>
+									<hr class="article_border">
+									<div class="article_title_area">
+										<p class="article_title">MAO NOTE #001「MineNetwork Owner 秋保からのご挨拶」</p>
+									</div>
+								</li>
+							</a>
+							<a href="news.html?article=mystery_answer_2020">
+								<li class="tile_article">
+									<img class="article_thumbnail" src="./assets/image/article_title/mystery_answer_2020.jpg" alt="Mystery Answer 2020"  />
+									<p class="article_date">2020.11.26 22:00</p>
+									<hr class="article_border">
+									<div class="article_title_area">
+										<p class="article_title">無限雪面のクリプトグラフ 解答解説</p>
+									</div>
+								</li>
+							</a>
+							<a href="news.html?article=photo_contest_2020">
+								<li class="tile_article">
+									<img class="article_thumbnail" src="./assets/image/article_title/photo_contest_2020.jpg" alt="Photo Contest 2020" />
+									<p class="article_date">2020.11.26 22:00</p>
+									<hr class="article_border">
+									<div class="article_title_area">
+										<p class="article_title">MAO OGTⅢ フォトコンテスト</p>
+									</div>
+								</li>
+							</a>
+
+						</ul>
+					</div>
+
+				</div>
+			</div>
+			<script>footer('./');</script>
 		</div>
 	</div>
 
-	<script src="./assets/js/pagepiling.js"></script>
 	<script src="./assets/js/load_animation.js"></script>
 
 </body>

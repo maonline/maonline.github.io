@@ -31,19 +31,6 @@ function footer(rootDir){
     
 }
 
-function angle_lock(){
-    $.ajax({
-        url: "./assets/include/angle_lock.html",
-        cache: false,
-        async: false,
-        dataType: 'html',
-        success: function(html){
-            document.write(html);
-        }
-    });
-    
-}
-
 $(function(){
     $('a[href^="#"]').click(function(){
         var speed = 500;
@@ -51,6 +38,17 @@ $(function(){
         var target = $(href == "#" || href == "" ? 'html' : href);
         var position = target.offset().top;
         $("html, body").animate({scrollTop: position}, speed, "swing");
-        return false;
+        return;
     });
 });
+
+function getParam(name) {
+    var url = window.location.href;
+    if (url.length > 100) return null;
+    name = name.replace(/[\[\]]/g, "\\$&");
+    var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+        results = regex.exec(url);
+    if (!results) return null;
+    if (!results[2]) return '';
+    return decodeURIComponent(results[2].replace(/\+/g, " "));
+}

@@ -7,6 +7,19 @@ var imgLen = images.length;
 var barLen = 100 / imgLen;
 var barWidth = 0;
 
+if (getParam('load') == 'false') {
+  var el = document.createElement("script");
+  el.src = "./assets/js/anime.min.js";
+  document.body.appendChild(el);
+  var el = document.createElement("script");
+  el.src = "./assets/js/block_reveal.js";
+  document.body.appendChild(el);
+  var el = document.createElement("script");
+  el.src = "./assets/js/load_animation.js";
+  document.body.appendChild(el);
+  loadingArea.style.display = 'none';
+}
+
 for (var i = 0; i < imgLen; i++) {
     images[i].onload = function() {
         barWidth = barWidth + barLen;
